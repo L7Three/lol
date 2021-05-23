@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Sign In/Sign Up</title>
+
+	<link rel="stylesheet" href="css/style.css">
+	<script src="/js/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+
+	<div class="container right-panel-active">
+
+		<!-- Sign Up -->
+		<div class="container__form container--signup">
+			<form action="#" class="form" id="form1" id="form">
+				<h2 class="form__title">注册</h2>
+				<input type="text" placeholder="请输入用户名(英文字符或数字)" class="input" id="r_name" id="username"/>
+				<span id="s_username"></span>
+				<input type="email" placeholder="邮箱" class="input" id="email"/>
+				<span id="s_email"></span>
+				<input type="password" placeholder="密码" class="input" id="r_pass" id="password"/>
+				<span id="s_password"></span>
+				<button class="btn" id="regist">注册</button>
+			</form>
+		</div>
+
+		<!-- Sign In -->
+		<div class="container__form container--signin">
+			<form action="#" class="form" id="form2">
+				<h2 class="form__title">登录</h2>
+				<input type="text" placeholder="用户名" class="input" id="l_name" />
+				<input type="password" placeholder="密码" class="input" id="l_pass" />
+				<a href="#" class="link">忘记密码?</a>
+				<button class="btn" id="login">登录</button>
+			</form>
+		</div>
+
+		<!-- Overlay -->
+		<div class="container__overlay">
+			<div class="overlay">
+				<div class="overlay__panel overlay--left">
+					<button class="btn" id="signIn">登录</button>
+				</div>
+				<div class="overlay__panel overlay--right">
+					<button class="btn" id="signUp">注册</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/script.js"></script>
+	<script src="js/register.js"></script>
+	<script>
+		$('#login').click(function () {
+			$.ajax({
+				type: "post",
+				url: "/index/login",
+				data: { "name": $("#l_name").val(), "password": $("#l_pass").val() },
+				success: function (data) {
+					if (data.status == 1) {
+						window.location.href = "/"
+						alert("登陆成功！")
+					} else {
+						alert("登录失败！")
+					}
+				}
+			})
+		})
+
+		$('#regist').click(function () {
+			$.ajax({
+				type: "post",
+				url: "/index/regist",
+				data: { "name": $("#r_name").val(), "email": $("#email").val(), "password": $("#r_pass").val() },
+				success: function (data) {
+					if (data.status == 1) {
+						alert("恭喜你,注册成功!")
+					} else {
+						alert("恭喜你,注册成功!")
+					}
+				}
+			})
+		})
+	</script>
+</body>
+
+</html>

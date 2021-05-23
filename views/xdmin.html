@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOL后台管理</title>
+    <link rel="stylesheet" href="css/lol.css">
+</head>
+
+<body>
+
+    <div class="z">
+        标题:<input type="text" class="queryInput" placeholder="请输入标题"> 内容:
+        <input type="text" class="queryInput"> 
+        <button class="c" onclick="seek()">查询</button>
+        <a href="#" id="qk" class="qk">清空</a>
+        <a href="/xdminlogo" id="qk" class="qk">管理员登录</a>
+    </div>
+
+    <div>
+        <ul class="dier">
+            <button class="add" id="margin" onclick="alert()">发表文章</button>
+           <a href="/issue"><button> 问题与意见反馈管理</button></a> 
+        </ul>
+    </div>
+
+    <div class="pa">
+        <table border="1" class="biao" id="biao">
+            <tr style="height: 50px">
+                <th>标题</th>
+                <th>发表人</th>
+                <th>文章内容</th>
+                <th>发表时间</th>
+                <th>操作</th>
+            </tr>
+
+
+            <tr id="a1">
+                <td class="hero">11.9版本更新公告：DWG冠军皮肤到来</td>
+                <td>英雄联盟官方</td>
+                <td>11.9版本更新公告：DWG冠军皮肤到来</td>
+                <td>2021-5-17</td>
+                <td>
+                    <button class="c">详情</button>
+                    <button class="c2">修改</button>
+                    <button class="c3  delete" onclick="R1()">删除</button>
+                    <button class="c4">添加图片</button>
+                </td>
+            </tr>
+            <tr id="a2">
+                <td class="hero">欢迎来到云顶之弈！</td>
+                <td>英雄联盟官方</td>
+                <td>云顶之弈</td>
+                <td>2021-5-19</td>
+                <td>
+                    <button class="c">详情</button>
+                    <button class="c2">修改</button>
+                    <button class="c3 delete" onclick="R2()">删除</button>
+                    <button class="c4">添加图片</button>
+                </td>
+            </tr>
+            <tr id="a3">
+                <td class="hero">属于RNG的时代再次到来 出征MSI 加油RNG</td>
+                <td>RNG电子竞技俱乐部</td>
+                <td>啦啦啦</td>
+                <td>2021-5-14</td>
+                <td>
+                    <button class="c">详情</button>
+                    <button class="c2">修改</button>
+                    <button class="c3 delete " onclick="R3()">删除</button>
+                    <button class="c4">添加图片</button>
+                </td>
+            </tr>
+
+        </table>
+
+        <div id="end_4" class="end4">
+            <span>
+                <h3>文章分布</h3>
+            </span>
+            <img src="/img/close.png" class="img" onclick="quit()">
+            </br>
+            <span>标题：</span>
+            <input type="text" placeholder="请输入名称：" class="mylol" id="add_name">
+            </br>
+            </br>
+            <span>发表人：</span>
+            <input type="text" placeholder="请输入您的名字：" class="mylol" id="add_place">
+            </br>
+            </br>
+            <span>文章内容：</span>
+            <input type="text" class="mylol" id="add_position">
+            <span>发表时间：</span>
+            <input type="text" placeholder="请输入发表时间：" class="mylol" id="add_words">
+            </br>
+            </br>
+
+            <button class="second" id="margin" onclick="quit()">取消</button>
+            <button class="first" id="margin" onclick="success()">确定</button>
+        </div>
+    </div>
+    <script src="js/lol.js">
+    </script>
+</body>
+</html>

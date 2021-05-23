@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: 2px solid red;
+        }
+        .little{
+            width: 50px;
+            height: 50px;
+            background: yellow;
+        }
+        #mid{
+            width: 600px;
+            height: 500px;
+        }
+        #mid>div{
+            width: 200px;
+            height: 200px;
+        }
+        #mid div{
+            border: 5px dashed brown;
+        }
+    </style>
+</head>
+<body>
+    <div id="top">top</div>
+    <div class="little">little</div>
+    <div id="mid">
+        <div>
+            1
+            <div>1-1</div>
+        </div>
+        <div>2</div>
+        mid
+    </div>
+    <div class="little">little</div>
+    <div id="btm">btm</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+/* 头部*/
+#lollogo{
+    width: 200px;
+    height: 100px;
+    position: relative;
+    top:0px;
+    left: 0px;
+    z-index: 2;
+    background-image: url("../img/icon.png");
+    background-position: 0px -30px;
+    margin-left: 90px;
+}
+#bgtop{
+    position: relative;
+    bottom: 15px;
+}
+#tablehead{
+    width: 100%;
+    height: 100px;
+    background: black;
+    text-align: center;
+}
+
+#headright{
+    width: 300px;
+    text-align: left;
+}
+
+#find{
+    width: 40px;
+    height: 30px;
+    background-image: url("../img/icon.png");
+    background-position: 0px 0px;
+}
+#phone{
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/icon.png");
+    background-position: -40px 0px;
+}
+#pcircle{
+    width: 80px;
+    height: 80px;
+    /*margin: 0 auto;*/
+    background-image: url("../img/icon.png");
+    background-position: 0px 170px;
+    float: right;
+}
+#person{
+    width: 66px;
+    height: 66px;
+    background-image: url("../img/peron.png");
+    margin-left: 25px;
+    margin-top: 5px;
+}
+.font1{
+    color: white;
+}
+.font2{
+    color: gray;
+    font-size: 10px;
+}
