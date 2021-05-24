@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/insert.css">
 </head>
+
 <body>
-    <form action="/xdmin/add" method="POST">
-        <input type="text" placeholder="标题"name="title"/>
-        <br/>
-        <input type="text" placeholder="发表人"name="name"/>
-        <br/>
-        <input type="text" placeholder="文章内容"name="content"/>
-        <br/>
-        <input type="submit">
+    <form action="/xdmin/add" method="POST" class="smart-green">
+        <label><span>标题 :</span>
+            <input id="title" type="text" name="title" />
+            <div class="error-msg"></div>
+        </label>
+        <label><span>发表人 :</span>
+            <input id="keywords" type="text" value="" name="name" />
+            <div class="error-msg"></div>
+        </label>
+        <label><span>文章内容 :</span>
+            <textarea id="description" name="content"></textarea>
+            <div class="error-msg"></div> &nbsp; &nbsp;
+        </label>
+        <div class="success-msg"></div>
+        <label><span>&nbsp;</span><input type="submit" class="button" value="确定" /></label>
     </form>
 </body>
 </html>
