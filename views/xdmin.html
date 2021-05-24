@@ -28,6 +28,7 @@
 
     <div class="pa">
         <table border="1" class="biao" id="biao">
+        <thead>
             <tr style="height: 50px">
                 <th>标题</th>
                 <th>发表人</th>
@@ -35,71 +36,25 @@
                 <th>发表时间</th>
                 <th>操作</th>
             </tr>
+        </thead>
 
-
-            <tr id="a1">
-                <td class="hero">11.9版本更新公告：DWG冠军皮肤到来</td>
-                <td>英雄联盟官方</td>
-                <td>11.9版本更新公告：DWG冠军皮肤到来</td>
-                <td>2021-5-17</td>
-                <td>
-                    <button class="c">详情</button>
-                    <button class="c2">修改</button>
-                    <button class="c3  delete" onclick="R1()">删除</button>
-                    <button class="c4">添加图片</button>
-                </td>
-            </tr>
-            <tr id="a2">
-                <td class="hero">欢迎来到云顶之弈！</td>
-                <td>英雄联盟官方</td>
-                <td>云顶之弈</td>
-                <td>2021-5-19</td>
-                <td>
-                    <button class="c">详情</button>
-                    <button class="c2">修改</button>
-                    <button class="c3 delete" onclick="R2()">删除</button>
-                    <button class="c4">添加图片</button>
-                </td>
-            </tr>
-            <tr id="a3">
-                <td class="hero">属于RNG的时代再次到来 出征MSI 加油RNG</td>
-                <td>RNG电子竞技俱乐部</td>
-                <td>啦啦啦</td>
-                <td>2021-5-14</td>
-                <td>
-                    <button class="c">详情</button>
-                    <button class="c2">修改</button>
-                    <button class="c3 delete " onclick="R3()">删除</button>
-                    <button class="c4">添加图片</button>
-                </td>
-            </tr>
-
+        <tbody>
+            <% for(let o of data){%>
+                <tr>
+                        <td><%=o.title%></td>
+                        <td><%=o.name%></td>
+                        <td><%=o.content%></td>
+                        <td><%=o.create_time%></td>
+                        <td>
+                            <button class="c">详情</button>
+                            <button class="c2">修改</button>
+                            <button class="c3  delete" onclick="R1()">删除</button>
+                            <button class="c4">添加图片</button>
+                        </td>
+                </tr>
+                     <% } %>
+        </tbody>
         </table>
-
-        <div id="end_4" class="end4">
-            <span>
-                <h3>文章分布</h3>
-            </span>
-            <img src="/img/close.png" class="img" onclick="quit()">
-            </br>
-            <span>标题：</span>
-            <input type="text" placeholder="请输入名称：" class="mylol" id="add_name">
-            </br>
-            </br>
-            <span>发表人：</span>
-            <input type="text" placeholder="请输入您的名字：" class="mylol" id="add_place">
-            </br>
-            </br>
-            <span>文章内容：</span>
-            <input type="text" class="mylol" id="add_position">
-            <span>发表时间：</span>
-            <input type="text" placeholder="请输入发表时间：" class="mylol" id="add_words">
-            </br>
-            </br>
-
-            <button class="second" id="margin" onclick="quit()">取消</button>
-            <button class="first" id="margin" onclick="success()">确定</button>
-        </div>
     </div>
     <script src="js/lol.js">
     </script>
