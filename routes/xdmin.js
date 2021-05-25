@@ -50,4 +50,30 @@ router.delete('/del/:id',(req,res) =>{
   })
 })
 
+router.get('/update/:id', (req, res) => {
+  let sqlStr = `SELECT * FROM article WHERE ID ="${req.params.id}" `
+    connection.query(sqlStr, (err, result) => {
+      if (err) throw err;
+      console.log(result);
+      res.render("update", { data: result })
+  })
+})
+
+router.post('/update/:id', (req, res) => {
+  let user = {
+      'title': req.body.title,
+      'name': req.body.name,
+      'content': req.body.content,
+  }
+  let sqlStr = `delete from article where id = ${req.params.id}`
+  connection.query(sqlStr, (err, result) => {
+    if(err) throw err;
+      let sqlStr1 = `INSERT INTO article(id,title,name,content) VALUES('${req.params.id}','${user.title}','${user.name}','${user.content}')`
+      connection.query(sqlStr1, (err, result) => {
+        if(err) throw err;
+          res.redirect('/xdmin')
+      })
+  })
+})
+
 module.exports = router;

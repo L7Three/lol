@@ -1,3 +1,4 @@
+//查询
 $(function(){
     $('.queryName').click(()=>{
         let message = document.getElementById("queryInput").value
@@ -15,7 +16,7 @@ $(function(){
                     <td>${o.create_time}</td>
                     <td>
                         <button class="c">详情</button>
-                        <button class="c2">修改</button>
+                        <button class="c2 update">修改</button>
                         <button class="c3  delete" data-id=${o.id}>删除</button>
                         <button class="c4">添加图片</button>
                     </td>
@@ -26,6 +27,7 @@ $(function(){
         })
     })
 
+     //删除
     Array.from(document.getElementsByClassName("delete")).forEach(i=>{
             i.onclick = (()=>{
             let id = i.getAttribute('data-id')
@@ -43,3 +45,12 @@ $(function(){
             )
     })
 });
+
+   //修改
+   Array.from(document.getElementsByClassName('update')).forEach(i => {
+    i.onclick = function () {
+        let ind = this.getAttribute('data-id1')
+        window.location.href = '/xdmin/update/' + ind
+    }
+})
+
