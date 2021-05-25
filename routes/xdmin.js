@@ -35,7 +35,7 @@ router.get('/', function (req, res) {
 router.post('/add', (req, res) => {
 
   let score = new Score(req.body.title, req.body.name, req.body.content)
-  connection.query("insert into article(title,name,content) value(?,?,?)", [score.title, score.name, score.content], (err, result, fields) => {
+  connection.query("insert into article(title,name,content,time) value(?,?,?)", [score.title, score.name, score.content], (err, result, fields) => {
     res.redirect('/xdmin')
   })
 
