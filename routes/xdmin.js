@@ -19,16 +19,11 @@ router.get('/add', function(req, res, next) {
   res.render('insert');
 });
 
-// router.get('/', function(req, res, next) {
-//   res.render('xdmin');
-// });
-
 router.get('/', function (req, res) {
-  connection.query("select * from article ", function (err, results, fields) {
+  connection.query("select * from article ORDER BY id DESC", function (err, results, fields) {
     res.render('xdmin', {
       data: results
-    });
-
+    })
   })
 });
 
@@ -38,7 +33,21 @@ router.post('/add', (req, res) => {
   connection.query("insert into article(title,name,content) value(?,?,?)", [score.title, score.name, score.content], (err, result, fields) => {
     res.redirect('/xdmin')
   })
+});
 
+router.post('/find/:message',function(req,res){
+  let message = req.params.message
+  connection.query(`select * from article where title like '%${message}%'`,function(err,results) {
+    console.log(results);
+    res.send(results);
+  })
+})
+
+router.delete('/del/:id',(req,res) =>{
+  let sql = `delete from article where id = ${req.params.id} `
+  connection.query(sql,(err,results)=>{
+    res.send('success')
+  })
 })
 
 module.exports = router;
