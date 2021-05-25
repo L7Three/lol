@@ -35,11 +35,11 @@ router.post('/add', (req, res) => {
   })
 });
 
-router.post('/find/:message',function(req,res){
-  let message = req.params.message
+router.post('/find',function(req,res){
+  let message = req.body.queryinput
   connection.query(`select * from article where title like '%${message}%'`,function(err,results) {
     console.log(results);
-    res.send(results);
+    res.render("xdmin",{data:results})
   })
 })
 
