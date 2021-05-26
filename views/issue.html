@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<title>首页</title>
 		<link rel="stylesheet" href="css/page.css" />
+		<link rel="stylesheet" href="/css/lol2.css">
 		<script type="text/javascript" src="js/jquery.min.js" ></script>
 		<script type="text/javascript" src="js/index.js" ></script>
 	</head>
@@ -14,18 +15,62 @@
 			<div class="bigTitle">问题反馈后台</div>
 			<div class="lines">
 				<div onclick="pageClick(this)" class="active"><img src="img/icon-1.png" />问题反馈管理</div>
-				<div onclick="pageClick(this)"><img src="img/icon-3.png" />用户信息管理</div>
+				<!-- <div onclick="pageClick(this)"><img src="img/icon-3.png" />用户信息管理</div> -->
 			</div>
 		</div>
 		<div class="top">
 			<div class="leftTiyle" id="flTitle">问题管理</div>
+			<a href="/xdmin"><div class="thisUser">返回后台首页</div></a>
 			<div class="thisUser">当前用户：admin</div>
 		</div>
-		<div class="content">HELLO WORD</div>
-		
-		<div style="text-align:center;">
-</div>
-		
-	</body>
+		<div class="content">
+				<table border="1" class="biao">
+					<thead>
+						<tr style="height: 50px">
+							<th>反馈编号</th>
+							<th>反馈内容</th>
+							<th>反馈时间</th>
+							<th>反馈人</th>
+							<th>操作</th>
+						</tr>
+					</thead>
 
+					<tbody>
+					    <% for(let o of data){%>
+					 <tr id="a1">
+							<td><%=o.id%></td>
+							<td class="hero"><%=o.content%></td>
+							<td><%=o.time%></td>
+							<td><%=o.name%></td>
+							<td>
+								<button class="c2">回复用户</button>
+								<button class="c3  delete" data-id=<%=o.id%>>删除</button>
+							</td>
+					</tr>
+					    <% } %>
+					</tbody>
+				</table>
+		</div>
+	</body>
 </html>
+<script>
+	$(function(){
+     //删除
+    Array.from(document.getElementsByClassName("delete")).forEach(i=>{
+            i.onclick = (()=>{
+            let id = i.getAttribute('data-id')
+            $.ajax({
+                url:"/issue/del/"+id,
+                type:"delete",
+                success:function(data){
+                    if(data == 'success'){
+                        alert('删除成功')
+                        $(i).parent().parent().remove()
+                    }
+                }
+            })
+        }
+            )
+    })
+});
+</script>

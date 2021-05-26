@@ -26,7 +26,8 @@
         <ul class="dier">
             <a href="/xdmin"> <button class="add" >返回首页</button> </a>
            <a href="/xdmin/add"><button class="add" id="margin"">发表文章</button></a>
-           <a href="/issue"><button class="add"> 反馈管理</button></a> 
+           <a href="/issue"><button class="add"> 反馈管理</button></a>
+           <a href="/log"><button class="add"> 查看日志</button></a> 
            
         </ul>
     </div>
@@ -49,7 +50,7 @@
                         <td><%=o.title%></td>
                         <td><%=o.name%></td>
                         <td><%=o.content%></td>
-                        <td><%=o.create_time%></td>
+                        <td><%=o.time%></td>
                         <td>
                             <button class="c">详情</button>
                             <button class="c2 update" data-id1=<%=o.id%>>修改</button>
