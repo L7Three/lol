@@ -16,7 +16,7 @@ var buyRouter = require('./routes/buy');
 var pkRouter = require('./routes/pk');
 var heroRouter = require('./routes/hero');
 var issueRouter = require('./routes/issue');
-// var logsRouter = require('./routes/logs');
+var logsRouter = require('./routes/logs');
 
 var app = express();
 
@@ -51,7 +51,7 @@ app.use('/buy',buyRouter);
 app.use('/pk',pkRouter);
 app.use('/hero',heroRouter);
 app.use('/issue',issueRouter);
-// app.use('/logs',logsRouter);
+app.use('/logs',logsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
