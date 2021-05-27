@@ -117,56 +117,15 @@
             <p class="newslittle">恭喜RNG获得世界冠军！！！</p>
     </div>
     <table id="news">
-        <tr>
-            <td class="news">新闻</td>
-            <td width="600px">英雄联盟首部动画剧集《Arcane》先导预告发</td>
-            <td>5/20</td>
-        </tr>
-        <tr>
-            <td class="news">新闻</td>
-            <td>11.9版本更新公告：DWG冠军皮肤到来</td>
-            <td>5/17</td>
-        </tr>
-        <tr>
-            <td class="news">新闻</td>
-            <td>欢迎来到云顶之弈</td>
-            <td>5/19</td>
-        </tr>
-        <tr>
-            <td class="news">新闻</td>
-            <td>【云顶之弈S5】光明与黑暗：奖励预告</td>
-            <td>5/18</td>
-        </tr>
-        <tr>
-            <td class="news">新闻</td>
-            <td>LPL春季赛冠军阵容回馈</td>
-            <td>5/17</td>
-        </tr>
-        <tr>
-            <td class="news">新闻</td>
-            <td>11.8版本更新公告：灵罗娃娃 格温登场</td>
-            <td>5/15</td>
-        </tr>
-        <tr>
-            <td class="news">新闻</td>
-            <td>属于RNG的时代再次到来 出征MSI 加油RNG</td>
-            <td>5/14</td>
-        </tr>
-        <tr>
-            <td class="news">新闻</td>
-            <td>英雄联盟新CG【远古守护者】解读，诺克萨斯！我是来谈判的！</td>
-            <td>5/13</td>
-        </tr>
-        <tr>
-            <td class="news">新闻</td>
-            <td>《简笔画联盟》手把手教你如何画一个Q版EZ 包！学！会！</td>
-            <td>5/12</td>
-        </tr>
-        <tr>
-            <td class="news">新闻</td>
-            <td>狒狒女警：丛刃女警爆发超越刺客！爆头一枪秒杀满血AD！</td>
-            <td>5/11</td>
-        </tr>
+        <tbody>
+            <% for(let o of data){%>
+            <tr>
+                <td ><%=o.title%></td>
+                <td><%=o.name%></td>
+                <td><%=o.time%></td>
+                <% } %>
+            </tr>
+        </tbody>
         <tr>
             <td colspan="3" id="newsend"></td>
         </tr>
