@@ -1,9 +1,26 @@
+const { render } = require('ejs');
 var express = require('express');
 var router = express.Router();
+var mysql = require("mysql");
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('news');
+let connection = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "123456",
+  port: "3306",
+  database: "user"
 });
+
+router.get('/', function (req, res) {
+  connection.query("select * from news ORDER BY id DESC", function (err, results, fields) {
+    res.render('news', {
+      data: results
+    })
+  })
+});
+
+
+
+
 
 module.exports = router;

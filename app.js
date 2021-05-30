@@ -18,6 +18,7 @@ var heroRouter = require('./routes/hero');
 var issueRouter = require('./routes/issue');
 var logsRouter = require('./routes/logs');
 
+
 var app = express();
 
 // view engine setup
@@ -52,6 +53,7 @@ app.use('/pk',pkRouter);
 app.use('/hero',heroRouter);
 app.use('/issue',issueRouter);
 app.use('/logs',logsRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

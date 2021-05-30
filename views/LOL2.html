@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/mid.css">
     <link rel="stylesheet" type="text/css" href="css/bottom.css">
     <link rel="stylesheet" type="text/css" href="css/end.css">
+    <script src="/js/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
@@ -120,9 +121,9 @@
         <tbody>
             <% for(let o of data){%>
             <tr>
-                <td ><%=o.title%></td>
+                <td class="details" data-id1=<%=o.id%>><%=o.title%></td>
                 <td><%=o.name%></td>
-                <td><%=o.time%></td>
+                <td><%=o.time.toLocaleString()%></td>
                 <% } %>
             </tr>
         </tbody>
@@ -194,3 +195,14 @@
 <div id="end"></div>
 </body>
 </html>
+
+<script>
+    //详情页面
+Array.from(document.getElementsByClassName('details')).forEach(i => {
+ i.onclick = function () {
+     let ind = this.getAttribute('data-id1')
+     window.location.href = '/details/' + ind
+ }
+})
+
+</script>

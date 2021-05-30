@@ -2,7 +2,7 @@ const { render } = require('ejs');
 var express = require('express');
 var router = express.Router();
 var mysql = require("mysql");
-var User = require("./bean/user");
+
 
 
 let connection = mysql.createConnection({
@@ -22,6 +22,14 @@ router.get('/', function (req, res) {
 });
 
 
+router.get('/details/:id', (req, res) => {
+  let sqlStr = `SELECT * FROM article WHERE ID ="${req.params.id}" `
+    connection.query(sqlStr, (err, result) => {
+      if (err) throw err;
+      console.log(result);
+      res.render("details", { data: result })
+  })
+})
 
 
 module.exports = router;

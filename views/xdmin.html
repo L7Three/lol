@@ -18,8 +18,8 @@
         标题:<input type="text" id="queryInput" class="queryInput" name="queryinput" placeholder="请输入标题">
         发表人: <input type="text">
         <button type="submit" class="c  queryName" id="queryName">查询</button>
-        <a href="#"  class="qk">清空</a>
-        <a href="/xdminlogo" class="qk">管理员登录</a>
+        <a href="#"  class="qk" style="left: 152px;">清空</a>
+        <a href="/xdminlogo" class="qk" style="left: 177px;">管理员登录</a>
         </form>
         
     </div>
@@ -52,7 +52,7 @@
                         <td><%=o.title%></td>
                         <td><%=o.name%></td>
                         <td><%=o.content%></td>
-                        <td><%=o.time%></td>
+                        <td><%=o.time.toLocaleString()%></td>
                         <td>
                             <button class="c">详情</button>
                             <button class="c2 update" data-id1=<%=o.id%>>修改</button>
@@ -95,6 +95,4 @@ $(function(){
         window.location.href = '/xdmin/update/' + ind
     }
 })
-
-
 </script>

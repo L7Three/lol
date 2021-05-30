@@ -9,6 +9,7 @@
     <title>官方公告</title>
 
     <link rel="stylesheet" href="/css/news.css">
+    <script src="/js/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -19,26 +20,28 @@
         </div><!-- /.container-fluid -->
     </nav>
 
-    <img src="/img/ig.jpg" class="index-bg">
+    <img src="/img/lol3.jpg" class="index-bg">
     <div class="container">
-        <h1>官方公告</h1>
+        <h1>联盟公告</h1>
         <h4></h4>
     <tbody>
         <% for(let o of data){%>
+        <form action="/details/<%=o.id%>" method="POST">
         <div class="news-list">
             <div class="news-list-left">
                 <div class="news-list-item">
-                    <div class="author-time">
+                    <div class="author-time" name="name">
                         <%=o.name%>
                     </div>
                     <div class="news-des">
-                        <h3 class="news-title"><i></i><a href="#"><%=o.title%></a></h3>
-                        <div class="news-content-des">
-                            <%=o.content%>
+                        <h3 class="news-title"><i></i><a href="#" name="title"><%=o.title%></a></h3>
+                        <div class="news-content-des" name="content">
+                        <%=o.content%>
                         </div>
                     </div>
                 </div>
-                <% } %>
+        </form>
+        <% } %>
                         <footer class="copyright">
                               Copyright &nbsp; 2021 DreamBoy All rights reserved.
                             </footer>    

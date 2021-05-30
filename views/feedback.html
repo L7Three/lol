@@ -87,14 +87,14 @@
 	<body>
 		<header>
 			<div class="left">
+				<form action="/feedback/add" method="POST">
 				<h2>反馈内容:</h2>
 				<section id="editor" style="width: 90%;margin: auto;text-align: left;">
-					<div id='edit' style="margin-top: 30px;">
-					</div>
+					<textarea name="content" id="edit"></textarea>
 				</section>
 				<h2>图片提交:</h2>
 				<div id="preview" style="margin-left: 60px;">
-					<img id="imghead" />
+					<img id="imghead"/>
 				</div>
 				<section style="float: right;margin-top: -160px;margin-right: 30%;">
 					<input type="file" onchange="previewImage(this)" style="width: 200px;height: 70px;opacity: 0;-moz-opacity: 0; -webkit-opacity: 0;" />
@@ -108,11 +108,10 @@
 					<a style="color: #f48b0e;">2、图片尽量清晰</a>
 				</section>
 				<h2>联系方式:</h2>
-				
-					<input name="searchkey" type="text" id="type" value="  用户名" onFocus="this.value=''" style="width: 200px;height: 40px;margin-left: 50px;color: #7c7c7c;" onblur="if(this.value.replace(/^ +| +$/g,'')=='')alert('用户名不能为空!')" /><br />
+					<input name="name" type="text" id="type" value="  用户名" onFocus="this.value=''" style="width: 200px;height: 40px;margin-left: 50px;color: #7c7c7c;" onblur="if(this.value.replace(/^ +| +$/g,'')=='')alert('用户名不能为空!')" /><br />
 					<input name="searchkey" type="text" id="type" value="  优先使用QQ，方便在线沟通" onFocus="this.value=''" style="width: 450px;height: 40px;margin: 50px;color: #7c7c7c;" onblur="if(this.value.replace(/^ +| +$/g,'')=='')alert('不能为空!')" /><br />
 					<input type="submit" class="hover" value="提交" style="border-radius: 14px;margin-left: 50px;width: 150px;height: 50px;" />
-				
+				</form>
 			</div>
 			<div class="right">
 				<input type="button" id="but" value="帮助中心" />

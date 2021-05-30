@@ -52,7 +52,9 @@ table {
     font-size: 16px;
     text-decoration: none;
     margin-left: 20px;
-    display: inline-block;
+    /* display: inline-block; */
+    position: relative;
+    right: 261px;
 }
 
 .pa {
