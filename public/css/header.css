@@ -1,0 +1,198 @@
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+form{
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+img {
+	border: none;
+	vertical-align: top;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+input {
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+}
+main {
+	display: block;
+}
+/*.header {
+	width: 100%;
+	height: 48px;
+	border-bottom: 2px solid #1190da;
+	box-shadow: 0 4px 3px #777;
+	IE8以下不支持css3阴影，乖乖切图做
+}*/
+body {
+	min-width: 980px;
+}
+.clearFix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.header {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 55px;
+	background: url(../img/header-bj.png) repeat-x center bottom;
+}
+.headerDiv {
+	width: 980px;
+	margin: 0 auto;
+}
+.headerDiv h1 {
+	float: left;
+	width: 184px;
+	height: 26px;
+	padding:10px 0 12px 0;
+	margin-right: 51px;
+}
+.logo:hover {
+	background: url(../img/weibo-logo-h.gif) no-repeat 0 0;
+}
+.nav {
+	float: left;
+} 
+.nav li {
+	position: relative;
+	float: left;
+	font: 16px/48px "微软雅黑";
+	margin-right: 1px;
+	transition: .5s;
+}
+.navA {
+	float: left;
+	padding: 0 18px;
+	color: #333;
+}
+.nav li:hover {
+	background: #ddd;
+}
+.dropMenu {
+	background: url(../img/new_icons.gif) no-repeat 0 -93px;
+}
+.minLink {
+	position: absolute;
+	top: 48px;
+	left: 0;
+	height: 0;
+	overflow: hidden;
+	width: 84px;
+	background: #f2f2f2;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	transition: .8s;
+}
+.minService {
+	position: absolute;
+	top: 48px;
+	left: 0;
+	height: 0;
+	width: 84px;
+	overflow: hidden;
+	background: #f2f2f2;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	transition: .8s;
+}
+.nav .navlist:hover .minService {
+	height: 158px;
+}
+.nav .navlist:hover .minLink {
+	height: 110px;
+}
+.minService a {
+	float: left;
+	width: 64px;
+	padding: 0 10px;
+	font: 16px/22px "微软雅黑";
+	margin-bottom: 2px;
+	color: #333;
+	text-align: center;
+}
+.minLink a {
+	float: left;
+	width: 64px;
+	padding: 0 10px;
+	font: 16px/22px "微软雅黑";
+	margin-bottom: 2px;
+	color: #333;
+	text-align: center;
+}
+.navlist .dropTop {
+	margin-top: 7px;
+}
+.navlist .dropBottom {
+	margin-bottom: 6px;
+}
+.minService a:hover,
+.minLink a:hover {
+	background: #d3d3d3;
+}
+.headerDiv .login {
+	float: right;
+	font: 16px/48px "微软雅黑";
+	transition: .5s;
+}
+.headerDiv .login:hover {
+	background: #ddd;
+}
+.headerDiv .login a {
+	display: inline-block;
+	color: #333;
+	padding: 0 20px;
+}
+/*footer*/
+/*.footer {
+	background: #f3f5f5;
+}*/
+.footerDiv {
+	width: 980px;
+	margin: 0 auto;
+	/*border-top: 1px solid #eaeaea;*/
+	padding: 13px 0 19px 0;
+	/*box-shadow: inset 0 0 1px #fff;*/
+}
+.bottomNav {
+	font: 12px/1 "微软雅黑";
+	padding: 8px 0 8px 206px;
+}
+.bottomNav a {
+	border-right: 1px solid #999;
+	padding: 0 19px;
+	float: left;
+	color: #3c7cb3;
+}
+.bottomNav .footerA {
+	border-right:none;
+}
+.registerSystem {
+	font: 12px/18px Arial,"微软雅黑";
+	padding-left: 278px;
+	color: #999;
+}
+.registerSystem span {
+	margin-right: 23px;
+}
+.loge66{
+	border: none;
+    vertical-align: top;
+    height: 43px;
+    margin-top: -8px;
+}

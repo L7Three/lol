@@ -11,7 +11,8 @@ let connection = mysql.createConnection({
   user: "root",
   password: "123456",
   port: "3306",
-  database: "user"
+  database: "user",
+  timezone:"SYSTEM"
 });
 
 
@@ -28,7 +29,6 @@ router.get('/', function (req, res) {
 });
 
 router.post('/add', (req, res) => {
-
   let score = new Score(req.body.title, req.body.name, req.body.content)
   connection.query("insert into article(title,name,content) value(?,?,?)", [score.title, score.name, score.content], (err, result, fields) => {
     res.redirect('/xdmin')

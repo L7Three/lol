@@ -1,0 +1,365 @@
+body {
+	background: #e4e4e4 url(../img/link-bg-x.jpg) repeat-x;
+}
+/*header选中*/
+#navList {
+	background: #ddd;
+}
+.LMain {
+	padding-top: 55px;
+	background: url(../img/ig.jpg) no-repeat center top;
+}
+.LWrap {
+	width: 950px;
+	margin: 0 auto;
+}
+.LTop {
+	height: 64px;
+	padding: 22px 0 25px 10px;
+}
+.LTop h2 {
+	width: 211px;
+	padding-top: 64px;
+	height: 0;
+	overflow: hidden;
+	
+}
+/*LContainer部分开始*/
+.LContainer {
+	border-radius: 9px;
+	background: #fff url(../img/min-link-bg.jpg) no-repeat center top;
+	box-shadow: 0 0 9px #cecece;
+}
+.LminLink {
+	padding-bottom: 18px;
+	background: url(../img/line.png) no-repeat center bottom;
+}
+.LminLinkImgs {
+	width: 189px;
+	height: 70px;
+	padding: 36px 0 10px;
+	margin: 0 auto;
+	background: url(../img/connect_logo.png) no-repeat 0 36px;
+}
+.LminLinkText {
+	width: 448px;
+	font: 14px/26px "微软雅黑";
+	margin: 0 auto;
+	color: rgb(7, 7, 7);
+	font-size: 56px;
+	height: 100px;
+    margin-left: 345px;
+}
+.LminLinkText1{
+	margin-left: 354px;
+    font-size: 56px;
+}
+.clickSoon {
+	font: 20px/46px "微软雅黑";
+	width: 236px;
+	height: 46px;
+	margin: 20px auto 0;
+}
+.clickSoonA {
+	float: left;
+	padding: 0 48px;
+	border-radius: 5px;
+	color: #fff;
+	box-shadow: 0 2px #ededed;
+	background: url(../img/click-soon.png) no-repeat 0 0px;
+}
+.clickSoonA:hover {
+	background: url(../img/click-soon.png) no-repeat 0 -56px;
+}
+.LList {
+	padding: 0 43px 0 110px;
+	margin-top: 45px;
+	margin-right: -67px;
+}
+.LList li {
+	width: 301px;
+	padding: 0 0 17px 64px;
+	float: left;
+	margin-right: 67px;
+}
+.resource {
+	background: url(../img/min-icons.gif) no-repeat left 6px;
+}
+.LList h4 {
+	font: bold 18px/30px "微软雅黑";
+}
+.LList p {
+	font: 12px/24px "微软雅黑";
+	color: #999;
+}
+.adduser {
+	background: url(../img/min-icons.gif) no-repeat left -194px;
+}
+.brand {
+	background: url(../img/min-icons.gif) no-repeat left -96px;
+}
+.content {
+	background: url(../img/min-icons.gif) no-repeat left -297px;
+}
+/*production开始*/
+.production {
+	padding: 0 30px 41px 40px;
+	background: url(../img/line.png) no-repeat center bottom;
+}
+.LContainer h3 {
+	padding-top: 25px;
+	font: lighter 26px/60px "微软雅黑";
+	color: #333;
+}
+.productionList {
+	width: 880px;
+}
+.productionList .productionImgs {
+	width: 60px;
+	height: 60px;
+	background: url(../img/min-icons2.gif) no-repeat -100px 0;
+}
+.productionList .productionImgs2 {
+	width: 60px;
+	height: 60px;
+	background: url(../img/min-icons2.gif) no-repeat -100px -100px;
+}
+.productionList .productionImgs3 {
+	width: 60px;
+	height: 60px;
+	background: url(../img/min-icons2.gif) no-repeat -100px -200px;
+}
+.productionList .productionImgs4 {
+	width: 60px;
+	height: 60px;
+	background: url(../img/min-icons2.gif) no-repeat -100px -300px;
+}
+.productionList .clearFix {
+	padding-top: 10px;
+	font: bold 18px/38px "微软雅黑";
+}
+.productionList li {
+	float: left;
+	width: 220px;
+}
+.linkA {
+	float: left;
+	height: 38px;
+	color: #3388bc;
+}
+.linkA2 {
+	float: left;
+	height: 38px;
+	color: #eeaa00;
+}
+.linkA3 {
+	float: left;
+	height: 38px;
+	color: #41af70;
+}
+.linkA4 {
+	float: left;
+	height: 38px;
+	color: #dd5565;
+}
+.productionList p {
+	width: 188px;
+	font: 12px/20px "微软雅黑";
+	color: #999;
+}
+.productionNav {
+	padding-top: 2px;
+	font: 12px/34px Arial, "微软雅黑";
+}
+.productionNav a {
+	color: #666;
+}
+/*technology 开始*/
+.technology {
+	padding: 0 30px 22px 40px;
+	background: url(../img/line.png) no-repeat center bottom;
+}
+.technologyList {
+	margin-top: 4px;
+}
+.technologyList li {
+	float: left;
+	width: 440px;
+}
+.technologyListImgs {
+	float: left;
+	width: 60px;
+	height: 60px;
+	padding: 0 15px 28px 0;
+	background: url(../img/min-icons2.gif) no-repeat -200px 0;
+}
+.technologyList h4 {
+	float: left;
+	font: bold 18px/1  Arial, "微软雅黑";
+}
+.technologyList h4 a {
+	color: #3388bc;
+}
+.technologyListText {
+	float: left;
+	width: 316px;
+	margin-top: 8px;
+	font: 12px/18px "微软雅黑";
+	color: #999;
+}
+.SDKDownload .technologyListImgs {
+	background-position: -200px -200px;
+}
+.problem .technologyListImgs {
+	background-position: -200px -100px;
+}
+.system .technologyListImgs {
+	background-position: -200px -300px;
+}
+.fund {
+	position: relative;
+	padding: 0 30px 64px 40px;
+	background: url(../img/line.png) no-repeat center bottom;
+}
+.fund p{ 
+	width: 564px;
+	font: 14px/24px "微软雅黑";
+	color: #666;
+}
+.subFund {
+	position: absolute;
+	top: 70px;
+	left: 618px;
+	font: 14px/1 "微软雅黑";
+	padding: 72px 0 0 76px;
+	width: 202px;
+	height: 48px;
+	background: url(../img/fund-bg.jpg) no-repeat;
+}
+.subFund span {
+	padding: 0 11px;
+	color: #3c8dc8;
+}
+.subFund a {
+	color: #3c8dc8;
+}
+/*success 开始*/
+.success {
+	padding: 0 30px 0 40px;
+	margin-top: 20px;
+}
+.successCase {
+	margin-top: 12px;
+}
+.successListL {
+	float: left;
+	width: 80px;
+	margin-right: 18px;
+}
+.successListLR {
+	float: left;
+	width: 772px;
+}
+.successLi {
+	position: relative;
+	margin-bottom: 20px;
+}
+.successLi a {
+	float: left;
+	width: 80px;
+	text-align: center;
+	margin-right: 16px;
+}
+.successLi .successMask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80px;
+	height: 80px;
+	background: #fff;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.successLi:hover .successMask{
+	opacity: .15;
+	filter: alpha(opacity=15);
+}
+.succesImgs {
+	float: left;
+	width: 80px;
+	height: 80px;
+	border-radius: 18px;
+	background: url(../img/success-logo.jpg) no-repeat 0 0;
+	box-shadow: 0 1px 1px #606060;
+}
+.fasthand .succesImgs {
+	background-position: -80px 0;
+}
+.game .succesImgs {
+	background-position: -160px 0;
+}
+.successName {
+	display: inline-block;
+	font: 14px/34px "微软雅黑";
+	color: #000;
+}
+#successName {
+	width: 80px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.gameText,
+.fasthandText,
+.momeyText {
+	position: relative;
+	width: 730px;
+	font: 14px/22px "微软雅黑";
+	padding: 15px 25px 15px 15px;
+	border: 1px solid #dfdfdf;
+	border-radius: 5px;
+	margin-bottom: 54px;
+	background: #f3f5f5; 
+	color:#000;
+}
+.gameText,
+.fasthandText{
+	display: none;
+}
+.lineArrow1 {
+	position: absolute;
+	top: 30px;
+	left: -9px;
+	width: 9px;
+	height: 18px;
+	background: url(../img/arrow2.jpg) no-repeat;
+}
+.successListLR p {
+	padding-bottom: 10px;
+}
+.gameText .Imgsin3,
+.fasthandText .Imgsin2,
+.momeyText .Imgsin1 {
+	box-shadow: 0 0 9px #b6b6b6;
+}
+.momeyText2 {
+	position: relative;
+	width: 629px;
+	font: 14px/22px "微软雅黑";
+	padding: 15px 25px 15px 15px;
+	border: 1px solid #dfdfdf;
+	border-radius: 5px;
+	margin-bottom: 54px;
+	background: #f3f5f5; 
+	color:#000;
+}
+.but1{
+	width: 130px;
+    height: 44px;
+    font-size: 22px;
+    background-color: #c67d96;
+    margin-left: 335px;
+    margin-top: 33px;
+    border-radius: 23px;
+
+}

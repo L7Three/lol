@@ -16,13 +16,13 @@
     <nav class="navbar">
         <div class="container navbar-content">
             <a href="/">首页</a>
-            <a href="#">关于我们</a>
+            <a href="/hot">我要上热门</a>
         </div><!-- /.container-fluid -->
     </nav>
 
     <img src="/img/lol3.jpg" class="index-bg">
     <div class="container">
-        <h1>联盟公告</h1>
+        <h1>联盟资讯</h1>
         <h4></h4>
     <tbody>
         <% for(let o of data){%>
@@ -31,7 +31,7 @@
             <div class="news-list-left">
                 <div class="news-list-item">
                     <div class="author-time" name="name">
-                        <%=o.name%>
+                        <%=o.name%>:
                     </div>
                     <div class="news-des">
                         <h3 class="news-title"><i></i><a href="#" name="title"><%=o.title%></a></h3>
