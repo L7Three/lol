@@ -12,14 +12,14 @@
 
 	<body>
 		<div class="left">
-			<div class="bigTitle">问题反馈后台</div>
+			<div class="bigTitle">用户管理后台</div>
 			<div class="lines">
-				<div onclick="pageClick(this)" class="active"><img src="img/icon-1.png" />问题反馈管理</div>
+				<div onclick="pageClick(this)" class="active"><img src="img/icon-3.png" />用户管理</div>
 				<!-- <div onclick="pageClick(this)"><img src="img/icon-3.png" />用户信息管理</div> -->
 			</div>
 		</div>
 		<div class="top">
-			<div class="leftTiyle" id="flTitle">问题管理</div>
+			<div class="leftTiyle" id="flTitle">用户管理</div>
 			<a href="/xdmin"><div class="thisUser">返回后台首页</div></a>
 			<div class="thisUser">当前管理员：admin</div>
 		</div>
@@ -27,11 +27,9 @@
 				<table border="1" class="biao">
 					<thead>
 						<tr style="height: 50px">
-							<th>反馈编号</th>
-							<th>反馈内容</th>
-							<th>反馈时间</th>
-							<th>反馈人</th>
-							<th>操作</th>
+							<th>用户编号</th>
+							<th>用户名</th>
+							<th>用户密码</th>
 						</tr>
 					</thead>
 
@@ -39,12 +37,10 @@
 					    <% for(let o of data){%>
 					 <tr id="a1">
 							<td><%=o.id%></td>
-							<td class="hero"><%=o.content%></td>
-							<td><%=o.time.toLocaleString()%></td>
-							<td><%=o.name%></td>
+							<td class="hero"><%=o.name%></td>
+							<td><%=o.pass%></td>
 							<td>
-								<button class="c2">回复用户</button>
-								<button class="c3  delete" data-id=<%=o.id%>>删除</button>
+								<button class="c3  delete" data-id=<%=o.id%>>删除用户</button>
 							</td>
 					</tr>
 					    <% } %>
@@ -60,7 +56,7 @@
             i.onclick = (()=>{
             let id = i.getAttribute('data-id')
             $.ajax({
-                url:"/issue/del/"+id,
+                url:"/user/del/"+id,
                 type:"delete",
                 success:function(data){
                     if(data == 'success'){
