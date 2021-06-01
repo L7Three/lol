@@ -13,14 +13,16 @@
 </head>
 
 <body>
+
     <nav class="navbar">
         <div class="container navbar-content">
             <a href="/">首页</a>
             <a href="/hot">我要上热门</a>
-        </div><!-- /.container-fluid -->
+        </div>
     </nav>
 
     <img src="/img/lol3.jpg" class="index-bg">
+
     <div class="container">
         <h1>联盟资讯</h1>
         <h4></h4>
@@ -43,11 +45,30 @@
                 </div>
         </form>
         <% } %>
+
+        <form action="/details/id/add" method="POST">
+        <div>
+            <% for(let l of datas){%>
+        <div style="font-family: monospace">
+            <div style="float: left;"><%=l.name%>:</div>
+            <div><%=l.comment%></div>
+        </div>
+        <% } %>
+            <div style="text-align: center; font-family: monospace">
+              评论: <textarea name="comment" id="" ></textarea>
+            </div>
+            <div style="text-align: center;">
+                <input type="submit" value="提交">
+            </div>
+            
+        </div>
+        </form>
                         <footer class="copyright">
                               Copyright &nbsp; 2021 DreamBoy All rights reserved.
-                            </footer>    
+                        </footer>    
             </div>
         </div>
     </tbody>    
 </body>
 </html>
+
