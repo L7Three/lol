@@ -97,7 +97,7 @@
 					<img id="imghead"/>
 				</div>
 				<section style="float: right;margin-top: -160px;margin-right: 30%;">
-					<input type="file" onchange="previewImage(this)" style="width: 200px;height: 70px;opacity: 0;-moz-opacity: 0; -webkit-opacity: 0;" />
+					<input type="file" name="img" onchange="previewImage(this)" style="width: 200px;height: 70px;opacity: 0;-moz-opacity: 0; -webkit-opacity: 0;" />
 					<section style="width: 200px;height: 60px;margin-top: -70px;background: #134364;color: #fff;border-radius: 14px;text-align: center;line-height: 60px;">
 						<a>上传图片</a>
 					</section>
@@ -107,6 +107,7 @@
 					<a style="color: #f48b0e;">1、图片尺寸不小于400*400，大小不超过500K</a><br />
 					<a style="color: #f48b0e;">2、图片尽量清晰</a>
 				</section>
+				<!-- <input type="file" name="img"> -->
 				<h2>联系方式:</h2>
 					<input name="name" type="text" id="type" value="  用户名" onFocus="this.value=''" style="width: 200px;height: 40px;margin-left: 50px;color: #7c7c7c;" onblur="if(this.value.replace(/^ +| +$/g,'')=='')alert('用户名不能为空!')" /><br />
 					<input name="searchkey" type="text" id="type" value="  优先使用QQ，方便在线沟通" onFocus="this.value=''" style="width: 450px;height: 40px;margin: 50px;color: #7c7c7c;" onblur="if(this.value.replace(/^ +| +$/g,'')=='')alert('不能为空!')" /><br />

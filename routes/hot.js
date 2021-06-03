@@ -24,6 +24,4 @@ router.post('/add', (req, res) => {
       res.redirect('/news')
     })
   });
-
-
 module.exports = router;

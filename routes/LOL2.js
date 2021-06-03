@@ -32,17 +32,9 @@ router.get('/details/:id', (req, res) => {
           datas: results
         })
       })
-      // res.render("details", { data: result, })
   })
 })
 
-// router.get('/', function (req, res) {
-//   connection.query("select * from comment ORDER BY id DESC", function (err, results, fields) {
-//     res.render('comment', {
-//       data: results
-//     })
-//   })
-// });
 
 router.post('/details/:id/add', (req, res) => {
   let co = new comment(req.body.name, req.body.comment)

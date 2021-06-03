@@ -19,8 +19,8 @@ router.get('/', function(req, res, next) {
 
 
 router.post('/add', (req, res) => {
-  let appeal = new feedback(req.body.content, req.body.name)
-  connection.query("insert into feedback (content,name) value(?,?)", [appeal.content, appeal.name], (err, result, fields) => {
+  let appeal = new feedback(req.body.content,req.body.img,req.body.name)
+  connection.query("insert into feedback(content,img,name) value(?,?,?)", [appeal.content,appeal.img,appeal.name], (err, result, fields) => {
     res.redirect('/')
   })
 });

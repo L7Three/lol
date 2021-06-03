@@ -12,11 +12,6 @@ let connection = mysql.createConnection({
   timezone:"SYSTEM"
 });
 
-
-// router.get('/', function(req, res, next) {
-//   res.render('issue');
-// });
-
 router.get('/', function (req, res) {
   connection.query("select * from feedback ORDER BY id DESC", function (err, results, fields) {
     if(err) throw err;

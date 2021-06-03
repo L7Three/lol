@@ -29,6 +29,7 @@
 						<tr style="height: 50px">
 							<th>反馈编号</th>
 							<th>反馈内容</th>
+							<th>反馈图片</th>
 							<th>反馈时间</th>
 							<th>反馈人</th>
 							<th>操作</th>
@@ -40,6 +41,7 @@
 					 <tr id="a1">
 							<td><%=o.id%></td>
 							<td class="hero"><%=o.content%></td>
+							<td><img width="100" src="/img/<%=o.img%>"/></td>
 							<td><%=o.time.toLocaleString()%></td>
 							<td><%=o.name%></td>
 							<td>
