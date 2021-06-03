@@ -5,7 +5,6 @@ var mysql = require("mysql");
 
 const Score = require('./bean/texts');
 
-
 let connection = mysql.createConnection({
   host: "localhost",
   user: "root",
@@ -14,7 +13,6 @@ let connection = mysql.createConnection({
   database: "user",
   timezone:"SYSTEM"
 });
-
 
 router.get('/add', function(req, res, next) {
   res.render('insert');

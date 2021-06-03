@@ -1,0 +1,694 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gbk" />
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-CP" />
+<meta name="description" content="英雄联盟官方网站，海量风格各异的英雄，丰富、便捷的物品合成系统，游戏内置的匹配、排行和竞技系统，独创的“召唤师”系统及技能、符文、天赋等系统组合，必将带你进入一个崭新而又丰富多彩的游戏世界。" />
+<meta name="Keywords" content="英雄联盟,lol,league of legends,DOTA,即时战略,MOBA,召唤师,符文,匹配,英雄,技能,团队,Gank,快节奏,Farm,成长" />
+<!-- 设计：cp  | 重构：cp | 创建：2016/04/25 | 更新：| 团队博客：http://tgideas.qq.com/ -->
+<title>英雄联盟微信-英雄联盟官方网站-腾讯游戏</title>
+<style>
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%}
+q:before,q:after{content:''}
+fieldset,img,abbr,acronym{border:0}
+
+/* footer */
+#footer_ied {left: 0;bottom: 0;margin: 0 auto;height: 120px;text-align:center;font-size:12px;line-height:19px;color:#cccccc;background: #100f19;}
+.wrap_ied {margin:0 auto;padding:30px;width:940px;}
+.wrap_ied a {color:#cccccc;}
+#footer_ied .e {font-size:10px;-webkit-text-size-adjust:none;}
+
+/* page */
+.c:before,.c:after {content:"";display:table}
+.c:after {clear:both}
+.c {zoom:1}
+body {font:12px/1.5 "\5FAE\8F6F\96C5\9ED1",sans-serif;padding-top: 42px;}
+a {text-decoration:none;overflow:hidden;}
+a:hover {text-decoration:underline}
+body,.wrap,.ost,#footer_ied {width: 100%;min-width: 1000px;_width:expression((document.documentElement.clientWidth||document.body.clientWidth)<1002?'1000px':'');}
+.hide {display:block;width:0;height:0;overflow:hidden;}
+.pr {position:relative;}
+.pa {position:absolute;}
+.db {display:block;text-indent:-999em;}
+
+/* killyesterday */
+a,em,i,b{color: inherit;font-style: inherit;font-weight: inherit;_font-style: normal;_font-weight: normal;}
+.wrap a:hover{text-decoration: none;}
+.fl{float: left;}
+.fr{float: right;}
+.mc{margin: 0 auto;}
+.sp,.nav a i{background: url(http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/sp.png) no-repeat;}
+:focus{outline: none;}
+
+html,body{overflow-y: hidden;}
+.wrap{height: 1200px;overflow: hidden;}
+.outer,.content{left: 0;top: 0;width: 100%;height: 100%;}
+.container{position: relative;margin: 0 auto;width: 1000px;height: 100%;}
+
+.page{height: 1200px;background-repeat: no-repeat;background-position: 50% 50%;overflow: hidden;}
+.page1{background-image: url(http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/bg1.jpg);}
+.page1 .container{background: url(http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/bg1-inner.jpg) no-repeat 50% 50%;}
+.page2{background-image: url(http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/bg2.jpg);}
+.page3{background-image: url(http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/bg3.jpg);}
+.page4{background-image: url(http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/bg4.jpg);}
+.page5{background-image: url(http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/bg5.jpg);}
+.page6{background-image: url(http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/bg6.jpg);}
+.page7{background-image: url(http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/bg7.jpg);}
+
+.frame{left: 50%;top: 50%;margin: -449px 0 0 -909px;width: 1818px;height: 898px;border: 1px solid #ffffff \9;border: 1px solid rgba(255,255,255,0.2);
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+.frame .i1,.frame .i2,.frame .i3,.frame .i4{width: 30px;height: 30px;background-position: -155px 0;display: block;}
+.frame .i1{left: -16px;top: -15px;}
+.frame .i2{right: -15px;top: -15px;}
+.frame .i3{left: -16px;bottom: -16px;}
+.frame .i4{right: -15px;bottom: -16px;}
+.logo{left: 40px;top: -25px;width: 202px;height: 105px;background: url(http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/logo.png);display: block;z-index: 1000;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+.nav{left: 38px;top: 50%;margin-top: -200px;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+.nav b{left: 10px;top: 20px;width: 1px;height: 400px;background: #ffffff;display: block;overflow: hidden;}
+.nav a{position: relative;margin-bottom: 50px;padding-left: 30px;height: 20px;color: #ffffff;font-size: 14px;line-height: 20px;display: block;overflow: visible;}
+.nav a:hover{text-shadow: 0 0 10px #ffffff;}
+.nav a i{position: absolute;left: 0;top: 0;width: 20px;height: 20px;display: block;}
+.nav a em{display: block;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+.nav .on i{left: -11px;top: -11px;width: 41px;height: 41px;
+	transition: transform 1s;
+	-webkit-transition: transform 1s;
+	transform: rotateY(360deg);
+	-webkit-transform: rotateY(360deg);
+}
+.nav .a1.on i{background-position: -266px -414px;}
+.nav .a2.on i{background-position: -314px -414px;}
+.nav .a3.on i{background-position: -362px -414px;}
+.nav .a4.on i{background-position: -266px -460px;}
+.nav .a5.on i{background-position: -314px -460px;}
+.nav .a6.on i{background-position: -362px -460px;}
+.nav .on em{display: none \9;text-indent: 1em;
+	transform: rotateX(90deg);
+	-webkit-transform: rotateX(90deg);
+}
+.arrow{left: 50%;bottom: -20px;margin-left: -20px;width: 40px;height: 40px;background-position: -36px 0;display: block;z-index: 1000;
+	animation: arrowShow 1.2s ease-out infinite alternate;
+	-webkit-animation: arrowShow 1.2s ease-out infinite alternate;
+}
+.arrow.up{background-position: -95px 0 \9;
+	animation: arrowShow2 1.2s ease-out infinite alternate;
+	-webkit-animation: arrowShow2 1.2s ease-out infinite alternate;
+}
+@keyframes arrowShow{
+	100%{transform: translateY(10px);}
+}
+@-webkit-keyframes arrowShow{
+	100%{-webkit-transform: translateY(10px);}
+}
+@keyframes arrowShow2{
+	0%{transform: rotateX(180deg) translateY(0);}
+	100%{transform: rotateX(180deg) translateY(10px);}
+}
+@-webkit-keyframes arrowShow2{
+	0%{-webkit-transform: rotateX(180deg) translateY(0);}
+	100%{-webkit-transform: rotateX(180deg) translateY(10px);}
+}
+
+.con{position: absolute;left: 0;top: 50%;margin-top: -260px;z-index: 999;}
+
+.slogan{margin-left: -5px;padding: 22px 0 0 33px;height: 212px;background: url(http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/slogan.png) no-repeat;color: #ffffff;font-size: 39px;font-weight: bold;line-height: 39px;text-shadow: 0 0 8px rgba(115,66,38,0.5);opacity: 0;opacity: 1 \9;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+.slogan b{font-size: 109px;line-height: 130px;display: block;}
+.qrcode{margin-top: 30px;width: 220px;color: #ffffff;font-size: 16px;line-height: 35px;text-align: center;}
+.qrcode img{width: 220px;height: 220px;display: block;}
+.page1 .qrcode{opacity: 0;opacity: 1 \9;}
+.desc{height: 115px;color: #ffffff;font-size: 20px;line-height: 20px;}
+.desc b{font-size: 48px;font-weight: bold;line-height: 75px;display: block;}
+
+.phone{position: absolute;left: 502px;top: -160px;padding-top: 65px;width: 334px;height: 657px;background: url(http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/phone.png);border-radius: 50px;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+.phone .hud{width: 333px;height: 593px;display: block;}
+.page2 .phone{box-shadow: 12px 12px 12px rgba(10,137,196,0.7);}
+.page3 .phone{box-shadow: 12px 12px 12px rgba(209,59,90,0.7);}
+.page4 .phone{box-shadow: 12px 12px 12px rgba(215,149,36,0.7);}
+.page5 .phone{box-shadow: 12px 12px 12px rgba(29,188,176,0.7);}
+.page6 .phone{box-shadow: 12px 12px 12px rgba(141,86,214,0.7);}
+.page7 .phone{box-shadow: 12px 12px 12px rgba(40,177,99,0.7);}
+
+.show .phone{animation: phoneShow 1s 0.8s forwards;}
+
+.page2 .cover{right: -255px;top: -26px;width: 288px;height: 220px;background: url(http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/bg2-cover.png);}
+
+.tip-box p{padding-top: 17px;width: 204px;height: 60px;color: #ffffff;font-size: 14px;line-height: 20px;text-align: center;opacity: 0;opacity: 1 \9;}
+.tip-box .p1{left: -140px;top: 330px;background-position: 0 -55px;}
+.tip-box .p2{right: -140px;top: 330px;background-position: -218px -55px;}
+.tip-box .p3{left: -140px;top: 515px;background-position: 0 -144px;}
+.tip-box .p4{right: -140px;top: 515px;background-position: -218px -144px;}
+.tag{opacity: 0;opacity: 1 \9;}
+.line1,.line3{width: 1px;overflow: hidden;}
+.line2,.line4{height: 1px;overflow: hidden;}
+.phone i{position: absolute;left: 0;top: 0;display: block;}
+.line1 i,.line3 i{width: 1px;height: 0;height: 100% \9;}
+.line2 i,.line4 i{width: 0;width: 100% \9;height: 1px;}
+.dot1,.dot3{width: 9px;height: 9px;opacity: 0;opacity: 1 \9;}
+.dot2,.dot4{width: 24px;height: 24px;opacity: 0;opacity: 1 \9;}
+.tip{opacity: 0;opacity: 1 \9;}
+
+.page3 .p1{top: 300px;background-position: 0 -235px}
+.page3 .p2{top: 300px;}
+
+.page4 .tag{left: -35px;top: 250px;width: 381px;height: 123px;border: 12px solid #ffc444;}
+.page4 .tip,.page5 .tip,.page6 .tip1,.page6 .tip2,.page7 .tip{padding-top: 17px;width: 204px;height: 60px;color: #ffffff;font-size: 14px;line-height: 20px;text-align: center;}
+.page4 .tip{left: 245px;top: 125px;width: 257px;background-position: 0 -414px;}
+.page4 .line1{left: 12px;bottom: 472px;height: 82px;}
+.page4 .line1 i{top: auto;bottom: 0;}
+.page4 .line2{left: 12px;top: 168px;width: 238px;}
+.page4 i{background: #34fff8;}
+.page4 .dot1{left: 8px;top: 246px;background-position: -213px -35px;}
+.page4 .dot2{left: 237px;top: 155px;background-position: -206px 0;}
+
+.page5 .tag{left: -100px;top: 198px;width: 513px;height: 110px;border: 12px solid #20fef1;}
+.page5 .tip{left: -100px;top: 398px;background-position: -218px -235px;}
+.page5 .line1{left: -41px;top: 301px;height: 100px;}
+.page5 i,.page6 i,.page7 i{background: #fad43b;}
+.page5 .dot1{left: -45px;top: 298px;background-position: -251px -35px;}
+.page5 .dot2{left: -52px;top: 389px;background-position: -244px 0;}
+
+.page6 .tip1,.page6 .tip2{left: -184px;top: 434px;background-position: 0 -325px;opacity: 0;opacity: 1 \9;}
+.page6 .tip2{left: 314px;top: 344px;}
+.page6 .line1{left: -87px;top: 412px;height: 28px;}
+.page6 .line2{right: 299px;top: 412px;width: 122px;}
+.page6 .line2 i{left: auto;right: 0;}
+.page6 .line3{left: 418px;bottom: 241px;height: 64px;}
+.page6 .line3 i{top: auto;bottom: 0;}
+.page6 .line4{left: 296px;top: 480px;width: 123px;}
+.page6 .dot1,.page6 .dot3{left: 31px;top: 409px;background-position: -251px -35px;}
+.page6 .dot2,.page6 .dot4{left: -98px;top: 425px;background-position: -244px 0;}
+.page6 .dot3{left: 291px;top: 475px;}
+.page6 .dot4{left: 405px;top: 406px;}
+
+.page7 .tag{left: -100px;top: 458px;width: 513px;height: 122px;border: 12px solid #50ff94;}
+.page7 .tip{left: 280px;top: 290px;background-position: -218px -325px;}
+.page7 .line1{left: 310px;bottom: 262px;height: 100px;}
+.page7 .line1 i{top: auto;bottom: 0;}
+.page7 .dot1{left: 306px;top: 456px;background-position: -251px -35px;}
+.page7 .dot2{left: 298px;top: 350px;background-position: -244px 0;}
+
+.show.page1 .slogan{animation: sloganShow 1s 0.5s forwards;-webkit-animation: sloganShow 1s 0.5s forwards;}
+.show.page1 .qrcode{animation: sloganShow 1s 1.5s forwards;-webkit-animation: sloganShow 1s 1.5s forwards;}
+.show .p1{animation: tipShow1 0.8s 1s forwards;-webkit-animation: tipShow1 0.8s 1s forwards;}
+.show .p2{animation: tipShow2 0.8s 1.5s forwards;-webkit-animation: tipShow2 0.8s 1.5s forwards;}
+.show .p3{animation: tipShow1 0.8s 2s forwards;-webkit-animation: tipShow1 0.8s 2s forwards;}
+.show .p4{animation: tipShow2 0.8s 2.5s forwards;-webkit-animation: tipShow2 0.8s 2.5s forwards;}
+.show .tag{animation: zoomShow 0.8s 1s forwards;-webkit-animation: zoomShow 0.8s 1s forwards;}
+.show .dot1{animation: dotShow 0.8s 1.5s forwards;-webkit-animation: dotShow 0.8s 1.5s forwards;}
+.show .dot2{animation: dotShow 0.8s 3s forwards;-webkit-animation: dotShow 0.8s 3s forwards;}
+.show .line1 i{animation: lineShow1 0.5s 2s linear forwards;-webkit-animation: lineShow1 0.5s 2s linear forwards;}
+.show .line2 i{animation: lineShow2 0.5s 2.5s linear forwards;-webkit-animation: lineShow2 0.5s 2.5s linear forwards;}
+.show .tip{animation: zoomShow 0.8s 3.5s forwards;-webkit-animation: zoomShow 0.8s 3.5s forwards;}
+.show.page5 .dot2,.show.page7 .dot2{animation: dotShow 0.8s 2.5s forwards;-webkit-animation: dotShow 0.8s 2.5s forwards;}
+.show.page5 .tip,.show.page7 .tip{animation: zoomShow 0.8s 3s forwards;-webkit-animation: zoomShow 0.8s 3s forwards;}
+.show.page6 .dot1{animation: dotShow 0.8s 1s forwards;-webkit-animation: dotShow 0.8s 1s forwards;}
+.show.page6 .dot2{animation: dotShow 0.8s 2.5s forwards;-webkit-animation: dotShow 0.8s 2.5s forwards;}
+.show.page6 .line1 i{animation: lineShow1 0.5s 2s linear forwards;-webkit-animation: lineShow1 0.5s 2s linear forwards;}
+.show.page6 .line2 i{animation: lineShow2 0.5s 1.5s linear forwards;-webkit-animation: lineShow2 0.5s 1.5s linear forwards;}
+.show.page6 .tip1{animation: zoomShow 0.8s 2.5s forwards;-webkit-animation: zoomShow 0.8s 2.5s forwards;}
+.show.page6 .dot3{animation: dotShow 0.8s 3.5s forwards;-webkit-animation: dotShow 0.8s 3.5s forwards;}
+.show.page6 .dot4{animation: dotShow 0.8s 5s forwards;-webkit-animation: dotShow 0.8s 5s forwards;}
+.show.page6 .line3 i{animation: lineShow1 0.5s 4.5s linear forwards;-webkit-animation: lineShow1 0.5s 4.5s linear forwards;}
+.show.page6 .line4 i{animation: lineShow2 0.5s 4s linear forwards;-webkit-animation: lineShow2 0.5s 4s linear forwards;}
+.show.page6 .tip2{animation: zoomShow 0.8s 5s forwards;-webkit-animation: zoomShow 0.8s 5s forwards;}
+
+@keyframes sloganShow{
+	0%{transform: translateY(50px);}
+	100%{opacity: 1;transform: translateY(0);}
+}
+@-webkit-keyframes sloganShow{
+	0%{-webkit-transform: translateY(50px);}
+	100%{opacity: 1;-webkit-transform: translateY(0);}
+}
+@keyframes tipShow1{
+	0%{transform: translateX(50px);}
+	100%{opacity: 1;transform: translateX(0);}
+}
+@-webkit-keyframes tipShow1{
+	0%{-webkit-transform: translateX(50px);}
+	100%{opacity: 1;-webkit-transform: translateX(0);}
+}
+@keyframes tipShow2{
+	0%{transform: translateX(-50px);}
+	100%{opacity: 1;transform: translateX(0);}
+}
+@-webkit-keyframes tipShow2{
+	0%{-webkit-transform: translateX(-50px);}
+	100%{opacity: 1;-webkit-transform: translateX(0);}
+}
+@keyframes zoomShow{
+	0%{transform: scale(0.3);}
+	60%{opacity: 1;transform: scale(1.2);}
+	100%{opacity: 1;transform: scale(1);}
+}
+@-webkit-keyframes zoomShow{
+	0%{-webkit-transform: scale(0.3);}
+	60%{opacity: 1;-webkit-transform: scale(1.2);}
+	100%{opacity: 1;-webkit-transform: scale(1);}
+}
+@keyframes dotShow{
+	100%{opacity: 1;transform: rotateY(360deg);}
+}
+@-webkit-keyframes dotShow{
+	100%{opacity: 1;-webkit-transform: rotateY(360deg);}
+}
+@keyframes lineShow1{
+	100%{height: 100%;}
+}
+@-webkit-keyframes lineShow1{
+	100%{height: 100%;}
+}
+@keyframes lineShow2{
+	100%{width: 100%;}
+}
+@-webkit-keyframes lineShow2{
+	100%{width: 100%;}
+}
+
+@media screen and (max-width: 1400px){
+	.nav{opacity: 0;display: none \9;
+		transform: translateX(-35px);
+		-webkit-transform: translateX(-35px);
+	}
+}
+@media screen and (max-width: 1050px){
+	.logo{left: 0;}
+}
+@media screen and (max-height: 910px){
+	.phone{
+		transform: scale(0.9);
+		-webkit-transform: scale(0.9);
+	}
+}
+@media screen and (max-height: 880px){
+	.slogan{margin-top: 80px;}
+}
+@media screen and (max-height: 840px){
+	.phone{
+		transform: scale(0.8);
+		-webkit-transform: scale(0.8);
+	}
+}
+
+</style>
+</head>
+<body>
+	
+<!--[if lt IE 9]>
+<p class="chromeframe">您使用的IE浏览器版本过低，为获得更佳浏览体验，<a href="http://windows.microsoft.com/">建议升级您的IE浏览器</a>，或使用<a href="http://www.google.com/chromeframe/?redirect=true">Google Chrome</a>、<a href="http://www.firefox.com.cn/">Firefox</a>等高级浏览器，将会得到更好的体验！</p>
+<![endif]-->
+
+<div class="wrap pr">
+	<div class="pa" id="footer_ied">
+		<div class="wrap_ied">
+			<p><a href="http://ieg.tencent.com" target="_blank">腾讯互动娱乐</a> | <a href="http://game.qq.com/contract.shtml" target="_blank">服务条款</a> | <a href="http://adver.qq.com/" target="_blank">广告服务</a> | <a href="http://game.qq.com/hr/" target="_blank">腾讯游戏招聘</a>			| <a href="http://service.qq.com/" target="_blank">腾讯游戏客服</a> | <a href="http://game.qq.com/gnav" target="_blank">游戏地图</a> | <a href="http://tgact.qq.com/" target="_blank">游戏活动</a> | <a href="http://game.qq.com/brand/business.htm" target="_blank">商务合作</a>			| <a href="http://www.qq.com/map/" target="_blank">网站导航</a></p>
+			<p class="e">COPYRIGHT &copy; 1998 – 2016 TENCENT. ALL RIGHTS RESERVED.</p>
+			<p><a href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm" target="_blank">腾讯公司 版权所有</a></p>
+		</div>
+	</div>
+	<div class="outer pa">
+		<div class="content pa">
+			<h1 class="hide">英雄联盟微信</h1>
+			<div class="page page1">
+				<div class="container">
+					<div class="con">
+						<p class="slogan">
+							<b>英雄联盟微信</b>
+							特色功能玩转指尖  精彩互动乐享不停
+						</p>
+						<p class="qrcode">
+							<img src="http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/qrcode.jpg" />
+							扫一扫  即刻关注
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="page page2">
+				<div class="container">
+					<div class="con">
+						<p class="desc">
+							<b>首款人工客服接入</b>
+							问题建议一键反馈  封号查询自助减刑
+						</p>
+						<p class="qrcode">
+							<img src="http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/qrcode.jpg" />
+							扫一扫  即刻关注
+						</p>
+						<div class="phone">
+							<img class="hud" src="http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/hud1.jpg" />
+							<div class="tip-box">
+								<p class="p1 sp pa">表现良好的召唤师<br />可以在此申请减刑哦！</p>
+								<p class="p2 sp pa">游戏中常见的问题都在这里<br />答案的好坏，由你决定！</p>
+								<p class="p3 sp pa">游戏BUG，<br />举报反馈，不吐不快！</p>
+								<p class="p4 sp pa">轻轻一点，<br />即有贴心客服为你服务！</p>
+							</div>
+							<p class="cover pa"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page page3">
+				<div class="container">
+					<div class="con">
+						<p class="desc">
+							<b>英雄一起嗨</b>
+							摇一摇，投票墙更多玩法联动线上线下
+						</p>
+						<p class="qrcode">
+							<img src="http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/qrcode.jpg" />
+							扫一扫  即刻关注
+						</p>
+						<div class="phone">
+							<img class="hud" src="http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/hud2.jpg" />
+							<div class="tip-box">
+								<p class="p1 sp pa">完善个人信息，<br />奖励发放不错过。</p>
+								<p class="p2 sp pa">联动现场，线上线下<br />一起好礼一起摇</p>
+								<p class="p3 sp pa">你的投票将会决定<br />现场的实时支持率呦</p>
+								<p class="p4 sp pa">大声说出你的观点，<br />敬请期待！</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page page4">
+				<div class="container">
+					<div class="con">
+						<p class="desc">
+							<b>周免半价早知道</b>
+							精彩赛事不错过
+						</p>
+						<p class="qrcode">
+							<img src="http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/qrcode.jpg" />
+							扫一扫  即刻关注
+						</p>
+						<div class="phone">
+							<img class="hud" src="http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/hud3.jpg" />
+							<p class="tag pa"><img width="381" height="123" src="http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/hud3-zoom.jpg" /></p>
+							<p class="tip sp pa">在【特色功能】中点击【闹钟订阅】<br />你想要的信息都在这里！</p>
+							<p class="line1 pa"><i></i></p>
+							<p class="line2 pa"><i></i></p>
+							<p class="dot1 sp pa"></p>
+							<p class="dot2 sp pa"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page page5">
+				<div class="container">
+					<div class="con">
+						<p class="desc">
+							<b>赛事内容更聚焦</b>
+							微信用户量身定制  直播售票尽在掌握
+						</p>
+						<p class="qrcode">
+							<img src="http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/qrcode.jpg" />
+							扫一扫  即刻关注
+						</p>
+						<div class="phone">
+							<img class="hud" src="http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/hud4.jpg" />
+							<p class="tag pa"><img width="513" height="110" src="http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/hud4-zoom.jpg" /></p>
+							<p class="tip sp pa">点击可以切换最近<br />正在进行的赛事</p>
+							<p class="line1 pa"><i></i></p>
+							<p class="dot1 sp pa"></p>
+							<p class="dot2 sp pa"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page page6">
+				<div class="container">
+					<div class="con">
+						<p class="desc">
+							<b>我的高校我做主</b>
+							入驻高校  为母校助力
+						</p>
+						<p class="qrcode">
+							<img src="http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/qrcode.jpg" />
+							扫一扫  即刻关注
+						</p>
+						<div class="phone">
+							<img class="hud" src="http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/hud5.jpg" />
+							<p class="tip1 sp pa">入驻高校，组建属于<br />自己的战队，为母校助力！</p>
+							<p class="tip2 sp pa">我的青春我做主，大神、<br />兄弟，为荣誉而战！</p>
+							<p class="line1 pa"><i></i></p>
+							<p class="line2 pa"><i></i></p>
+							<p class="line3 pa"><i></i></p>
+							<p class="line4 pa"><i></i></p>
+							<p class="dot1 sp pa"></p>
+							<p class="dot2 sp pa"></p>
+							<p class="dot3 sp pa"></p>
+							<p class="dot4 sp pa"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page page7">
+				<div class="container">
+					<div class="con">
+						<p class="desc">
+							<b>服务器状态查询</b>
+							排队维护早知道
+						</p>
+						<p class="qrcode">
+							<img src="http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/qrcode.jpg" />
+							扫一扫  即刻关注
+						</p>
+						<div class="phone">
+							<img class="hud" src="http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/hud6.jpg" />
+							<p class="tag pa"><img width="513" height="122" src="http://ossweb-img.qq.com/images/lol/act/a20160425wxlol/hud6-zoom.jpg" /></p>
+							<p class="tip sp pa">实时查询服务器状态，<br />排队维护早知道！</p>
+							<p class="line1 pa"><i></i></p>
+							<p class="dot1 sp pa"></p>
+							<p class="dot2 sp pa"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="frame pa">
+			<i class="i1 sp pa"></i>
+			<i class="i2 sp pa"></i>
+			<i class="i3 sp pa"></i>
+			<i class="i4 sp pa"></i>
+			<a class="logo pa" href="http://lol.qq.com/" target="_blank" title="英雄联盟"></a>
+			<p class="nav pa">
+				<b class="pa"></b>
+				<span class="sp pa"></span>
+				<a class="a1" href="javascript:;"><i></i><em>微客服</em></a>
+				<a class="a2" href="javascript:;"><i></i><em>LOL现场</em></a>
+				<a class="a3" href="javascript:;"><i></i><em>闹钟订阅</em></a>
+				<a class="a4" href="javascript:;"><i></i><em>赛事中心</em></a>
+				<a class="a5" href="javascript:;"><i></i><em>高校排行榜</em></a>
+				<a class="a6" href="javascript:;"><i></i><em>服务器查询</em></a>
+				<a class="a7" href="javascript:;"><i></i><em>返回首页</em></a>
+			</p>
+			<a class="arrow sp pa" href="javascript:;"></a>
+		</div>
+	</div>
+</div>
+
+<script src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
+<script src="js/mouse.js"></script>
+<script src="http://ossweb-img.qq.com/images/lol/title/lol.js"></script>
+<script src="http://ossweb-img.qq.com/images/js/milo/milo.js"></script>
+<script src="http://pingjs.qq.com/ping_tcss_ied.js"></script>
+<script>
+//初始化
+var pageH = 1200,
+	pageL = $(".content .page").length,
+	index = 0,
+	winW,winH,srlT,srlH;
+
+//自适应
+$(window).ready(function(){
+	winSize();
+});
+$(window).resize(function(){
+	winSize();
+});
+function winSize(){
+	winW = $(window).width();
+	winH = $(window).height();
+	if(winH>=800){
+		pageH = winH-42;
+		$("html").css({
+			'overflow-y': 'hidden'
+		})
+	}else{
+		pageH = 800-42;
+		$("html").css({
+			'overflow-y': 'auto'
+		})
+	}
+	$(".wrap,.outer,.page").css({
+		'height': pageH+'px'
+	})
+	if(winW>=1105){
+		w = $(".page").width()-104;
+	}else{
+		w = $(".page").width();
+	}
+	h = $(".page").height()-42-104;
+	$(".frame").css({
+		'width': w+'px',
+		'height': h+'px',
+		'margin-left': 0-w/2,
+		'margin-top': 0-h/2
+	})
+	$(".con").each(function(){
+		w = $(this).width();
+		h = $(this).height();
+		$(this).css({
+			'margin-top': 0-h/2
+		})
+	})
+	if(index==pageL){
+		index = pageL-1;
+	}
+	pageGo(index,true);
+	srlH = $(document).height()-winH;
+}
+
+//导航
+$(".nav a").each(function(i){
+	$(this).click(function(){
+		if(i==pageL-1){
+			index = 0;
+		}else{
+			index = i+1;
+		}
+		pageGo(index);
+	});
+});
+function navShow(){
+	if(index != pageL){
+		if(index != 0){
+			$(".nav a").eq(index-1).addClass("on").siblings().removeClass("on");
+		}else{
+			$(".nav a").removeClass("on");
+		}
+	}
+}
+
+//鼠标
+$(".wrap").on("mousewheel", function(event){
+	if(!$(".content").is(":animated")){
+		srlT = $(document).scrollTop();
+		if((event.deltaY==1 && srlT==0) || (event.deltaY==-1 && srlT==srlH)){
+			index -= event.deltaY;
+			if(index<0){
+				index = 0;
+				return;
+			}
+			if(index>pageL){
+				index = pageL;
+				return;
+			}
+			pageGo(index);
+		}
+	}
+});
+
+//键盘
+$(document).keydown(function(e){
+	if(!$(".content").is(":animated")){
+		srlT = $(document).scrollTop();
+		if(e.keyCode==38 && srlT==0){
+			prevGo();
+		}else if(e.keyCode==40 && srlT==srlH){
+			nextGo();
+		}
+	}
+})
+
+//箭头
+$(".arrow").click(function(){
+	if(!$(".content").is(":animated")){
+		if($(this).hasClass("up")){
+			index = 0;
+			pageGo(index);
+		}else{
+			nextGo();
+		}
+	}
+})
+
+//滑屏
+function prevGo(){
+	index--;
+	if(index<0){
+		index = 0;
+	}
+	pageGo(index);
+}
+function nextGo(){
+	if(!$(".outer").is(":animated")){
+		index++;
+		if(index>pageL){
+			index = pageL;
+		}
+		pageGo(index);
+	}
+}
+function pageGo(i,t){
+	navShow();
+	if(index==pageL){
+		if(!t){
+			$(".outer").stop(true).animate({'top': '-120px'}, 700, "easeInOutQuint");
+		}else{
+			$(".outer").css({'top': '-120px'});
+		}
+	}else{
+		n = 0-i*pageH+"px";
+		if(!t){
+			$(".content").stop(true).animate({'top': n}, 700, "easeInOutQuint");
+			$(".outer").stop(true).animate({'top': 0}, 700, "easeInOutQuint");
+		}else{
+			$(".content").css({'top': n});
+			$(".outer").css({'top': 0});
+		}
+		if(index>=pageL-1){
+			$(".arrow").addClass("up");
+		}else{
+			$(".arrow").removeClass("up");
+		}
+		$(".content .page").eq(i).addClass("show");
+	}
+}
+jQuery.extend(jQuery.easing, {
+	def: 'easeInOutQuint',
+	easeInOutQuint: function(x, t, b, c, d) {
+		if ((t /= d / 2) < 1) return c / 2 * t * t * t * t * t + b;
+		return c / 2 * ((t -= 2) * t * t * t * t + 2) + b;
+	}
+});
+
+//统计
+if(typeof(pgvMain) == 'function'){pgvMain();}
+</script>
+</body>
+</html><!--[if !IE]>|xGv00|07d08a7729481e5bafba1710d18ffc73<![endif]-->

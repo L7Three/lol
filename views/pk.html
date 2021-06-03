@@ -1,12 +1,1272 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="gbk" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="robots" content="all">
+  <meta name="author" content="Tencent-CP" />
+  <meta name="Copyright" content="Tencent" />
+  <meta name="keywords" content="英雄联盟,lol,lol新手礼包,lol攻略,lol视频,lol视频攻略,英雄资料,英雄联盟战争学院,明星解说视频,101战争学院,英雄,攻略,WCG,点亮图标,赛事" />
+  <meta name="description" content="英雄联盟官方网站，海量风格各异的英雄，丰富、便捷的物品合成系统，游戏内置的匹配、排行和竞技系统，独创的“召唤师”系统及技能、符文、天赋等系统组合，必将带你进入一个崭新而又丰富多彩的游戏世界。" />
+  <title>LPL2021春季赛-英雄联盟官方网站-腾讯游戏</title>
+  <link rel="stylesheet" href="//ossweb-img.qq.com/images/js/swiper/swiper-4.3.3.min.css">
+  <link rel="stylesheet" href="//lpl.qq.com/act/a20201230lplspring/css/index.css">
+  <!-- 页面设计：cp | 页面制作：cp | 创建：2020-12-30 -->
+  <!-- //game.gtimg.cn/images/lpl/act/a20201230lplspring/ -->
 </head>
 <body>
-    <img src="/img/pk.png" alt="">
+
+  <div class="wrap">
+    <h1 class="hidden">2021春季赛</h1>
+
+    
+
+		
+		<!-- 首屏 Start -->
+    <div class="module module-1">
+      <div class="module-inner">
+        <div class="logo"></div>
+        <div class="slogan"></div>
+        <div class="headline"></div>
+        <div class="partner"></div>
+      </div>
+    </div>
+    <!-- 首屏 End -->
+
+
+    <div class="module module-2">
+      <div class="module-inner">
+
+        <div class="match-flex-wrap">
+
+          <!-- 赛事直播 Start -->
+          <div class="match-live module-anchor" data-name="赛事直播">
+            <div class="base-title">
+              <div class="title" id="live-status">正在直播</div>
+              <svg class="icon">
+                <path fill-rule="evenodd" d="M13.000,6.000 L13.000,5.000 L14.000,5.000 L14.000,6.000 L13.000,6.000 ZM12.000,7.000 L12.000,6.000 L13.000,6.000 L13.000,7.000 L12.000,7.000 ZM11.000,8.000 L11.000,7.000 L12.000,7.000 L12.000,8.000 L11.000,8.000 ZM10.000,9.000 L10.000,8.000 L11.000,8.000 L11.000,9.000 L10.000,9.000 ZM9.000,10.000 L9.000,9.000 L10.000,9.000 L10.000,10.000 L9.000,10.000 ZM12.000,4.000 L13.000,4.000 L13.000,5.000 L12.000,5.000 L12.000,4.000 ZM11.000,3.000 L12.000,3.000 L12.000,4.000 L11.000,4.000 L11.000,3.000 ZM10.000,2.000 L11.000,2.000 L11.000,3.000 L10.000,3.000 L10.000,2.000 ZM9.000,1.000 L10.000,1.000 L10.000,2.000 L9.000,2.000 L9.000,1.000 ZM9.000,4.000 L10.000,4.000 L10.000,5.000 L11.000,5.000 L11.000,6.000 L10.000,6.000 L10.000,7.000 L9.000,7.000 L9.000,8.000 L8.000,8.000 L8.000,9.000 L7.000,9.000 L7.000,10.000 L6.000,10.000 L6.000,11.000 L4.000,11.000 L4.000,10.000 L5.000,10.000 L5.000,9.000 L6.000,9.000 L6.000,8.000 L7.000,8.000 L7.000,7.000 L8.000,7.000 L8.000,6.000 L9.000,6.000 L9.000,5.000 L8.000,5.000 L8.000,4.000 L7.000,4.000 L7.000,3.000 L6.000,3.000 L6.000,2.000 L5.000,2.000 L5.000,1.000 L4.000,1.000 L4.000,-0.000 L6.000,-0.000 L6.000,1.000 L7.000,1.000 L7.000,2.000 L8.000,2.000 L8.000,3.000 L9.000,3.000 L9.000,4.000 ZM4.000,4.000 L5.000,4.000 L5.000,5.000 L6.000,5.000 L6.000,6.000 L5.000,6.000 L5.000,7.000 L4.000,7.000 L4.000,8.000 L3.000,8.000 L3.000,9.000 L2.000,9.000 L2.000,10.000 L-0.000,10.000 L-0.000,1.000 L2.000,1.000 L2.000,2.000 L3.000,2.000 L3.000,3.000 L4.000,3.000 L4.000,4.000 Z"/>
+              </svg>
+              <div class="desc" id="game_name"></div>
+            </div>
+            <div class="live-wrap">
+              <div class="live-player" id="liveCon"></div>
+              <a class="btn-live" href="//lpl.qq.com/es/live.shtml" onclick="PTTSendClick('btn', 'btn-live', '前往直播间');" target="_blank">前往直播间</a>
+            </div>
+          </div>
+          <!-- 赛事直播 End -->
+
+          <!-- 赛程 Start -->
+          <div class="match-stage">
+
+            <div class="base-title">
+              <div class="title">赛程</div>
+              <svg class="icon">
+                <path fill-rule="evenodd" d="M13.000,6.000 L13.000,5.000 L14.000,5.000 L14.000,6.000 L13.000,6.000 ZM12.000,7.000 L12.000,6.000 L13.000,6.000 L13.000,7.000 L12.000,7.000 ZM11.000,8.000 L11.000,7.000 L12.000,7.000 L12.000,8.000 L11.000,8.000 ZM10.000,9.000 L10.000,8.000 L11.000,8.000 L11.000,9.000 L10.000,9.000 ZM9.000,10.000 L9.000,9.000 L10.000,9.000 L10.000,10.000 L9.000,10.000 ZM12.000,4.000 L13.000,4.000 L13.000,5.000 L12.000,5.000 L12.000,4.000 ZM11.000,3.000 L12.000,3.000 L12.000,4.000 L11.000,4.000 L11.000,3.000 ZM10.000,2.000 L11.000,2.000 L11.000,3.000 L10.000,3.000 L10.000,2.000 ZM9.000,1.000 L10.000,1.000 L10.000,2.000 L9.000,2.000 L9.000,1.000 ZM9.000,4.000 L10.000,4.000 L10.000,5.000 L11.000,5.000 L11.000,6.000 L10.000,6.000 L10.000,7.000 L9.000,7.000 L9.000,8.000 L8.000,8.000 L8.000,9.000 L7.000,9.000 L7.000,10.000 L6.000,10.000 L6.000,11.000 L4.000,11.000 L4.000,10.000 L5.000,10.000 L5.000,9.000 L6.000,9.000 L6.000,8.000 L7.000,8.000 L7.000,7.000 L8.000,7.000 L8.000,6.000 L9.000,6.000 L9.000,5.000 L8.000,5.000 L8.000,4.000 L7.000,4.000 L7.000,3.000 L6.000,3.000 L6.000,2.000 L5.000,2.000 L5.000,1.000 L4.000,1.000 L4.000,-0.000 L6.000,-0.000 L6.000,1.000 L7.000,1.000 L7.000,2.000 L8.000,2.000 L8.000,3.000 L9.000,3.000 L9.000,4.000 ZM4.000,4.000 L5.000,4.000 L5.000,5.000 L6.000,5.000 L6.000,6.000 L5.000,6.000 L5.000,7.000 L4.000,7.000 L4.000,8.000 L3.000,8.000 L3.000,9.000 L2.000,9.000 L2.000,10.000 L-0.000,10.000 L-0.000,1.000 L2.000,1.000 L2.000,2.000 L3.000,2.000 L3.000,3.000 L4.000,3.000 L4.000,4.000 Z"/>
+              </svg>
+            </div>
+
+            <div class="stage-wrap">
+              <div class="swiper-container swiper-no-swiping stage-swiper">
+                <div id="stage-type" class="swiper-wrapper">
+                  <script id="stage-type-temp" type="text/html">
+                    {{each list as value index}}
+                      <div id="game_type1_{{value.GameTypeId}}" class="swiper-slide stage_{{value.classTag}}">
+                        {{if value.iOpen == 1}}
+                          <a  class="text" href="javascript:Base.InitGameSchedule1('{{value.GameTypeId}}', 1);">{{value.GameTypeName}}</a>
+                        {{else}}
+                          <a class="text" href="javascript:alert('敬请期待');">{{value.GameTypeName}}</a>
+                        {{/if}}
+                      </div>
+                    {{/each}}
+                  </script>
+                </div>
+              </div>
+              <div class="swiper-control">
+                <a class="stage-btn-prev" href="javascript:;" onclick="PTTSendClick('btn', 'stage-btn-prev', '上一页')">
+                  <svg width="6px" height="11px">
+                    <path fill-rule="evenodd" d="M5.000,11.000 L5.000,10.000 L4.000,10.000 L4.000,9.000 L3.000,9.000 L3.000,8.000 L2.000,8.000 L2.000,7.000 L1.000,7.000 L1.000,6.000 L-0.000,6.000 L-0.000,5.000 L1.000,5.000 L1.000,4.000 L2.000,4.000 L2.000,3.000 L3.000,3.000 L3.000,2.000 L4.000,2.000 L4.000,1.000 L5.000,1.000 L5.000,-0.000 L6.000,-0.000 L6.000,1.000 L6.000,2.000 L5.000,2.000 L5.000,3.000 L4.000,3.000 L4.000,4.000 L3.000,4.000 L3.000,5.000 L2.000,5.000 L2.000,6.000 L3.000,6.000 L3.000,7.000 L4.000,7.000 L4.000,8.000 L5.000,8.000 L5.000,9.000 L6.000,9.000 L6.000,10.000 L6.000,11.000 L5.000,11.000 Z"/>
+                  </svg>
+                </a>
+                <a class="stage-btn-next" href="javascript:;" onclick="PTTSendClick('btn', 'stage-btn-next', '下一页')">
+                  <svg width="6px" height="11px">
+                    <path fill-rule="evenodd" d="M5.000,6.000 L5.000,7.000 L4.000,7.000 L4.000,8.000 L3.000,8.000 L3.000,9.000 L2.000,9.000 L2.000,10.000 L1.000,10.000 L1.000,11.000 L-0.000,11.000 L-0.000,10.000 L-0.000,9.000 L1.000,9.000 L1.000,8.000 L2.000,8.000 L2.000,7.000 L3.000,7.000 L3.000,6.000 L4.000,6.000 L4.000,5.000 L3.000,5.000 L3.000,4.000 L2.000,4.000 L2.000,3.000 L1.000,3.000 L1.000,2.000 L-0.000,2.000 L-0.000,1.000 L-0.000,-0.000 L1.000,-0.000 L1.000,1.000 L2.000,1.000 L2.000,2.000 L3.000,2.000 L3.000,3.000 L4.000,3.000 L4.000,4.000 L5.000,4.000 L5.000,5.000 L6.000,5.000 L6.000,6.000 L5.000,6.000 Z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="stage-content">
+              <div id="date-tab" class="date-tab">
+                <ul id="day-type-1" class="date-tab-list">
+                  <script id="day-type-1-temp" type="text/html">
+                    {{each list as value index}}
+                      <li id="process_1_{{value.gameType}}_{{value.GameProcId}}">
+                        <a href="javascript:Base.ShowGameScheduleList1('{{value.gameType}}', '{{value.GameProcId}}');" onclick="PTTSendClick('btn', 'day-type-{{index}}', '{{value.GameProcName}}');">{{value.GameProcName}}</a>
+                      </li>
+                    {{/each}}
+                  </script>
+                </ul>
+              </div>
+
+              <div class="date-control">
+                <a id="date-btn-prev" class="date-btn-prev" href="javascript:;" onclick="PTTSendClick('btn', 'date-btn-prev', '上一页')">
+                  <svg  width="6px" height="11px">
+                    <path fill-rule="evenodd" d="M5.000,11.000 L5.000,10.000 L4.000,10.000 L4.000,9.000 L3.000,9.000 L3.000,8.000 L2.000,8.000 L2.000,7.000 L1.000,7.000 L1.000,6.000 L-0.000,6.000 L-0.000,5.000 L1.000,5.000 L1.000,4.000 L2.000,4.000 L2.000,3.000 L3.000,3.000 L3.000,2.000 L4.000,2.000 L4.000,1.000 L5.000,1.000 L5.000,-0.000 L6.000,-0.000 L6.000,1.000 L6.000,2.000 L5.000,2.000 L5.000,3.000 L4.000,3.000 L4.000,4.000 L3.000,4.000 L3.000,5.000 L2.000,5.000 L2.000,6.000 L3.000,6.000 L3.000,7.000 L4.000,7.000 L4.000,8.000 L5.000,8.000 L5.000,9.000 L6.000,9.000 L6.000,10.000 L6.000,11.000 L5.000,11.000 Z"/>
+                  </svg>
+                </a>
+                <a id="date-btn-next" class="date-btn-next" href="javascript:;" onclick="PTTSendClick('btn', 'date-btn-next', '下一页')">
+                  <svg width="6px" height="11px">
+                    <path fill-rule="evenodd" d="M5.000,6.000 L5.000,7.000 L4.000,7.000 L4.000,8.000 L3.000,8.000 L3.000,9.000 L2.000,9.000 L2.000,10.000 L1.000,10.000 L1.000,11.000 L-0.000,11.000 L-0.000,10.000 L-0.000,9.000 L1.000,9.000 L1.000,8.000 L2.000,8.000 L2.000,7.000 L3.000,7.000 L3.000,6.000 L4.000,6.000 L4.000,5.000 L3.000,5.000 L3.000,4.000 L2.000,4.000 L2.000,3.000 L1.000,3.000 L1.000,2.000 L-0.000,2.000 L-0.000,1.000 L-0.000,-0.000 L1.000,-0.000 L1.000,1.000 L2.000,1.000 L2.000,2.000 L3.000,2.000 L3.000,3.000 L4.000,3.000 L4.000,4.000 L5.000,4.000 L5.000,5.000 L6.000,5.000 L6.000,6.000 L5.000,6.000 Z"/>
+                  </svg>
+                </a>
+              </div>
+
+              <!-- 赛事回顾-内容 -->  
+              <ul class="mv-vod-list base-scroll">
+                <script id="mv-vod-list-temp" type="text/html">
+                  {{each list as value index}}
+                    <li id="game_schedult_{{value.bMatchId}}" class="{{value.statusClass}}">
+                      {{if value.MatchStatus == 2}}
+                        <div class="proceed"></div>
+                      {{/if}}
+                      <!-- 已结束 -->
+                      <div class="match-message">
+                        <div class="match-time">
+                          <p class="date">{{value.time1}}</p>
+                          <p class="time">{{value.time2}}</p>
+                          <div class="status">{{value.txts}}</div>
+                        </div>
+                        <!-- 比赛队伍 -->
+                        <div class="match-team">
+                          <!-- 队伍 -->
+                          <div class="team-logo teamA">
+                            <img src="{{value.logoA}}" title="{{value.TeamNameA}}" />
+                          </div>
+                          <div class="team-message">
+                            <div class="team-score">
+                              <div class="team-name teamA">{{value.TeamNameA}}</div>
+                              <div class="score-result">
+                                <span class="score-item {{value.scoreAClass}}">{{value.ScoreA}}</span>
+                                <span class="dot">:</span>
+                                <span class="score-item {{value.scoreBClass}}">{{value.ScoreB}}</span>
+                              </div>
+                              <div class="team-name teamB">{{value.TeamNameB}}</div>
+                            </div>
+                            {{if value.MatchStatus == 3}}
+                              {{if value.dNoLive_1}}
+                                <div class="vs-tag">
+                                  <a href="javascript:Base.ShowGameScheduleVod('{{value.bMatchId}}',80);" id="vod_btn_{{value.bMatchId}}_80" onclick="PTTSendClick('btn', 'video3', '赛事速看');">
+                                    <div class="text">赛事速看</div>
+                                  </a>
+                                  <a href="javascript:Base.ShowGameScheduleVod('{{value.bMatchId}}',20);" id="vod_btn_{{value.bMatchId}}_20" onclick="PTTSendClick('btn', 'video2', '全场回顾');">
+                                    <div class="text">全场回顾</div>
+                                  </a>
+                                  <a href="javascript:Base.ShowGameScheduleVod('{{value.bMatchId}}',76);" id="vod_btn_{{value.bMatchId}}_76" onclick="PTTSendClick('btn', 'video1', '巅峰时刻');">
+                                    <div class="text">巅峰时刻</div>
+                                  </a>
+                                </div>
+                              {{else}}
+                                <a class="btn-status-gray" href="javascript:;">已结束</a>
+                              {{/if}}
+                            {{else if value.MatchStatus == 2}}
+                              <a class="btn-status-colorful" href="{{value.shref}}" onclick="PTTSendClick('btn','look','观看直播');">观看直播</a>
+                            {{else}}
+                              <a class="btn-status-gray" href="javascript:;">敬请期待</a>
+                            {{/if}}
+                          </div>
+                          <div class="team-logo teamB">
+                            <img src="{{value.logoB}}" title="{{value.TeamNameB}}" />
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 视频 -->
+                      {{if value.MatchStatus == 3 && value.dNoLive_1}}
+                        <div class="match-video-wrap">
+                          <div class="match-video-sw">
+                            <ul class="matchsw" id="game_vod_{{value.bMatchId}}"></ul>
+                          </div>
+                          <a class="match-sw-prev" href="javascript:;" onclick="PTTSendClick('btn', 'match-sw-prev', '上一页')">
+                            <svg class="icon">
+                              <path fill-rule="evenodd" d="M9.000,4.997 L10.000,2.997 L7.000,-0.003 L-0.000,5.997 L-0.000,7.997 L7.000,13.997 L10.000,10.997 L9.000,8.997 L7.000,10.997 L2.000,6.997 L2.000,6.997 L7.000,2.997 L9.000,4.997 Z"/>
+                            </svg>
+                          </a>
+                          <a class="match-sw-next" href="javascript:;" onclick="PTTSendClick('btn', 'match-sw-next', '下一页')">
+                            <svg class="icon">
+                              <path fill-rule="evenodd" d="M1.000,4.997 L-0.000,2.997 L3.000,-0.003 L10.000,5.997 L10.000,7.997 L3.000,13.997 L-0.000,10.997 L1.000,8.997 L3.000,10.997 L8.000,6.997 L8.000,6.997 L3.000,2.997 L1.000,4.997 Z"/>
+                            </svg>
+                          </a>
+                        </div>
+                      {{/if}}
+                    </li>
+                  {{/each}}
+                </script>
+              </ul>
+            </div>
+          </div>
+          <!-- 赛程 End -->
+        </div>
+
+        <!-- 广告位 Start -->
+        <a class="lpl-middle-advt" href="javascript:;" onclick="PTTSendClick('btn', 'lpl-middle-advt', '广告位');" target="_blank">
+          <img src="" alt="" />
+        </a>
+        <!-- 广告位 End -->
+
+        <!-- 赛事信息及购票 Start -->
+        <div class="match-ticket" style="display: none;">
+
+          <div class="base-title">
+            <div class="title">赛事购票</div>
+            <svg class="icon">
+              <path fill-rule="evenodd" d="M13.000,6.000 L13.000,5.000 L14.000,5.000 L14.000,6.000 L13.000,6.000 ZM12.000,7.000 L12.000,6.000 L13.000,6.000 L13.000,7.000 L12.000,7.000 ZM11.000,8.000 L11.000,7.000 L12.000,7.000 L12.000,8.000 L11.000,8.000 ZM10.000,9.000 L10.000,8.000 L11.000,8.000 L11.000,9.000 L10.000,9.000 ZM9.000,10.000 L9.000,9.000 L10.000,9.000 L10.000,10.000 L9.000,10.000 ZM12.000,4.000 L13.000,4.000 L13.000,5.000 L12.000,5.000 L12.000,4.000 ZM11.000,3.000 L12.000,3.000 L12.000,4.000 L11.000,4.000 L11.000,3.000 ZM10.000,2.000 L11.000,2.000 L11.000,3.000 L10.000,3.000 L10.000,2.000 ZM9.000,1.000 L10.000,1.000 L10.000,2.000 L9.000,2.000 L9.000,1.000 ZM9.000,4.000 L10.000,4.000 L10.000,5.000 L11.000,5.000 L11.000,6.000 L10.000,6.000 L10.000,7.000 L9.000,7.000 L9.000,8.000 L8.000,8.000 L8.000,9.000 L7.000,9.000 L7.000,10.000 L6.000,10.000 L6.000,11.000 L4.000,11.000 L4.000,10.000 L5.000,10.000 L5.000,9.000 L6.000,9.000 L6.000,8.000 L7.000,8.000 L7.000,7.000 L8.000,7.000 L8.000,6.000 L9.000,6.000 L9.000,5.000 L8.000,5.000 L8.000,4.000 L7.000,4.000 L7.000,3.000 L6.000,3.000 L6.000,2.000 L5.000,2.000 L5.000,1.000 L4.000,1.000 L4.000,-0.000 L6.000,-0.000 L6.000,1.000 L7.000,1.000 L7.000,2.000 L8.000,2.000 L8.000,3.000 L9.000,3.000 L9.000,4.000 ZM4.000,4.000 L5.000,4.000 L5.000,5.000 L6.000,5.000 L6.000,6.000 L5.000,6.000 L5.000,7.000 L4.000,7.000 L4.000,8.000 L3.000,8.000 L3.000,9.000 L2.000,9.000 L2.000,10.000 L-0.000,10.000 L-0.000,1.000 L2.000,1.000 L2.000,2.000 L3.000,2.000 L3.000,3.000 L4.000,3.000 L4.000,4.000 Z"/>
+            </svg>
+          </div>
+
+          <ul id="ticket-list" class="ticket-list">
+            <script id="ticket-list-html" type="text/html">
+              {{each ticketList as item index}}
+                <li>
+                  <div class="image">
+                    <img src="{{item.image}}" alt="">
+                    <div class="name">{{item.name}}</div>
+                  </div>
+                  <div class="info">
+                    <div class="site">{{item.site}}</div>
+                    <div class="desc">{{item.desc}}</div>
+                  </div>
+                  <a href="//lpl.qq.com/es/ticket.shtml?iTicketId={{item.ticketId}}" target="_blank">
+                    <div class="text">票务详情</div>
+                  </a>
+                </li>
+              {{/each}}
+            </script>
+          </ul>
+        </div>
+        <!--赛事信息及购票 End-->
+
+        <!-- 赛事进度 Start -->
+        <div class="match-progress module-anchor" data-name="赛事进度">
+          <div class="base-title">
+            <div class="title">赛事进度</div>
+            <svg class="icon">
+              <path fill-rule="evenodd" d="M13.000,6.000 L13.000,5.000 L14.000,5.000 L14.000,6.000 L13.000,6.000 ZM12.000,7.000 L12.000,6.000 L13.000,6.000 L13.000,7.000 L12.000,7.000 ZM11.000,8.000 L11.000,7.000 L12.000,7.000 L12.000,8.000 L11.000,8.000 ZM10.000,9.000 L10.000,8.000 L11.000,8.000 L11.000,9.000 L10.000,9.000 ZM9.000,10.000 L9.000,9.000 L10.000,9.000 L10.000,10.000 L9.000,10.000 ZM12.000,4.000 L13.000,4.000 L13.000,5.000 L12.000,5.000 L12.000,4.000 ZM11.000,3.000 L12.000,3.000 L12.000,4.000 L11.000,4.000 L11.000,3.000 ZM10.000,2.000 L11.000,2.000 L11.000,3.000 L10.000,3.000 L10.000,2.000 ZM9.000,1.000 L10.000,1.000 L10.000,2.000 L9.000,2.000 L9.000,1.000 ZM9.000,4.000 L10.000,4.000 L10.000,5.000 L11.000,5.000 L11.000,6.000 L10.000,6.000 L10.000,7.000 L9.000,7.000 L9.000,8.000 L8.000,8.000 L8.000,9.000 L7.000,9.000 L7.000,10.000 L6.000,10.000 L6.000,11.000 L4.000,11.000 L4.000,10.000 L5.000,10.000 L5.000,9.000 L6.000,9.000 L6.000,8.000 L7.000,8.000 L7.000,7.000 L8.000,7.000 L8.000,6.000 L9.000,6.000 L9.000,5.000 L8.000,5.000 L8.000,4.000 L7.000,4.000 L7.000,3.000 L6.000,3.000 L6.000,2.000 L5.000,2.000 L5.000,1.000 L4.000,1.000 L4.000,-0.000 L6.000,-0.000 L6.000,1.000 L7.000,1.000 L7.000,2.000 L8.000,2.000 L8.000,3.000 L9.000,3.000 L9.000,4.000 ZM4.000,4.000 L5.000,4.000 L5.000,5.000 L6.000,5.000 L6.000,6.000 L5.000,6.000 L5.000,7.000 L4.000,7.000 L4.000,8.000 L3.000,8.000 L3.000,9.000 L2.000,9.000 L2.000,10.000 L-0.000,10.000 L-0.000,1.000 L2.000,1.000 L2.000,2.000 L3.000,2.000 L3.000,3.000 L4.000,3.000 L4.000,4.000 Z"/>
+            </svg>
+          </div>
+
+          <!-- 赛季筛选 -->
+          <ul id="stage-type-2" class="lpl_progress_nav fr clearfix">
+            <script id="stage-type2-temp" type="text/html">
+              {{each list as value index}}
+                {{if value.iOpen==1}}
+                  <li id="game_type2_{{value.GameTypeId}}" class="w{{value.classTag}}" data-open="1">
+                    <a href="javascript:Base.InitGameSchedule2('{{value.GameTypeId}}', '{{value.ChartId}}',{{index}});">{{value.GameTypeName}}</a>
+                  </li>
+                {{else}}
+                  <li id="game_type2_{{value.GameTypeId}}" class="w{{value.classTag}}">
+                    <a href="javascript:;">{{value.GameTypeName}}</a>
+                  </li>
+                {{/if}}
+              {{/each}}
+            </script>
+          </ul>
+
+          <!-- 赛季面板 -->
+          <div class="lpl_match_progress">
+
+            <!-- 春季常规赛 Start -->
+            <div class="spring_routine_match_box macth-box" style="display: none;">
+              <div class="progress-1">
+                <div id="week-type-box-1" class="week-type-box">
+                  <div id="day-type-2" class="week-type"></div>
+                </div>
+                <div class="week-type-control">
+                  <a id="btn-prev-2" class="btn-prev" href="javascript:;" onclick="PTTSendClick('btn', 'btn-prev', '上一页');">
+                    <svg width="6px" height="11px">
+                      <path fill-rule="evenodd" d="M5.000,11.000 L5.000,10.000 L4.000,10.000 L4.000,9.000 L3.000,9.000 L3.000,8.000 L2.000,8.000 L2.000,7.000 L1.000,7.000 L1.000,6.000 L-0.000,6.000 L-0.000,5.000 L1.000,5.000 L1.000,4.000 L2.000,4.000 L2.000,3.000 L3.000,3.000 L3.000,2.000 L4.000,2.000 L4.000,1.000 L5.000,1.000 L5.000,-0.000 L6.000,-0.000 L6.000,1.000 L6.000,2.000 L5.000,2.000 L5.000,3.000 L4.000,3.000 L4.000,4.000 L3.000,4.000 L3.000,5.000 L2.000,5.000 L2.000,6.000 L3.000,6.000 L3.000,7.000 L4.000,7.000 L4.000,8.000 L5.000,8.000 L5.000,9.000 L6.000,9.000 L6.000,10.000 L6.000,11.000 L5.000,11.000 Z"/>
+                    </svg>
+                  </a>
+                  <a id="btn-next-2" class="btn-next" href="javascript:;" onclick="PTTSendClick('btn', 'btn-next', '下一页');">
+                    <svg width="6px" height="11px">
+                      <path fill-rule="evenodd" d="M5.000,6.000 L5.000,7.000 L4.000,7.000 L4.000,8.000 L3.000,8.000 L3.000,9.000 L2.000,9.000 L2.000,10.000 L1.000,10.000 L1.000,11.000 L-0.000,11.000 L-0.000,10.000 L-0.000,9.000 L1.000,9.000 L1.000,8.000 L2.000,8.000 L2.000,7.000 L3.000,7.000 L3.000,6.000 L4.000,6.000 L4.000,5.000 L3.000,5.000 L3.000,4.000 L2.000,4.000 L2.000,3.000 L1.000,3.000 L1.000,2.000 L-0.000,2.000 L-0.000,1.000 L-0.000,-0.000 L1.000,-0.000 L1.000,1.000 L2.000,1.000 L2.000,2.000 L3.000,2.000 L3.000,3.000 L4.000,3.000 L4.000,4.000 L5.000,4.000 L5.000,5.000 L6.000,5.000 L6.000,6.000 L5.000,6.000 Z"/>
+                    </svg>
+                  </a>
+                </div>
+                <div id="progress_scroll-1" class="progress-scroll-wrap base-scroll">
+                  <ul id="match-list-1" class="match-list"></ul>
+                </div>
+              </div>
+              <!--积分榜单-->
+              <div class="progress-2">
+                <div class="team-scoreboard">
+                  <div class="scoreboard-head">
+                    <div class="scoreboard-title">
+                      <span>战队积分榜</span>
+                    </div>
+                    <div class="tr">
+                      <div class="td">排名</div>
+                      <div class="td">战队</div>
+                      <div class="td">胜负</div>
+                      <div class="td">积分</div>
+                    </div>
+                  </div>
+                  <div class="scoreboard-scroll base-scroll">
+                    <ul class="match-rank-list" id="match-rank-list-1"></ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 春季常规赛 End -->
+
+            <!--春季季后赛 Start-->
+            <div class="spring_playoff_box  macth-box" id="summer_1" style="display: none;">
+              <!-- <div class="part-box1 clearfloat">
+                <ul class="part1 clearfix"></ul>
+                <ul class="part2 clearfix"></ul>
+              </div>
+              <div class="part-box2 clearfloat"></div>
+              <div class="part-box3"></div> -->
+
+              <!-- 2021赛季 冒泡赛,季后赛模板 -->
+              <div class="m-events-container m-container">
+                <!--21年季后赛模板,3轮冒泡赛加双败赛-->
+                <div class="event-type-1 lpl-play-offs lpl-play-offs-21" id="LPL_PO_C">
+  
+                </div>
+                
+              </div>
+            </div>
+            <!--春季季后赛 End-->
+
+            <!-- 夏季常规赛 Start -->
+            <div class="spring_routine_match_box macth-box summer" style="display: none;">
+              <div class="progress-1">
+                <div class="week-type-box" id="week-type-box-2">
+                  <div class="week-type" id="day-type-3"></div>
+                </div>
+                <div class="week-type-control">
+                  <a id="btn-prev-3" class="btn-prev" href="javascript:;" onclick="PTTSendClick('btn', 'btn-prev', '上一页');">
+                    <svg width="6px" height="11px">
+                      <path fill-rule="evenodd" d="M5.000,11.000 L5.000,10.000 L4.000,10.000 L4.000,9.000 L3.000,9.000 L3.000,8.000 L2.000,8.000 L2.000,7.000 L1.000,7.000 L1.000,6.000 L-0.000,6.000 L-0.000,5.000 L1.000,5.000 L1.000,4.000 L2.000,4.000 L2.000,3.000 L3.000,3.000 L3.000,2.000 L4.000,2.000 L4.000,1.000 L5.000,1.000 L5.000,-0.000 L6.000,-0.000 L6.000,1.000 L6.000,2.000 L5.000,2.000 L5.000,3.000 L4.000,3.000 L4.000,4.000 L3.000,4.000 L3.000,5.000 L2.000,5.000 L2.000,6.000 L3.000,6.000 L3.000,7.000 L4.000,7.000 L4.000,8.000 L5.000,8.000 L5.000,9.000 L6.000,9.000 L6.000,10.000 L6.000,11.000 L5.000,11.000 Z"/>
+                    </svg>
+                  </a>
+                  <a id="btn-next-3" class="btn-next" href="javascript:;" onclick="PTTSendClick('btn', 'btn-next', '下一页');">
+                    <svg width="6px" height="11px">
+                      <path fill-rule="evenodd" d="M5.000,6.000 L5.000,7.000 L4.000,7.000 L4.000,8.000 L3.000,8.000 L3.000,9.000 L2.000,9.000 L2.000,10.000 L1.000,10.000 L1.000,11.000 L-0.000,11.000 L-0.000,10.000 L-0.000,9.000 L1.000,9.000 L1.000,8.000 L2.000,8.000 L2.000,7.000 L3.000,7.000 L3.000,6.000 L4.000,6.000 L4.000,5.000 L3.000,5.000 L3.000,4.000 L2.000,4.000 L2.000,3.000 L1.000,3.000 L1.000,2.000 L-0.000,2.000 L-0.000,1.000 L-0.000,-0.000 L1.000,-0.000 L1.000,1.000 L2.000,1.000 L2.000,2.000 L3.000,2.000 L3.000,3.000 L4.000,3.000 L4.000,4.000 L5.000,4.000 L5.000,5.000 L6.000,5.000 L6.000,6.000 L5.000,6.000 Z"/>
+                    </svg>
+                  </a>
+                </div>
+                <div id="progress_scroll-2" class="progress-scroll-wrap base-scroll">
+                  <ul class="match-list" id="match-list-2"></ul>
+                </div>
+              </div>
+              <!-- 积分榜单 -->
+              <div class="progress-2">
+                <div class="team-scoreboard">
+                  <div class="scoreboard-head">
+                    <div class="scoreboard-title">
+                      <span>战队积分榜</span>
+                    </div>
+                    <div class="tr">
+                      <div class="td">排名</div>
+                      <div class="td">战队</div>
+                      <div class="td">胜负</div>
+                      <div class="td">积分</div>
+                    </div>
+                  </div>
+                  <div class="scoreboard-scroll base-scroll">
+                    <ul class="match-rank-list" id="match-rank-list-2"></ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 夏季常规赛 End -->
+
+            <!--夏季季后赛 Start-->
+            <div class="spring_playoff_box macth-box summer" id="summer_2" style="display: none;">
+              <div class="part-box1 clearfloat">
+                <ul class="part1 clearfix"></ul>
+                <ul class="part2 clearfix"></ul>
+              </div>
+              <div class="part-box2 clearfloat"></div>
+              <div class="part-box3"></div>
+            </div>
+            <!--夏季季后赛 End-->
+            
+            <!--全球总决赛选拔赛 Start-->
+            <div class="macth-box spring_playoff_box global_selection" style="display: none;">
+              <ul class="part1 clearfix">
+                <script type="text/html" id="global_selection-temp">
+                  {{each list as value index}}
+                    <li class="{{value.statusClass}}">
+                      <p class="sign">{{value.rounds}} - <span>{{value.txt}}</span></p>
+                      <div class="{{value.scoreAClass}} clearfix">
+                        <i class="left clearfix"></i>
+                        <div class="team-names">
+                          <a href="javascript:;" class="team-info">
+                            <img src="{{value.logoA}}">
+                            <span>{{value.TeamNameA}}</span>
+                            <span class="right">{{value.ScoreA}}</span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="{{value.scoreBClass}} clearfix">
+                        <i class="left clearfix"></i>
+                        <div class="team-names">
+                          <a href="javascript:;" class="team-info">
+                            <img src="{{value.logoB}}">
+                            <span>{{value.TeamNameB}}</span>
+                            <span class="right">{{value.ScoreB}}</span>
+                          </a>
+                        </div>
+                      </div>
+                      <p class="time">{{value.MatchDate1}}</p>
+                      {{if value.MatchStatus == 3}}
+                        <div class="btns">
+                          {{if value.bMatchId != 0}}
+                            <a href="{{value.href_data}}" target="_blank" class="s-video-btn sprites-icon ">数据</a>
+                          {{else}}
+                            <a href="javascript:alert('敬请期待');" target="_blank" class="s-video-btn sprites-icon ">数据</a>
+                          {{/if}}
+
+                          {{if value.NewsId != 0}}
+                            <a href="{{value.href_video}}" target="_blank" class="s-data-btn sprites-icon ">视频</a>
+                          {{else}}
+                            <a href="javascript:alert('敬请期待');" target="_blank" class="s-data-btn sprites-icon ">视频</a>
+                          {{/if}}
+                        </div>
+                      {{else if value.MatchStatus==2}}
+                        <a href="{{value.shref}}" target="_blank" class="watch_live spr-icon">观看直播</a>
+                      {{else}}
+                        <a href="javascript:;" target="_blank" class="not_started spr-icon">暂未开始</a>
+                      {{/if}}
+                    </li>
+                  {{/each}}
+                </script>
+              </ul>
+            </div>
+            <!--全球总决赛选拔赛 End-->
+          </div>
+        </div>
+        <!-- 赛事进度 End -->
+      </div>
+    </div>
+
+
+    <!-- 历史对局 Start -->
+    <div class="module module-3" style="display:block;">
+      <div class="module-inner">
+        
+        <div class="match-historical module-anchor" data-name="历史对局">
+
+          <div class="base-title">
+            <div class="title">历史对局</div>
+            <svg class="icon">
+              <path fill-rule="evenodd" d="M13.000,6.000 L13.000,5.000 L14.000,5.000 L14.000,6.000 L13.000,6.000 ZM12.000,7.000 L12.000,6.000 L13.000,6.000 L13.000,7.000 L12.000,7.000 ZM11.000,8.000 L11.000,7.000 L12.000,7.000 L12.000,8.000 L11.000,8.000 ZM10.000,9.000 L10.000,8.000 L11.000,8.000 L11.000,9.000 L10.000,9.000 ZM9.000,10.000 L9.000,9.000 L10.000,9.000 L10.000,10.000 L9.000,10.000 ZM12.000,4.000 L13.000,4.000 L13.000,5.000 L12.000,5.000 L12.000,4.000 ZM11.000,3.000 L12.000,3.000 L12.000,4.000 L11.000,4.000 L11.000,3.000 ZM10.000,2.000 L11.000,2.000 L11.000,3.000 L10.000,3.000 L10.000,2.000 ZM9.000,1.000 L10.000,1.000 L10.000,2.000 L9.000,2.000 L9.000,1.000 ZM9.000,4.000 L10.000,4.000 L10.000,5.000 L11.000,5.000 L11.000,6.000 L10.000,6.000 L10.000,7.000 L9.000,7.000 L9.000,8.000 L8.000,8.000 L8.000,9.000 L7.000,9.000 L7.000,10.000 L6.000,10.000 L6.000,11.000 L4.000,11.000 L4.000,10.000 L5.000,10.000 L5.000,9.000 L6.000,9.000 L6.000,8.000 L7.000,8.000 L7.000,7.000 L8.000,7.000 L8.000,6.000 L9.000,6.000 L9.000,5.000 L8.000,5.000 L8.000,4.000 L7.000,4.000 L7.000,3.000 L6.000,3.000 L6.000,2.000 L5.000,2.000 L5.000,1.000 L4.000,1.000 L4.000,-0.000 L6.000,-0.000 L6.000,1.000 L7.000,1.000 L7.000,2.000 L8.000,2.000 L8.000,3.000 L9.000,3.000 L9.000,4.000 ZM4.000,4.000 L5.000,4.000 L5.000,5.000 L6.000,5.000 L6.000,6.000 L5.000,6.000 L5.000,7.000 L4.000,7.000 L4.000,8.000 L3.000,8.000 L3.000,9.000 L2.000,9.000 L2.000,10.000 L-0.000,10.000 L-0.000,1.000 L2.000,1.000 L2.000,2.000 L3.000,2.000 L3.000,3.000 L4.000,3.000 L4.000,4.000 Z"/>
+            </svg>
+          </div>
+          
+          <!-- 历史对局-筛选 -->
+          <div class="historical-sort">
+            <a class="on" href="javascript:renderDataTable(dataTable.matchList);">大场</a>
+            <a href="javascript:renderDataTable(dataTable.matchListB);">小场</a>
+          </div>
+
+          <!-- 历史对局-数据面板 -->
+          <div class="data-table fold" id="data-table"></div>
+        </div>
+
+        <!-- 历史对局-下拉菜单 -->
+        <ul class="data-table-menu" id="data-table-menu">
+          <script type="text/html" id="data-table-menu-html">
+            {{ each list as item index }}
+              <li data-key="x-{{ index }}">
+                <img src="{{ item.team.logo }}" alt="">
+                <svg class="icon-current">
+                  <path fill-rule="evenodd" d="M5.000,17.000 L5.000,18.000 L4.000,18.000 L4.000,19.000 L3.000,19.000 L3.000,20.000 L2.000,20.000 L2.000,35.000 L-0.000,35.000 L-0.000,-0.000 L2.000,-0.000 L2.000,13.000 L3.000,13.000 L3.000,14.000 L4.000,14.000 L4.000,15.000 L5.000,15.000 L5.000,16.000 L6.000,16.000 L6.000,17.000 L5.000,17.000 Z"/>
+                </svg>
+              </li>
+            {{ /each }}
+          </script>
+        </ul>
+
+      </div>
+
+      <div class="data-table-switch open">
+        <div class="text">展开全部</div>
+        <svg class="icon">
+          <path fill-rule="evenodd" d="M10.000,7.000 L10.000,6.000 L9.000,6.000 L9.000,5.000 L8.000,5.000 L8.000,4.000 L7.000,4.000 L7.000,3.000 L6.000,3.000 L6.000,2.000 L5.000,2.000 L5.000,3.000 L4.000,3.000 L4.000,4.000 L3.000,4.000 L3.000,5.000 L2.000,5.000 L2.000,6.000 L1.000,6.000 L1.000,7.000 L-0.000,7.000 L-0.000,5.000 L1.000,5.000 L1.000,4.000 L2.000,4.000 L2.000,3.000 L3.000,3.000 L3.000,2.000 L4.000,2.000 L4.000,1.000 L5.000,1.000 L5.000,-0.000 L6.000,-0.000 L6.000,1.000 L7.000,1.000 L7.000,2.000 L8.000,2.000 L8.000,3.000 L9.000,3.000 L9.000,4.000 L10.000,4.000 L10.000,5.000 L11.000,5.000 L11.000,7.000 L10.000,7.000 Z"/>
+        </svg>
+      </div>
+    </div>
+    <!-- 历史对局 End -->
+
+
+    <div class="module module-4">
+      <div class="module-inner">
+
+        <!-- 数据榜单 Start -->
+        <div class="match-ranklist module-anchor" data-name="数据榜单">
+
+          <!-- 英雄排行榜 Start -->
+          <div class="hero-list">
+
+            <div class="base-title">
+              <div class="title">英雄排行榜</div>
+              <svg class="icon">
+                <path fill-rule="evenodd" d="M13.000,6.000 L13.000,5.000 L14.000,5.000 L14.000,6.000 L13.000,6.000 ZM12.000,7.000 L12.000,6.000 L13.000,6.000 L13.000,7.000 L12.000,7.000 ZM11.000,8.000 L11.000,7.000 L12.000,7.000 L12.000,8.000 L11.000,8.000 ZM10.000,9.000 L10.000,8.000 L11.000,8.000 L11.000,9.000 L10.000,9.000 ZM9.000,10.000 L9.000,9.000 L10.000,9.000 L10.000,10.000 L9.000,10.000 ZM12.000,4.000 L13.000,4.000 L13.000,5.000 L12.000,5.000 L12.000,4.000 ZM11.000,3.000 L12.000,3.000 L12.000,4.000 L11.000,4.000 L11.000,3.000 ZM10.000,2.000 L11.000,2.000 L11.000,3.000 L10.000,3.000 L10.000,2.000 ZM9.000,1.000 L10.000,1.000 L10.000,2.000 L9.000,2.000 L9.000,1.000 ZM9.000,4.000 L10.000,4.000 L10.000,5.000 L11.000,5.000 L11.000,6.000 L10.000,6.000 L10.000,7.000 L9.000,7.000 L9.000,8.000 L8.000,8.000 L8.000,9.000 L7.000,9.000 L7.000,10.000 L6.000,10.000 L6.000,11.000 L4.000,11.000 L4.000,10.000 L5.000,10.000 L5.000,9.000 L6.000,9.000 L6.000,8.000 L7.000,8.000 L7.000,7.000 L8.000,7.000 L8.000,6.000 L9.000,6.000 L9.000,5.000 L8.000,5.000 L8.000,4.000 L7.000,4.000 L7.000,3.000 L6.000,3.000 L6.000,2.000 L5.000,2.000 L5.000,1.000 L4.000,1.000 L4.000,-0.000 L6.000,-0.000 L6.000,1.000 L7.000,1.000 L7.000,2.000 L8.000,2.000 L8.000,3.000 L9.000,3.000 L9.000,4.000 ZM4.000,4.000 L5.000,4.000 L5.000,5.000 L6.000,5.000 L6.000,6.000 L5.000,6.000 L5.000,7.000 L4.000,7.000 L4.000,8.000 L3.000,8.000 L3.000,9.000 L2.000,9.000 L2.000,10.000 L-0.000,10.000 L-0.000,1.000 L2.000,1.000 L2.000,2.000 L3.000,2.000 L3.000,3.000 L4.000,3.000 L4.000,4.000 Z"/>
+              </svg>
+            </div>
+
+            <!-- 英雄排行榜 - 筛选 -->
+            <ul class="base-sort-list hero-sort">
+              <li class="on"><a href="javascript:;" onclick="PTTSendClick('btn', 'hero-sort-prohibit', '禁用率');">禁用率</a></li>
+              <li><a href="javascript:;" onclick="PTTSendClick('btn', 'hero-sort-use', '禁用率');">使用率</a></li>
+            </ul>
+
+            <!-- 禁用率 -->
+            <ul class="ranklist usage-rate active">
+              <script id="heroBPBackTemp" type="text/html">
+                {{each list as value index}}
+                  <li>
+                    <p class="ranktimes">{{value.ban}}次</p>
+                    <div class="rankbg">
+                      <div class="rankshow" style="height:{{value.ban_rate}}%;"></div>
+                    </div>
+                    <p class="rankpct">{{value.ban_rate}}%</p>
+                    <img src="//game.gtimg.cn/images/lol/act/img/champion/{{value.alias}}.png" width="37" height="37">
+                    <p class="rankname">{{value.name}}</p>
+                  </li>
+                {{/each}}
+              </script>
+            </ul>
+
+            <!-- 使用率 -->
+            <ul class="ranklist disable-rate">
+              <script id="heroBPPickTemp" type="text/html">
+                {{each list as value index}}
+                  <li>
+                    <p class="ranktimes">{{value.pick}}次</p>
+                    <div class="rankbg">
+                      <div class="rankshow" style="height:{{value.pick_rate}}%;"></div>
+                    </div>
+                    <p class="rankpct">{{value.pick_rate}}%</p>
+                    <img src="//game.gtimg.cn/images/lol/act/img/champion/{{value.alias}}.png" width="37" height="37">
+                    <p class="rankname">{{value.name}}</p>
+                  </li>
+                {{/each}}
+              </script>
+            </ul>
+          </div>
+          <!-- 英雄排行榜 End-->
+
+          <!-- 每周最佳阵容 Start -->
+          <div class="lineup-list">
+
+            <div class="base-title">
+              <div class="title">每周最佳阵容</div>
+              <svg class="icon">
+                <path fill-rule="evenodd" d="M13.000,6.000 L13.000,5.000 L14.000,5.000 L14.000,6.000 L13.000,6.000 ZM12.000,7.000 L12.000,6.000 L13.000,6.000 L13.000,7.000 L12.000,7.000 ZM11.000,8.000 L11.000,7.000 L12.000,7.000 L12.000,8.000 L11.000,8.000 ZM10.000,9.000 L10.000,8.000 L11.000,8.000 L11.000,9.000 L10.000,9.000 ZM9.000,10.000 L9.000,9.000 L10.000,9.000 L10.000,10.000 L9.000,10.000 ZM12.000,4.000 L13.000,4.000 L13.000,5.000 L12.000,5.000 L12.000,4.000 ZM11.000,3.000 L12.000,3.000 L12.000,4.000 L11.000,4.000 L11.000,3.000 ZM10.000,2.000 L11.000,2.000 L11.000,3.000 L10.000,3.000 L10.000,2.000 ZM9.000,1.000 L10.000,1.000 L10.000,2.000 L9.000,2.000 L9.000,1.000 ZM9.000,4.000 L10.000,4.000 L10.000,5.000 L11.000,5.000 L11.000,6.000 L10.000,6.000 L10.000,7.000 L9.000,7.000 L9.000,8.000 L8.000,8.000 L8.000,9.000 L7.000,9.000 L7.000,10.000 L6.000,10.000 L6.000,11.000 L4.000,11.000 L4.000,10.000 L5.000,10.000 L5.000,9.000 L6.000,9.000 L6.000,8.000 L7.000,8.000 L7.000,7.000 L8.000,7.000 L8.000,6.000 L9.000,6.000 L9.000,5.000 L8.000,5.000 L8.000,4.000 L7.000,4.000 L7.000,3.000 L6.000,3.000 L6.000,2.000 L5.000,2.000 L5.000,1.000 L4.000,1.000 L4.000,-0.000 L6.000,-0.000 L6.000,1.000 L7.000,1.000 L7.000,2.000 L8.000,2.000 L8.000,3.000 L9.000,3.000 L9.000,4.000 ZM4.000,4.000 L5.000,4.000 L5.000,5.000 L6.000,5.000 L6.000,6.000 L5.000,6.000 L5.000,7.000 L4.000,7.000 L4.000,8.000 L3.000,8.000 L3.000,9.000 L2.000,9.000 L2.000,10.000 L-0.000,10.000 L-0.000,1.000 L2.000,1.000 L2.000,2.000 L3.000,2.000 L3.000,3.000 L4.000,3.000 L4.000,4.000 Z"/>
+              </svg>
+            </div>
+
+            <ul class="player-card-list" id="LPL_R_best_player_C">
+              <script type="text/html" id="LPL_R_best_player_C-temp">
+                {{each list as value index}}
+                  <li>
+                    <div class="icon-seat {{value.p_en}}"></div>
+                    <div class="icon-team">
+                      <img src="{{value.teamLogo}}" title="战队图标" />
+                    </div>
+                    <div class="player-avatar">
+                      <img src="{{value.pic}}" alt="{{value.nickname}}" />
+                    </div>
+                    <div class="player-name">{{value.nickname}}</div>
+                  </li>
+                {{/each}}
+              </script>
+            </ul>
+          </div>
+          <!-- 每周最佳阵容 End -->
+
+          <!-- 个人排行榜 Start -->
+          <div class="player-list">
+
+            <div class="base-title">
+              <div class="title">个人排行榜</div>
+              <svg class="icon">
+                <path fill-rule="evenodd" d="M13.000,6.000 L13.000,5.000 L14.000,5.000 L14.000,6.000 L13.000,6.000 ZM12.000,7.000 L12.000,6.000 L13.000,6.000 L13.000,7.000 L12.000,7.000 ZM11.000,8.000 L11.000,7.000 L12.000,7.000 L12.000,8.000 L11.000,8.000 ZM10.000,9.000 L10.000,8.000 L11.000,8.000 L11.000,9.000 L10.000,9.000 ZM9.000,10.000 L9.000,9.000 L10.000,9.000 L10.000,10.000 L9.000,10.000 ZM12.000,4.000 L13.000,4.000 L13.000,5.000 L12.000,5.000 L12.000,4.000 ZM11.000,3.000 L12.000,3.000 L12.000,4.000 L11.000,4.000 L11.000,3.000 ZM10.000,2.000 L11.000,2.000 L11.000,3.000 L10.000,3.000 L10.000,2.000 ZM9.000,1.000 L10.000,1.000 L10.000,2.000 L9.000,2.000 L9.000,1.000 ZM9.000,4.000 L10.000,4.000 L10.000,5.000 L11.000,5.000 L11.000,6.000 L10.000,6.000 L10.000,7.000 L9.000,7.000 L9.000,8.000 L8.000,8.000 L8.000,9.000 L7.000,9.000 L7.000,10.000 L6.000,10.000 L6.000,11.000 L4.000,11.000 L4.000,10.000 L5.000,10.000 L5.000,9.000 L6.000,9.000 L6.000,8.000 L7.000,8.000 L7.000,7.000 L8.000,7.000 L8.000,6.000 L9.000,6.000 L9.000,5.000 L8.000,5.000 L8.000,4.000 L7.000,4.000 L7.000,3.000 L6.000,3.000 L6.000,2.000 L5.000,2.000 L5.000,1.000 L4.000,1.000 L4.000,-0.000 L6.000,-0.000 L6.000,1.000 L7.000,1.000 L7.000,2.000 L8.000,2.000 L8.000,3.000 L9.000,3.000 L9.000,4.000 ZM4.000,4.000 L5.000,4.000 L5.000,5.000 L6.000,5.000 L6.000,6.000 L5.000,6.000 L5.000,7.000 L4.000,7.000 L4.000,8.000 L3.000,8.000 L3.000,9.000 L2.000,9.000 L2.000,10.000 L-0.000,10.000 L-0.000,1.000 L2.000,1.000 L2.000,2.000 L3.000,2.000 L3.000,3.000 L4.000,3.000 L4.000,4.000 Z"/>
+              </svg>
+            </div>
+
+            <!-- 个人排行榜 - 筛选 -->
+            <ul class="base-sort-list player-sort">
+              <li class="on"><a href="javascript:Base.InitPersonalrankInfo();" onclick="PTTSendClick('btn', 'player-sort-kill', '击杀');">击杀</a></li>
+              <li><a href="javascript:Base.InitPersonalrankInfo(1);" onclick="PTTSendClick('btn', 'player-sort-assist', '助攻');">助攻</a></li>
+              <li><a href="javascript:Base.InitPersonalrankInfo(5);" onclick="PTTSendClick('btn', 'player-sort-lasthit', '补刀');">补刀</a></li>
+              <li><a href="javascript:Base.InitPersonalrankInfo(4);" onclick="PTTSendClick('btn', 'player-sort-gold', '金钱');">金钱</a></li>
+            </ul>
+
+            <!-- 击杀 -->
+            <div class="cimi-tab-pr active">
+              <ul class="tab-hd-title">
+                <li>排名</li>
+                <li>选手</li>
+                <li>战队</li>
+                <li>位置</li>
+                <li>总击杀(场均)</li>
+              </ul>
+              <div class="tab-outer base-scroll">
+                <table>
+                  <tbody id="personalRanking-kill"></tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- 助攻 -->
+            <div class="cimi-tab-pr">
+              <ul class="tab-hd-title">
+                <li>排名</li>
+                <li>选手</li>
+                <li>战队</li>
+                <li>位置</li>
+                <li>总助攻(场均)</li>
+              </ul>
+              <div class="tab-outer base-scroll">
+                <table>
+                  <tbody id="personalRanking-assist"></tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- 补刀 -->
+            <div class="cimi-tab-pr">
+              <ul class="tab-hd-title">
+                <li>排名</li>
+                <li>选手</li>
+                <li>战队</li>
+                <li>位置</li>
+                <li>总补刀(场均)</li>
+              </ul>
+              <div class="tab-outer base-scroll">
+                <table>
+                  <tbody id="personalRanking-lasthit"></tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- 金钱 -->
+            <div class="cimi-tab-pr">
+              <ul class="tab-hd-title">
+                <li>排名</li>
+                <li>选手</li>
+                <li>战队</li>
+                <li>位置</li>
+                <li>总金钱(场均)</li>
+              </ul>
+              <div class="tab-outer base-scroll">
+                <table>
+                  <tbody id="personalRanking-gold"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- 个人排行榜 End -->
+        </div>
+        <!-- 数据榜单 End -->
+    
+        <!-- 赛事视频 Start -->
+        <div class="match-video module-anchor" data-name="赛事视频">
+
+          <div class="base-title">
+            <div class="title">赛事视频</div>
+            <svg class="icon">
+              <path fill-rule="evenodd" d="M13.000,6.000 L13.000,5.000 L14.000,5.000 L14.000,6.000 L13.000,6.000 ZM12.000,7.000 L12.000,6.000 L13.000,6.000 L13.000,7.000 L12.000,7.000 ZM11.000,8.000 L11.000,7.000 L12.000,7.000 L12.000,8.000 L11.000,8.000 ZM10.000,9.000 L10.000,8.000 L11.000,8.000 L11.000,9.000 L10.000,9.000 ZM9.000,10.000 L9.000,9.000 L10.000,9.000 L10.000,10.000 L9.000,10.000 ZM12.000,4.000 L13.000,4.000 L13.000,5.000 L12.000,5.000 L12.000,4.000 ZM11.000,3.000 L12.000,3.000 L12.000,4.000 L11.000,4.000 L11.000,3.000 ZM10.000,2.000 L11.000,2.000 L11.000,3.000 L10.000,3.000 L10.000,2.000 ZM9.000,1.000 L10.000,1.000 L10.000,2.000 L9.000,2.000 L9.000,1.000 ZM9.000,4.000 L10.000,4.000 L10.000,5.000 L11.000,5.000 L11.000,6.000 L10.000,6.000 L10.000,7.000 L9.000,7.000 L9.000,8.000 L8.000,8.000 L8.000,9.000 L7.000,9.000 L7.000,10.000 L6.000,10.000 L6.000,11.000 L4.000,11.000 L4.000,10.000 L5.000,10.000 L5.000,9.000 L6.000,9.000 L6.000,8.000 L7.000,8.000 L7.000,7.000 L8.000,7.000 L8.000,6.000 L9.000,6.000 L9.000,5.000 L8.000,5.000 L8.000,4.000 L7.000,4.000 L7.000,3.000 L6.000,3.000 L6.000,2.000 L5.000,2.000 L5.000,1.000 L4.000,1.000 L4.000,-0.000 L6.000,-0.000 L6.000,1.000 L7.000,1.000 L7.000,2.000 L8.000,2.000 L8.000,3.000 L9.000,3.000 L9.000,4.000 ZM4.000,4.000 L5.000,4.000 L5.000,5.000 L6.000,5.000 L6.000,6.000 L5.000,6.000 L5.000,7.000 L4.000,7.000 L4.000,8.000 L3.000,8.000 L3.000,9.000 L2.000,9.000 L2.000,10.000 L-0.000,10.000 L-0.000,1.000 L2.000,1.000 L2.000,2.000 L3.000,2.000 L3.000,3.000 L4.000,3.000 L4.000,4.000 Z"/>
+            </svg>
+          </div>
+
+          <!-- 赛事视频-筛选 -->
+          <ul class="base-sort-list video-sort">
+            <li class="on"><a href="javascript:Base.InitVideoList(0);" onclick="PTTSendClick('btn', 'video-sort-1', '全部')">全部</a></li>
+            <li><a href="javascript:Base.getKolVideoList();" onclick="PTTSendClick('btn', 'video-sort-2', 'LPL官方节目')">LPL官方节目</a></li>
+            <li><a href="javascript:Base.InitVideoList(20);" onclick="PTTSendClick('btn', 'video-sort-3', '全场回顾')">全场回顾</a></li>
+            <li><a href="javascript:Base.InitVideoList(80);" onclick="PTTSendClick('btn', 'video-sort-4', '赛事速看')">赛事速看</a></li>
+            <li><a href="javascript:Base.InitVideoList(76);" onclick="PTTSendClick('btn', 'video-sort-5', '巅峰时刻')">巅峰时刻</a></li>
+          </ul>
+          <a class="video-more" href="//lpl.qq.com/es/video.shtml" onclick="PTTSendClick('btn', 'video-more', '更多')" target="_blank">更多</a>
+
+          <!-- 赛事视频-列表 -->
+          <ul class="video-list" id="list_content_v">
+            <script type="text/html" id="videoListTemp">
+              {{if baseList}}
+                {{each baseList as value index}}
+                  <li>
+                    <a href="{{value.href}}" onclick="PTTSendClick('btn', 'video-item-{{index}}', '{{value.videoInfo.sName}}');" target="_blank">
+                      <div class="image">
+                        <img src="{{value.videoInfo.sImg1}}" alt="{{value.videoInfo.sName}}" />
+                        <div class="shade"></div>
+                        <div class="time">{{value.min}}:{{value.sec}}</div>
+                      </div>
+                      <div class="intro">
+                        <div class="title">{{value.videoInfo.sName}}</div>
+                        <div class="info">
+                          <div class="view">播放量{{value.videoInfo.iTotal1}}</div>
+                          <div class="update">{{value.times}}</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                {{/each}}
+              {{else}}
+                {{each lplList as value index}}
+                  <li>
+                    <a href="{{value.href}}" onclick="PTTSendClick('btn', 'video-item-{{index}}', '{{value.sTitle}}');" target="_blank">
+                      <div class="image">
+                        <img src="{{value.sIMG}}" alt="{{value.sTitle}}" />
+                        <div class="shade"></div>
+                        <div class="time">{{value.min}}:{{value.sec}}</div>
+                      </div>
+                      <div class="intro">
+                        <div class="title">{{value.sTitle}}</div>
+                        <div class="info">
+                          <div class="view">播放量{{value.iTotalPlay}}</div>
+                          <div class="update">{{value.sIdxTime1}}</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                {{/each}}
+              {{/if}}
+            </script>
+          </ul>
+        </div>
+        <!-- 赛事视频 End -->
+      </div>
+    </div>
+
+    
+    <div class="module module-5">
+      <div class="module-inner">
+
+        <!-- 参赛队伍 Start -->
+        <div class="team-wrap module-anchor" data-name="参赛队伍">
+
+          <div class="base-title">
+            <div class="title">参赛战队</div>
+            <svg class="icon">
+              <path fill-rule="evenodd" d="M13.000,6.000 L13.000,5.000 L14.000,5.000 L14.000,6.000 L13.000,6.000 ZM12.000,7.000 L12.000,6.000 L13.000,6.000 L13.000,7.000 L12.000,7.000 ZM11.000,8.000 L11.000,7.000 L12.000,7.000 L12.000,8.000 L11.000,8.000 ZM10.000,9.000 L10.000,8.000 L11.000,8.000 L11.000,9.000 L10.000,9.000 ZM9.000,10.000 L9.000,9.000 L10.000,9.000 L10.000,10.000 L9.000,10.000 ZM12.000,4.000 L13.000,4.000 L13.000,5.000 L12.000,5.000 L12.000,4.000 ZM11.000,3.000 L12.000,3.000 L12.000,4.000 L11.000,4.000 L11.000,3.000 ZM10.000,2.000 L11.000,2.000 L11.000,3.000 L10.000,3.000 L10.000,2.000 ZM9.000,1.000 L10.000,1.000 L10.000,2.000 L9.000,2.000 L9.000,1.000 ZM9.000,4.000 L10.000,4.000 L10.000,5.000 L11.000,5.000 L11.000,6.000 L10.000,6.000 L10.000,7.000 L9.000,7.000 L9.000,8.000 L8.000,8.000 L8.000,9.000 L7.000,9.000 L7.000,10.000 L6.000,10.000 L6.000,11.000 L4.000,11.000 L4.000,10.000 L5.000,10.000 L5.000,9.000 L6.000,9.000 L6.000,8.000 L7.000,8.000 L7.000,7.000 L8.000,7.000 L8.000,6.000 L9.000,6.000 L9.000,5.000 L8.000,5.000 L8.000,4.000 L7.000,4.000 L7.000,3.000 L6.000,3.000 L6.000,2.000 L5.000,2.000 L5.000,1.000 L4.000,1.000 L4.000,-0.000 L6.000,-0.000 L6.000,1.000 L7.000,1.000 L7.000,2.000 L8.000,2.000 L8.000,3.000 L9.000,3.000 L9.000,4.000 ZM4.000,4.000 L5.000,4.000 L5.000,5.000 L6.000,5.000 L6.000,6.000 L5.000,6.000 L5.000,7.000 L4.000,7.000 L4.000,8.000 L3.000,8.000 L3.000,9.000 L2.000,9.000 L2.000,10.000 L-0.000,10.000 L-0.000,1.000 L2.000,1.000 L2.000,2.000 L3.000,2.000 L3.000,3.000 L4.000,3.000 L4.000,4.000 Z"/>
+            </svg>
+          </div>
+
+          <!-- 参赛队伍-列表 -->
+          <ul class="team-list" id="team-list">
+            <script type="text/html" id="team-list-html">
+              {{each teamList as item index}}
+                <li>
+                  <a href="//lpl.qq.com/es/team_detail.shtml?tid={{item.teamId}}" onclick="PTTSendClick('btn', 'team-item-{{index}}', '{{item.teamName}}');" target="_blank">
+                    <div class="image">
+                      <img src="{{item.teamLogo}}" alt="{{item.teamName}}" />
+                    </div>
+                    <div class="text">
+                      <span>{{item.teamName}}</span>
+                    </div>
+                  </a>
+                </li>
+              {{/each}}
+            </script>
+          </ul>
+        </div>
+        <!-- 参赛队伍 End -->
+    
+        <!-- 官方解说 Start -->
+        <div class="narrate-wrap">
+
+          <div class="base-title">
+            <div class="title">官方解说</div>
+            <svg class="icon">
+              <path fill-rule="evenodd" d="M13.000,6.000 L13.000,5.000 L14.000,5.000 L14.000,6.000 L13.000,6.000 ZM12.000,7.000 L12.000,6.000 L13.000,6.000 L13.000,7.000 L12.000,7.000 ZM11.000,8.000 L11.000,7.000 L12.000,7.000 L12.000,8.000 L11.000,8.000 ZM10.000,9.000 L10.000,8.000 L11.000,8.000 L11.000,9.000 L10.000,9.000 ZM9.000,10.000 L9.000,9.000 L10.000,9.000 L10.000,10.000 L9.000,10.000 ZM12.000,4.000 L13.000,4.000 L13.000,5.000 L12.000,5.000 L12.000,4.000 ZM11.000,3.000 L12.000,3.000 L12.000,4.000 L11.000,4.000 L11.000,3.000 ZM10.000,2.000 L11.000,2.000 L11.000,3.000 L10.000,3.000 L10.000,2.000 ZM9.000,1.000 L10.000,1.000 L10.000,2.000 L9.000,2.000 L9.000,1.000 ZM9.000,4.000 L10.000,4.000 L10.000,5.000 L11.000,5.000 L11.000,6.000 L10.000,6.000 L10.000,7.000 L9.000,7.000 L9.000,8.000 L8.000,8.000 L8.000,9.000 L7.000,9.000 L7.000,10.000 L6.000,10.000 L6.000,11.000 L4.000,11.000 L4.000,10.000 L5.000,10.000 L5.000,9.000 L6.000,9.000 L6.000,8.000 L7.000,8.000 L7.000,7.000 L8.000,7.000 L8.000,6.000 L9.000,6.000 L9.000,5.000 L8.000,5.000 L8.000,4.000 L7.000,4.000 L7.000,3.000 L6.000,3.000 L6.000,2.000 L5.000,2.000 L5.000,1.000 L4.000,1.000 L4.000,-0.000 L6.000,-0.000 L6.000,1.000 L7.000,1.000 L7.000,2.000 L8.000,2.000 L8.000,3.000 L9.000,3.000 L9.000,4.000 ZM4.000,4.000 L5.000,4.000 L5.000,5.000 L6.000,5.000 L6.000,6.000 L5.000,6.000 L5.000,7.000 L4.000,7.000 L4.000,8.000 L3.000,8.000 L3.000,9.000 L2.000,9.000 L2.000,10.000 L-0.000,10.000 L-0.000,1.000 L2.000,1.000 L2.000,2.000 L3.000,2.000 L3.000,3.000 L4.000,3.000 L4.000,4.000 Z"/>
+            </svg>
+          </div>
+
+          <!-- 官方解说 - 列表 -->
+          <div class="swiper-container swiper-no-swiping base-swiper-card narrate-swiper">
+            <div class="swiper-wrapper" id="narrate-list">
+              <script type="text/html" id="narrate-list-html">
+                {{each narrateList as item index}}
+                  <ul class="swiper-slide card-list">
+                    {{each item as sitem sindex}}
+                      <li class="card-item">
+                        <div class="image">
+                          <img src="{{sitem.image}}" alt="{{sitem.name}}" />
+                        </div>
+                        <div class="text">{{sitem.name}}</div>
+                      </li>
+                    {{/each}}
+                  </ul>
+                {{/each}}
+              </script>
+            </div>
+          </div>
+
+          <!-- 官方解说 - 切换 -->
+          <div class="swiper-control">
+            <a class="base-swiper-btn narrate-btn-prev" href="javascript:;" onclick="PTTSendClick('btn', 'narrate-btn-prev', '上一页')">
+              <svg class="icon">
+                <path fill-rule="evenodd" d="M9.000,4.997 L10.000,2.997 L7.000,-0.003 L-0.000,5.997 L-0.000,7.997 L7.000,13.997 L10.000,10.997 L9.000,8.997 L7.000,10.997 L2.000,6.997 L2.000,6.997 L7.000,2.997 L9.000,4.997 Z"/>
+              </svg>
+            </a>
+            <a class="base-swiper-btn narrate-btn-next" href="javascript:;" onclick="PTTSendClick('btn', 'narrate-btn-next', '下一页')">
+              <svg class="icon">
+                <path fill-rule="evenodd" d="M1.000,4.997 L-0.000,2.997 L3.000,-0.003 L10.000,5.997 L10.000,7.997 L3.000,13.997 L-0.000,10.997 L1.000,8.997 L3.000,10.997 L8.000,6.997 L8.000,6.997 L3.000,2.997 L1.000,4.997 Z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- 官方解说 End -->
+    
+        <!-- 官方主持人 Start -->
+        <div class="compere-wrap">
+
+          <div class="base-title">
+            <div class="title">官方主持人</div>
+            <svg class="icon">
+              <path fill-rule="evenodd" d="M13.000,6.000 L13.000,5.000 L14.000,5.000 L14.000,6.000 L13.000,6.000 ZM12.000,7.000 L12.000,6.000 L13.000,6.000 L13.000,7.000 L12.000,7.000 ZM11.000,8.000 L11.000,7.000 L12.000,7.000 L12.000,8.000 L11.000,8.000 ZM10.000,9.000 L10.000,8.000 L11.000,8.000 L11.000,9.000 L10.000,9.000 ZM9.000,10.000 L9.000,9.000 L10.000,9.000 L10.000,10.000 L9.000,10.000 ZM12.000,4.000 L13.000,4.000 L13.000,5.000 L12.000,5.000 L12.000,4.000 ZM11.000,3.000 L12.000,3.000 L12.000,4.000 L11.000,4.000 L11.000,3.000 ZM10.000,2.000 L11.000,2.000 L11.000,3.000 L10.000,3.000 L10.000,2.000 ZM9.000,1.000 L10.000,1.000 L10.000,2.000 L9.000,2.000 L9.000,1.000 ZM9.000,4.000 L10.000,4.000 L10.000,5.000 L11.000,5.000 L11.000,6.000 L10.000,6.000 L10.000,7.000 L9.000,7.000 L9.000,8.000 L8.000,8.000 L8.000,9.000 L7.000,9.000 L7.000,10.000 L6.000,10.000 L6.000,11.000 L4.000,11.000 L4.000,10.000 L5.000,10.000 L5.000,9.000 L6.000,9.000 L6.000,8.000 L7.000,8.000 L7.000,7.000 L8.000,7.000 L8.000,6.000 L9.000,6.000 L9.000,5.000 L8.000,5.000 L8.000,4.000 L7.000,4.000 L7.000,3.000 L6.000,3.000 L6.000,2.000 L5.000,2.000 L5.000,1.000 L4.000,1.000 L4.000,-0.000 L6.000,-0.000 L6.000,1.000 L7.000,1.000 L7.000,2.000 L8.000,2.000 L8.000,3.000 L9.000,3.000 L9.000,4.000 ZM4.000,4.000 L5.000,4.000 L5.000,5.000 L6.000,5.000 L6.000,6.000 L5.000,6.000 L5.000,7.000 L4.000,7.000 L4.000,8.000 L3.000,8.000 L3.000,9.000 L2.000,9.000 L2.000,10.000 L-0.000,10.000 L-0.000,1.000 L2.000,1.000 L2.000,2.000 L3.000,2.000 L3.000,3.000 L4.000,3.000 L4.000,4.000 Z"/>
+            </svg>
+          </div>
+
+          <!-- 官方主持人 - 列表 -->
+          <div class="swiper-container swiper-no-swiping base-swiper-card compere-swiper">
+            <div class="swiper-wrapper" id="compere-list">
+              <script type="text/html" id="compere-list-html">
+                {{each compereList as item index}}
+                  <ul class="swiper-slide card-list">
+                    {{each item as sitem sindex}}
+                      <li class="card-item">
+                        <div class="image">
+                          <img src="{{sitem.image}}" alt="{{sitem.name}}" />
+                        </div>
+                        <div class="text">{{sitem.name}}</div>
+                      </li>
+                    {{/each}}
+                  </ul>
+                {{/each}}
+              </script>
+            </div>
+          </div>
+
+          <!-- 官方主持人 - 切换 -->
+          <div class="swiper-control">
+            <a class="base-swiper-btn compere-btn-prev" href="javascript:;" onclick="PTTSendClick('btn', 'compere-btn-prev', '上一页')">
+              <svg class="icon">
+                <path fill-rule="evenodd" d="M9.000,4.997 L10.000,2.997 L7.000,-0.003 L-0.000,5.997 L-0.000,7.997 L7.000,13.997 L10.000,10.997 L9.000,8.997 L7.000,10.997 L2.000,6.997 L2.000,6.997 L7.000,2.997 L9.000,4.997 Z"/>
+              </svg>
+            </a>
+            <a class="base-swiper-btn compere-btn-next" href="javascript:;" onclick="PTTSendClick('btn', 'compere-btn-next', '下一页')">
+              <svg class="icon">
+                <path fill-rule="evenodd" d="M1.000,4.997 L-0.000,2.997 L3.000,-0.003 L10.000,5.997 L10.000,7.997 L3.000,13.997 L-0.000,10.997 L1.000,8.997 L3.000,10.997 L8.000,6.997 L8.000,6.997 L3.000,2.997 L1.000,4.997 Z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- 官方主持人 End -->
+      </div>
+    </div>
+
+
+    <!-- 赛事奖金 Start -->
+    <div class="module module-6">
+      <div class="module-inner">
+
+        <div class="base-title">
+          <div class="title">赛事奖金</div>
+          <svg class="icon">
+            <path fill-rule="evenodd" d="M13.000,6.000 L13.000,5.000 L14.000,5.000 L14.000,6.000 L13.000,6.000 ZM12.000,7.000 L12.000,6.000 L13.000,6.000 L13.000,7.000 L12.000,7.000 ZM11.000,8.000 L11.000,7.000 L12.000,7.000 L12.000,8.000 L11.000,8.000 ZM10.000,9.000 L10.000,8.000 L11.000,8.000 L11.000,9.000 L10.000,9.000 ZM9.000,10.000 L9.000,9.000 L10.000,9.000 L10.000,10.000 L9.000,10.000 ZM12.000,4.000 L13.000,4.000 L13.000,5.000 L12.000,5.000 L12.000,4.000 ZM11.000,3.000 L12.000,3.000 L12.000,4.000 L11.000,4.000 L11.000,3.000 ZM10.000,2.000 L11.000,2.000 L11.000,3.000 L10.000,3.000 L10.000,2.000 ZM9.000,1.000 L10.000,1.000 L10.000,2.000 L9.000,2.000 L9.000,1.000 ZM9.000,4.000 L10.000,4.000 L10.000,5.000 L11.000,5.000 L11.000,6.000 L10.000,6.000 L10.000,7.000 L9.000,7.000 L9.000,8.000 L8.000,8.000 L8.000,9.000 L7.000,9.000 L7.000,10.000 L6.000,10.000 L6.000,11.000 L4.000,11.000 L4.000,10.000 L5.000,10.000 L5.000,9.000 L6.000,9.000 L6.000,8.000 L7.000,8.000 L7.000,7.000 L8.000,7.000 L8.000,6.000 L9.000,6.000 L9.000,5.000 L8.000,5.000 L8.000,4.000 L7.000,4.000 L7.000,3.000 L6.000,3.000 L6.000,2.000 L5.000,2.000 L5.000,1.000 L4.000,1.000 L4.000,-0.000 L6.000,-0.000 L6.000,1.000 L7.000,1.000 L7.000,2.000 L8.000,2.000 L8.000,3.000 L9.000,3.000 L9.000,4.000 ZM4.000,4.000 L5.000,4.000 L5.000,5.000 L6.000,5.000 L6.000,6.000 L5.000,6.000 L5.000,7.000 L4.000,7.000 L4.000,8.000 L3.000,8.000 L3.000,9.000 L2.000,9.000 L2.000,10.000 L-0.000,10.000 L-0.000,1.000 L2.000,1.000 L2.000,2.000 L3.000,2.000 L3.000,3.000 L4.000,3.000 L4.000,4.000 Z"/>
+          </svg>
+        </div>
+
+        <!-- 赛事奖金 - 奖金列表 -->
+        <div class="match-wrap">
+          <ul class="ranking-list" id="ranking-list">
+            <script type="text/html" id="ranking-list-html">
+              {{each rankingList as item index}}
+                <li>
+                  <div class="honor">{{item.honor}}</div>
+                  <div class="price">{{item.price}}</div>
+                  <div class="units">{{item.units}}</div>
+                </li>
+              {{/each}}
+            </script>
+          </ul>
+        </div>
+
+        <!-- 赛事奖金 - 关于LPL -->
+        <div class="about-wrap" id="about-wrap">
+          <script type="text/html" id="about-wrap-html">
+            <div class="lpl-logo"></div>
+            <ul class="about-list">
+              {{each list as item index}}
+                <li>
+                  <div class="title">{{# item.title}}</div>
+                  <div class="desc">{{# item.desc}}</div>
+                </li>
+              {{/each}}
+            </ul>
+            <div class="winner">
+              {{if winner.status}}
+                <div class="logo">
+                  <img src="{{winner.logo}}" alt="{{winner.name}}" />
+                </div>
+                <div class="name">冠军: {{winner.name}}</div>
+              {{else}}
+                <div class="name">敬请期待</div>
+              {{/if}}
+            </div>
+          </script>
+        </div>
+
+        <!-- 赛事奖金 - 时间轴 -->
+        <div class="about-timeline">
+
+          <!-- 赛事奖金 - 时间轴 - 列表 -->
+          <div class="swiper-container about-swiper">
+            <div class="swiper-wrapper" id="timeline-list">
+              <script type="text/html" id="timeline-list-html">
+                {{each timelineList as item index}}
+                  <div class="swiper-slide timeline-item {{index == 0 ? 'active' : ''}}">
+                    <div class="icon-circle"></div>
+                    <div class="icon-site"></div>
+                    <div class="text">{{item.match}}</div>
+                  </div>
+                  {{/each}}
+              </script>
+            </div>
+          </div>
+
+          <!-- 赛事奖金 - 时间轴 - 切换 -->
+          <div class="swiper-control">
+            <a class="base-swiper-btn about-btn-prev" href="javascript:;" onclick="PTTSendClick('btn', 'about-btn-prev', '上一页')">
+              <svg class="icon">
+                <path fill-rule="evenodd" d="M9.000,4.997 L10.000,2.997 L7.000,-0.003 L-0.000,5.997 L-0.000,7.997 L7.000,13.997 L10.000,10.997 L9.000,8.997 L7.000,10.997 L2.000,6.997 L2.000,6.997 L7.000,2.997 L9.000,4.997 Z"/>
+              </svg>
+            </a>
+            <a class="base-swiper-btn about-btn-next" href="javascript:;" onclick="PTTSendClick('btn', 'about-btn-next', '下一页')">
+              <svg class="icon">
+                <path fill-rule="evenodd" d="M1.000,4.997 L-0.000,2.997 L3.000,-0.003 L10.000,5.997 L10.000,7.997 L3.000,13.997 L-0.000,10.997 L1.000,8.997 L3.000,10.997 L8.000,6.997 L8.000,6.997 L3.000,2.997 L1.000,4.997 Z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 赛事奖金 End -->
+  </div>
+
+  
+  <!-- 模板渲染 Start -->
+
+    <!-- 春季赛常规赛 夏季常规赛 -->
+    <script id="match-list-1-temp" type="text/html">
+      {{each list as value index}}
+        <li class="{{value.statusClass}}">
+          <div class="proceed"></div>
+          <div class="match-time">
+            <div class="date">{{value.time1}}</div>
+            <div class="time">{{value.time2}}</div>
+            <div class="status">{{value.txts}}</div>
+          </div>
+          <div class="match-score">
+            <div class="team-item">{{value.TeamNameA}}</div>
+            <div class="match-result">
+              <div class="score-item {{value.scoreAClass}}">{{value.ScoreA}}</div>
+              <div class="score-item {{value.scoreBClass}}">{{value.ScoreB}}</div>
+            </div>
+            <div class="team-item">{{value.TeamNameB}}</div>
+          </div>
+          <div class="video-item">
+            {{if value.MatchStatus == 3 && value.bMatchId != 0}}
+              <a class="base-btn btn-data" href="{{value.href_data}}" target="_blank" onclick="PTTSendClick('btn', 'btn-data', '数据');">
+                <div class="text">数据</div>
+              </a>
+            {{else}}
+              <a class="base-btn btn-data" href="javascript:alert('敬请期待');" onclick="PTTSendClick('btn', 'btn-data', '数据');">
+                <div class="text">数据</div>
+              </a>
+            {{/if}}
+            {{if value.MatchStatus == 3 && value.NewsId != 0}}
+              <a class="base-btn btn-video" href="{{value.href_video}}" target="_blank" onclick="PTTSendClick('btn', 'btn-video', '视频');">
+                <div class="text">视频</div>
+              </a>
+            {{else}}
+              <a class="base-btn btn-video" href="javascript:alert('敬请期待');" onclick="PTTSendClick('btn', 'btn-video', '视频');">
+                <div class="text">视频</div>
+              </a>
+            {{/if}}
+          </div>
+        </li>
+      {{/each}}
+    </script>
+
+    <!-- 春季赛常规赛 夏季常规赛 筛选 -->
+    <script id="day-type-2-temp" type="text/html">
+      {{each list as value index}}
+        <a id="process_2_{{value.gameType}}_{{value.GameProcId}}" href="javascript:Base.ShowGameScheduleList2('{{value.gameType}}','{{value.GameProcId}}');" onclick="PTTSendClick('btn','weekOne','{{value.GameProcName}}');">
+          {{value.GameProcName}}
+        </a>
+      {{/each}}
+    </script>
+
+    <!-- 战队积分榜 -->
+    <script id="match-rank-list-1-temp" type="text/html">
+      {{each list as value index}}
+        <li>
+          <div class="td">
+            <div class="top-rank top_{{value.Rank}}">{{value.Rank}}</div>
+          </div>
+          <div class="td">
+            <div class="match-rank-team">
+              <div class="team-logo">
+                <a target="_blank" href="{{value.href}}" target="_blank">
+                  <img src="{{value.logo}}">
+                </a>
+              </div>
+              <div class="team-name">{{value.TeamName}}</div>
+            </div>
+          </div>
+          <div class="td">
+            <div class="match-rank-rult">
+              <span class="win">{{value.Value1}}</span>
+              <span class="centline">/</span>
+              <div class="lost">{{value.Value3}}</div>
+            </div>
+          </div>
+          <div class="td">
+            <div class="integrate">{{value.Score}}</div>
+          </div>
+        </li>
+      {{/each}}
+    </script>
+
+    <!-- 个人排行榜 -->
+    <script id="personalRanking-temp" type="text/html">
+      {{each list as value index}}
+        <tr>
+          {{if index < 3}}
+            <td class="tb-01">
+              <div class="rank-num num-{{value.iNum}}">
+                <span>{{value.iNum}}</span>
+              </div>
+            </td>
+          {{else}}
+            <td class="tb-01">
+              <span>{{value.iNum}}</span>
+            </td>
+          {{/if}}
+          <td class="tb-02">
+            <img src="{{value.UserIcon}}" title="{{value.NickName}}">
+            <span>{{value.NickName}}</span>
+          </td>
+          <td class="tb-03">
+            <img src="{{value.TeamLogo}}" title="战队图标">
+          </td>
+          <td class="tb-04">{{value.iPosition}}</td>
+          {{if value.sField_1}}
+            <td class="tb-05">{{value.sField_data}}({{value.sField_data1}})</td>
+          {{else}}
+            <td class="tb-05">{{value.sField_data}}</td>
+          {{/if}}
+        </tr>
+      {{/each}}
+    </script>
+
+    <!-- 历史对局 -->
+    <script id="data-table-html" type="text/html">
+      <div class="tr">
+        <div class="td"></div>
+        {{each list as value index}}
+          <div class="td highlight-y y-{{ index + 1 }}">
+            <div class="team-logo">
+              <img src="{{value.team.logo}}" alt="">
+            </div>
+          </div>
+        {{/each}}
+        <div class="td data-score">
+          <span>胜/负</span>
+        </div>
+        <div class="td data-score">
+          <span>胜率</span>
+        </div>
+      </div>
+      {{each list as value index}}
+        <div class="tr highlight-x x-{{ index }} {{ index === 0 ? 'on' : '' }}" data-key="x-{{ index }}">
+          <div class="td menu-switch">
+            <div class="team-logo">
+              <img src="{{value.team.logo}}" alt="">
+            </div>
+          </div>
+          {{each value.scoreList as item sindex}}
+            <div class="td highlight-y y-{{ sindex + 1 }}" data-key="y-{{ sindex + 1 }}">
+              {{if item.teamA.name != item.teamB.name}}
+                {{if item.link != 'javascript:;' && item.link != ''}}
+                  <a class="btn-view" href="{{item.link}}" target="_blank">
+                    <div class="icon-video"></div>
+                  </a>
+                {{/if}}
+                {{if item.teamA.score > item.teamB.score}}
+                  <div class="status-red">
+                {{else if item.teamA.score < item.teamB.score}}
+                  <div class="status-green">
+                {{else}}  
+                  <div>
+                {{/if}}
+                  {{item.teamA.score}} - {{item.teamB.score}}
+                </div>
+              {{/if}}
+            </div>
+          {{/each}}
+          <div class="td data-score">
+            {{if value.win > value.lost}}
+              <div class="score status-red">
+            {{else if value.win == value.lost}}
+              <div class="score status-orange">
+            {{else if value.win < value.lost}}
+              <div class="score status-green">
+            {{/if}}
+              {{value.win}}/{{value.lost}}
+            </div>
+          </div>
+          <div class="td data-score">
+            {{if value.winrate > 50}}
+              <div class="score status-red">
+            {{else if value.winrate == 50}}
+              <div class="score status-orange">
+            {{else if value.winrate < 50}}
+              <div class="score status-green">
+            {{/if}}
+              {{value.winrate}}%
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </script>
+    <!-- 春季季后赛 冒泡赛，双败赛-->
+
+    <!--单场对局模板-->
+    <script type="text/html" id="LPL_PO_match_game_one_T">
+      <div class="list-col-one {{MatchStatusData[0]}}">
+        <!--比赛轮数-->
+        <h3 class="match-part-name"><span class="sheaves-num">{{roundsName}}</span></h3>
+        <!--对局上方的游戏状态,时间等信息栏-->
+        <p class="info">
+          <span class="status">{{MatchStatusData[1]}}</span>
+          <span class="time">{{MatchDate}}</span>
+          {{if MatchStatusData[0] === 'wait' }}
+          <a class="herf-video">敬请期待</a>
+          {{else if MatchStatusData[0] === 'now'}}
+            <a class="herf-order" target="_blank" href="//lpl.qq.com/es/live.shtml?bgid={{GameId}}&bmid={{bMatchId}}" onclick="PTTSendClick('event','watch','观看直播')">观看直播</a>
+            {{else}}
+              <a class="herf-video" target="_blank" href="//lpl.qq.com/es/video_detail.shtml?nid={{NewsId}}&bMatchId={{bMatchId}}" onclick="PTTSendClick('event','video','查看视频')">视频</a>
+              <a class="herf-data" target="_blank" href="//lpl.qq.com/es/stats.shtml?bmid={{bMatchId}}" onclick="PTTSendClick('event','gamedata','查看数据')">数据</a>
+              {{/if}}
+        </p>
+        <!--两支战队-->
+        <p class="team {{isAWin && 'win'}}">
+          <span class="img-wrap"><img src="{{teamALogo}}" alt=""></span>
+          <a class="team-name">{{teamAName}}</a>
+          <a class="score">{{ScoreA}}</a>
+        </p>
+        <p class="team {{isBWin && 'win'}}">
+          <span class="img-wrap"><img src="{{teamBLogo}}" alt=""></span>
+          <a class="team-name">{{teamBName}}</a>
+          <a class="score">{{ScoreB}}</a>
+        </p>
+        
+      </div>
+    </script>
+    <!--单排比赛模板-->
+    <script type="text/html" id="LPL_PO_one_col_T">
+      {{each}}
+      {{include 'LPL_PO_match_game_one_T' $value}}
+      {{/each}}
+    </script>
+    <!--lpl季后赛模板-->
+    <script type="text/html" id="LPL_PO_T">
+      <div class="lpl-play-offs-21-bubbling">
+        <div class="format list-col">
+          <div class="format-name">冒泡赛</div>
+          <div class="format-name format-name-both">双败赛</div>
+        </div>
+        <div class="list-col">
+          {{include 'LPL_PO_one_col_T' $data.top8to6}}
+        </div>
+        <div class="list-col front-box list-wire">
+          <i class="link-0"></i>
+          <div class="link-wirebox">
+            <div class="link-wire1"></div>
+            <div class="link-wire2"></div>
+          </div>
+          <div class="link-line"></div>
+        </div>
+        <div class="list-col">
+          {{include 'LPL_PO_one_col_T' $data.top6to4}}
+        </div>
+        <!-- 横线 -->
+        <div class="list-col front-box list-wire2">
+          <i class="link-0"></i>
+          <div class="link-wirebox">
+            <div class="link-wire1"></div>
+            <div class="link-wire2"></div>
+          </div>
+          <div class="link-line"></div>
+        </div>
+        <div class="list-col">
+          {{include 'LPL_PO_one_col_T' $data.top4to2}}
+        </div>
+      </div>
+      
+    </script>
+  <!-- 模板渲染 End -->
+
+
+  <!-- 插件 -->
+  <script src="//js.aq.qq.com/js/aq_common.js"></script>
+	<script src="//ossweb-img.qq.com/images/js/swiper4_component/js/swiper.min.js"></script>
+	<script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.11.3.min.js"></script>
+	<script src="//ossweb-img.qq.com/images/js/milo_bundle/milo.js"></script>
+  <script src="//vm.gtimg.cn/tencentvideo/txp/js/txplayer.js"></script>
+  <script src="//game.gtimg.cn/images/js/ArtTemplate.js"></script>
+  <script src="//ossweb-img.qq.com/images/js/livelink/livelink.p2p.min.js" charset="utf-8"></script>
+
+  <!-- 组件 -->
+  <script src="//lpl.qq.com/web201612/js/tools.js"></script>
+  <script src="//lpl.qq.com/web201612/js/public.js"></script>
+	<script src="//ossweb-img.qq.com/images/lol/title/lol.js"></script>
+  <script src="//game.gtimg.cn/images/js/2018foot/foot.js"></script>
+
+  <!-- 数据 -->
+  <script src="//lpl.qq.com/web201612/data/LOL_MATCH2_TEAM_LIST.js"></script>
+  <script src="//lpl.qq.com/web201612/data/LOL_MATCH2_TEAM_MEMBER_LIST.js"></script>
+  <script src="//lpl.qq.com/web201612/data/LOL_MATCH2_LIVE_BMATCH_LIST.js"></script>
+  <script src="//lpl.qq.com/web201612/data/LOL_MATCH_ALL_BATTLE_SCORE_LIST.js"></script>
+
+  <!-- 页面 -->
+	<script src="//lpl.qq.com/act/a20201230lplspring/js/data.js"></script>
+	<script src="//lpl.qq.com/act/a20201230lplspring/js/render.js"></script>
+  <script src="//lpl.qq.com/act/a20201230lplspring/js/index.js"></script>
+  <script src="//lpl.qq.com/act/a20201230lplspring/js/base.js"></script>
+  <script src="//lpl.qq.com/act/a20201230lplspring/js/sj21-sprite.js"></script>
+  
+  <!-- 埋点 -->
+	<script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+	<script>
+    var setSite = {
+      siteType: 'a20201230lplspring',
+      pageType: 'index',
+      pageName: '首页',
+      project: 'other',
+      osact: 0
+    }
+    if (typeof (pgvMain) == 'function') pgvMain()
+  </script>
 </body>
-</html>
+</html><!-- #t6Hl8#C6920D967A3B276992C4B16BB09A97F0 -->
