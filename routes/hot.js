@@ -19,8 +19,8 @@ router.get('/', function(req, res, next) {
 
 
 router.post('/add', (req, res) => {
-    let score = new Score(req.body.title, req.body.name, req.body.content)
-    connection.query("insert into article(title,name,content) value(?,?,?)", [score.title, score.name, score.content], (err, result, fields) => {
+    let score = new Score(req.body.title, req.body.name, req.body.content,req.body.img)
+    connection.query("insert into article(title,name,content,img) value(?,?,?,?)", [score.title, score.name, score.content,score.img], (err, result, fields) => {
       res.redirect('/news')
     })
   });

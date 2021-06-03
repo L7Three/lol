@@ -27,8 +27,8 @@ router.get('/', function (req, res) {
 });
 
 router.post('/add', (req, res) => {
-  let score = new Score(req.body.title, req.body.name, req.body.content)
-  connection.query("insert into article(title,name,content) value(?,?,?)", [score.title, score.name, score.content], (err, result, fields) => {
+  let score = new Score(req.body.title, req.body.name, req.body.content,req.body.img)
+  connection.query("insert into article(title,name,content,img) value(?,?,?,?)", [score.title, score.name, score.content,score.img], (err, result, fields) => {
     res.redirect('/xdmin')
   })
 });
@@ -62,11 +62,12 @@ router.post('/update/:id', (req, res) => {
       'title': req.body.title,
       'name': req.body.name,
       'content': req.body.content,
+      'img':req.body.img
   }
   let sqlStr = `delete from article where id = ${req.params.id}`
   connection.query(sqlStr, (err, result) => {
     if(err) throw err;
-      let sqlStr1 = `INSERT INTO article(id,title,name,content) VALUES('${req.params.id}','${user.title}','${user.name}','${user.content}')`
+      let sqlStr1 = `INSERT INTO article(id,title,name,content,img) VALUES('${req.params.id}','${user.title}','${user.name}','${user.content}','${user.img}')`
       connection.query(sqlStr1, (err, result) => {
         if(err) throw err;
           res.redirect('/xdmin')
