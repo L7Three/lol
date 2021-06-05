@@ -18,6 +18,7 @@
         <div class="container navbar-content">
             <a href="/">首页</a>
             <a href="/hot">我要上热门</a>
+            <span style="margin-left: 680px;"><a href="/index">登录</a></span>
         </div>
     </nav>
 
@@ -59,7 +60,7 @@
               评论: <textarea name="comment" id="" ></textarea>
             </div>
             <div style="text-align: center;">
-                <input type="submit" id="tj" value="评论">
+                <input type="submit" id="tj" value="发表">
             </div>
             
         </div>
@@ -78,5 +79,16 @@
 $('#tj').click(function(){
 			alert('评论成功!')
 		})
+
+
+// $('#tj').click(function(){
+//     $.ajax({
+//         type:"post",
+//         url:"/details/id/add",
+//         data:{},
+//         success:
+//     })
+// })
+
 </script>
 

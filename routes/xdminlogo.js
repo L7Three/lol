@@ -28,6 +28,7 @@ router.post("/login", function (req, res) {
             res.json({ "status": -1 });
         } else {
             res.json({ "status": 1 });
+            req.session.user=results;
         }
     })
 });
@@ -45,8 +46,6 @@ router.post("/regist", function (req, res) {
             res.send("success")
         }
     })
-
-    
 })
 
 module.exports = router;

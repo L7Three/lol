@@ -26,7 +26,7 @@ router.get('/details/:id', (req, res) => {
     connection.query(sqlStr, (err, result) => {
       if (err) throw err;
       console.log(result);
-      connection.query("select * from comment ORDER BY id DESC", function (err, results, fields) {
+      connection.query("select * from newscomment ORDER BY id DESC", function (err, results, fields) {
         res.render('details', {
           data: result,
           datas: results
@@ -35,13 +35,11 @@ router.get('/details/:id', (req, res) => {
   })
 })
 
-
 router.post('/details/:id/add', (req, res) => {
   let co = new comment(req.body.name, req.body.comment)
-  connection.query("insert into comment(name,comment) value(?,?)", [co.name, co.comment], (err, result, fields) => {
+  connection.query("insert into newscomment(name,comment) value(?,?)", [co.name, co.comment], (err, result, fields) => {
     res.redirect('/details/:id')
   })
 });
-
 
 module.exports = router;

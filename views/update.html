@@ -22,11 +22,11 @@
             <div class="error-msg"></div>
         </label>
         <label><span>文章内容 :</span>
-            <textarea id="description" name="content" value="<%=o.content%>"></textarea>
+            <input id="description" size="80" name="content" value="<%=o.content%>"/>
             <div class="error-msg"></div> &nbsp; &nbsp;
         </label>
         <label><span>图片 :</span>
-            <input id="keywords" type="file" value="" name="img"/>
+            <input id="keywords" type="file" src="/img/<%=o.img%>" name="img"/>
             <div class="error-msg"></div>
         </label>
         <div class="success-msg"></div>
