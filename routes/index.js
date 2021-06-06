@@ -5,13 +5,18 @@ var mysql = require('mysql');
 var User = require(".//bean/user");
 var md5 = require("md5");
 
+
 let connection = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "123456",
     port: "3306",
-    database: "user"
+    database: "user",
+    timezone:"SYSTEM"
+
 });
+
+
 
 router.get('/', function (req, res, next) {
     res.render('index');
@@ -28,6 +33,8 @@ router.post("/login", function (req, res) {
             res.json({ "status": -1 });
         } else {
             res.json({ "status": 1 });
+            req.session.user=v.name;
+            router.nam = v.name;
         }
     })
 });
@@ -44,10 +51,7 @@ router.post("/regist", function (req, res) {
         } else {
             res.send("success")
         }
-    })
-
-    
+    })    
 })
-
 
 module.exports = router;

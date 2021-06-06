@@ -3,6 +3,7 @@ var express = require('express');
 var router = express.Router();
 var mysql = require("mysql");
 var comment = require("./bean/comment");
+var name = require("./index");
 
 let connection = mysql.createConnection({
   host: "localhost",
@@ -14,11 +15,22 @@ let connection = mysql.createConnection({
 });
 
 router.get('/', function (req, res) {
-  connection.query("select * from article ORDER BY id DESC", function (err, results, fields) {
-    res.render('LOL2', {
-      data: results
+  console.log(name.nam);
+  if(name.nam){
+    connection.query("select * from article ORDER BY id DESC", function (err, results, fields) {
+      res.render('LOL3', {
+        data: results,
+        n : name.nam
+      })
     })
-  })
+  }else{
+    connection.query("select * from article ORDER BY id DESC", function (err, results, fields) {
+      res.render('LOL2', {
+        data: results
+      })
+    })
+  }
+  
 });
 
 router.get('/details/:id', (req, res) => {
