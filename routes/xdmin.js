@@ -1,11 +1,11 @@
 const e = require('express');
 var express = require('express');
 var router = express.Router();
-
+var name = require("./xdminlogo");
 var mysql = require("mysql");
 
 const Score = require('./bean/texts');
-var name = require("./xdminlogo");
+
 
 let connection = mysql.createConnection({
   host: "localhost",
@@ -16,11 +16,10 @@ let connection = mysql.createConnection({
   timezone:"SYSTEM"
 });
 
-router.get('/add', function(req, res, next) {
-  res.render('insert');
-});
+
 
 router.get('/', function (req, res) {
+  console.log(name.nam);
   if(name.nam){
     connection.query("select * from article ORDER BY id DESC", function (err, results, fields) {
       res.render('xdmin1', {
@@ -37,9 +36,17 @@ router.get('/', function (req, res) {
   }
 });
 
+
+router.get('/add', function(req, res, next) {
+  res.render('insert');
+});
+
 router.post('/add', (req, res) => {
-  let score = new Score(req.body.title, req.body.name, req.body.content,req.body.img)
-  connection.query("insert into article(title,name,content,img) value(?,?,?,?)", [score.title, score.name, score.content,score.img], (err, result, fields) => {
+  console.log(11);
+  console.log("成为"+name.nam);
+  let names = name.nam
+  let score = new Score(req.body.title,req.body.content,req.body.img)
+  connection.query("insert into article(title,name,content,img) value(?,?,?,?)", [score.title,names, score.content,score.img], (err, result, fields) => {
     res.redirect('/xdmin')
   })
 });

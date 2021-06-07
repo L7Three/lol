@@ -1,11 +1,8 @@
 class Score{
-    constructor(title,name,content,img){
+    constructor(title,content,img){
         this.title = title;
-        this.name = name;
         this.content = content;
         this.img = img;
-        
-        
     }
 }
 
