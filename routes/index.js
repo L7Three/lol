@@ -13,7 +13,6 @@ let connection = mysql.createConnection({
     port: "3306",
     database: "user",
     timezone:"SYSTEM"
-
 });
 
 
@@ -32,9 +31,8 @@ router.post("/login", function (req, res) {
         if (!v) {
             res.json({ "status": -1 });
         } else {
-            res.json({ "status": 1 });
             req.session.user=v.name;
-            router.nam = v.name;
+            res.json({ "status": 1 });
         }
     })
 });

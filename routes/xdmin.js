@@ -1,9 +1,11 @@
+const e = require('express');
 var express = require('express');
 var router = express.Router();
 
 var mysql = require("mysql");
 
 const Score = require('./bean/texts');
+var name = require("./xdminlogo");
 
 let connection = mysql.createConnection({
   host: "localhost",
@@ -19,11 +21,20 @@ router.get('/add', function(req, res, next) {
 });
 
 router.get('/', function (req, res) {
-  connection.query("select * from article ORDER BY id DESC", function (err, results, fields) {
-    res.render('xdmin', {
-      data: results
+  if(name.nam){
+    connection.query("select * from article ORDER BY id DESC", function (err, results, fields) {
+      res.render('xdmin1', {
+        data: results,
+        n: name.nam
+      })
     })
-  })
+  }else{
+    connection.query("select * from article ORDER BY id DESC", function (err, results, fields) {
+      res.render('xdmin', {
+        data: results
+      })
+    })
+  }
 });
 
 router.post('/add', (req, res) => {

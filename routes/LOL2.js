@@ -3,7 +3,7 @@ var express = require('express');
 var router = express.Router();
 var mysql = require("mysql");
 var comment = require("./bean/comment");
-var name = require("./index");
+
 
 let connection = mysql.createConnection({
   host: "localhost",
@@ -15,12 +15,12 @@ let connection = mysql.createConnection({
 });
 
 router.get('/', function (req, res) {
-  console.log(name.nam);
-  if(name.nam){
+  console.log(req.session.user);
+  if(req.session.user){
     connection.query("select * from article ORDER BY id DESC", function (err, results, fields) {
       res.render('LOL3', {
         data: results,
-        n : name.nam
+        n : req.session.user
       })
     })
   }else{
@@ -30,27 +30,38 @@ router.get('/', function (req, res) {
       })
     })
   }
-  
 });
+
+router.get("/ind",function(req,res){
+  connection.query("select * from article ORDER BY id DESC", function (err, results, fields) {
+    res.render('LOL2', {
+      data: results
+    })
+  })
+})
 
 router.get('/details/:id', (req, res) => {
   let sqlStr = `SELECT * FROM article WHERE ID ="${req.params.id}" `
     connection.query(sqlStr, (err, result) => {
       if (err) throw err;
       console.log(result);
-      connection.query("select * from newscomment ORDER BY id DESC", function (err, results, fields) {
+      connection.query(`select * from newscomment  where content_id ="${req.params.id}" ORDER BY id DESC`, function (err, results, fields) {
+        if(err) throw err;
+        console.log(results);
         res.render('details', {
           data: result,
-          datas: results
+          datas: results,
+          id:req.params.id
         })
       })
   })
 })
 
 router.post('/details/:id/add', (req, res) => {
+  let id = req.body.id
   let co = new comment(req.body.name, req.body.comment)
-  connection.query("insert into newscomment(name,comment) value(?,?)", [co.name, co.comment], (err, result, fields) => {
-    res.redirect('/details/:id')
+  connection.query("insert into newscomment(name,comment,content_id) value(?,?,?)", [req.session.user, co.comment,id], (err, result, fields) => {
+    res.redirect('/details/'+id)
   })
 });
 

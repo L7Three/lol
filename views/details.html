@@ -59,9 +59,9 @@
               评论: <textarea name="comment" id="" ></textarea>
             </div>
             <div style="text-align: center;">
-                <input type="submit" id="tj" value="发表">
+            <input type="hidden" name="id" value="<%= id %>">
+            <input type="submit" id="tj" value="发表">
             </div>
-            
         </div>
         </form>
                         <footer class="copyright">
@@ -78,16 +78,6 @@
 $('#tj').click(function(){
 			alert('评论成功!')
 		})
-
-
-// $('#tj').click(function(){
-//     $.ajax({
-//         type:"post",
-//         url:"/details/id/add",
-//         data:{},
-//         success:
-//     })
-// })
 
 </script>
 
