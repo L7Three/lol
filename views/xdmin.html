@@ -14,87 +14,146 @@
 
     <div class="z">
         <form action="/xdmin/find" method="POST">
-        <a href="/" class="qk ">返回前端首页</a>
-        标题:<input type="text" id="queryInput" class="queryInput" name="queryinput" placeholder="请输入标题">
-        发表人: <input type="text">
-        <button type="submit" class="c  queryName" id="queryName">查询</button>
-        <a href="#"  class="qk" style="left: 152px;">清空</a>
-        <a href="/xdminlogo" class="qk" style="left: 177px;">管理员登录</a>
+            <a href="/" class="qk ">返回前端首页</a>
+            标题:<input type="text" id="queryInput" class="queryInput" name="queryinput" placeholder="请输入标题">
+            发表人: <input type="text">
+            <button type="submit" class="c  queryName" id="queryName">查询</button>
+            <a href="#" class="qk" style="left: 152px;">清空</a>
+            <a href="/xdminlogo" class="qk" style="left: 177px;">管理员登录</a>
         </form>
-        
+
     </div>
 
     <div>
         <ul class="dier">
-           <a href="/xdmin"> <button class="add" >返回首页</button> </a>
-           <a href="/xdmin/add"><button class="add" id="margin"">发表文章</button></a>
-           <a href="/issue"><button class="add"> 反馈管理</button></a>
-           <a href="/logs"><button class="add"> 查看日志</button></a> 
-           <a href="/user"><button class="add">用户管理</button></a> 
-           
+            <a href="/xdmin"> <button class="add">返回首页</button> </a>
+            <a href="/xdmin/add"><button class="add" id="margin"">发表文章</button></a>
+           <a href=" /issue"><button class="add"> 反馈管理</button></a>
+            <a href="/logs"><button class="add"> 查看日志</button></a>
+            <a href="/user"><button class="add">用户管理</button></a>
+
         </ul>
     </div>
 
     <div class="pa">
         <table border="1" class="biao">
-        <thead>
-            <tr style="height: 50px">
-                <th>标题</th>
-                <th>发表人</th>
-                <th>文章内容</th>
-                <th>文章图片</th>
-                <th>发表时间</th>
-                <th>操作</th>
-            </tr>
-        </thead>
+            <thead>
+                <tr style="height: 50px">
+                    <th>标题</th>
+                    <th>发表人</th>
+                    <th>文章内容</th>
+                    <th>文章图片</th>
+                    <th>发表时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
 
-        <tbody id="biao">
-            <% for(let o of data){%>
-                <tr>
-                        <td><%=o.title%></td>
-                        <td><%=o.name%></td>
-                        <td><%=o.content%></td>
-                        <td><img width="100" src="/img/<%=o.img%>"/></td>
-                        <td><%=o.time%></td>
+            <tbody id="biao">
+                <% for(let o of data){%>
+                    <tr>
+                        <td>
+                            <%=o.title%>
+                        </td>
+                        <td>
+                            <%=o.name%>
+                        </td>
+                        <td>
+                            <%=o.content%>
+                        </td>
+                        <td><img width="100" src="/img/<%=o.img%>" /></td>
+                        <td>
+                            <%=o.time%>
+                        </td>
                         <td>
                             <button class="c">详情</button>
                             <button class="c2 update" data-id1=<%=o.id%>>修改</button>
                             <button class="c3  delete" data-id=<%=o.id%>>删除</button>
                             <button class="c4">添加图片</button>
                         </td>
-                </tr>
+                    </tr>
                      <% } %>
-        </tbody>
+            </tbody>
         </table>
     </div>
+    <tfoot>
+                        <span id="before" style="margin-left: 500px;">上一页</span>
+                        <span id="pages"></span>
+                        <span id="next" style="margin-left: 64px">下一页</span>
+                        <input type="hidden"  id="count" value="<%= count%>">
+                        <input type="hidden"  id="page" value="<%= page%>">
+    </tfoot>
 </body>
+
 </html>
 <script>
-$(function(){
-     //删除
-    Array.from(document.getElementsByClassName("delete")).forEach(i=>{
-            i.onclick = (()=>{
-            let id = i.getAttribute('data-id')
-            $.ajax({
-                url:"/xdmin/del/"+id,
-                type:"delete",
-                success:function(data){
-                    if(data == 'success'){
-                        alert('删除成功')
-                        $(i).parent().parent().remove()
+    $(function () {
+        //删除
+        Array.from(document.getElementsByClassName("delete")).forEach(i => {
+            i.onclick = (() => {
+                let id = i.getAttribute('data-id')
+                $.ajax({
+                    url: "/xdmin/del/" + id,
+                    type: "delete",
+                    success: function (data) {
+                        if (data == 'success') {
+                            alert('删除成功')
+                            $(i).parent().parent().remove()
+                        }
                     }
-                }
-            })
-        }
+                })
+            }
             )
-    })
-});
+        })
+    });
 
-   //修改
-   Array.from(document.getElementsByClassName('update')).forEach(i => {
-    i.onclick = function () {
-        let ind = this.getAttribute('data-id1')
-        window.location.href = '/xdmin/update/' + ind
+    //修改
+    Array.from(document.getElementsByClassName('update')).forEach(i => {
+        i.onclick = function () {
+            let ind = this.getAttribute('data-id1')
+            window.location.href = '/xdmin/update/' + ind
+        }
+    })
+
+
+
+    //分页功能
+
+    var count = document.getElementById('count').value;
+    //总条数
+    var page = document.getElementById('page').value;
+    //当前的页码
+    console.log(count);
+    console.log(page);
+    var pages = document.getElementById('pages');
+    var prev = document.getElementById('before');
+    var next = document.getElementById('next');
+    function createPages() {
+        pages.innerHTML = '';
+        for (var i = 0; i < Math.ceil(count / 2); i++) {
+            pages.innerHTML += `<button class="btna" json-page="${i}">${i + 1}</button>`;
+        }
     }
-})
+    createPages()
+    //点击按钮翻页
+    $(function () {
+        //获取页面的位置
+        $('.btna').on('click', function () {
+            let page = $(this).attr('json-page');
+            window.location.href = '/xdmin/?page=' + page;
+        })
+        // 点击上一页
+        prev.onclick = function () {
+            if (page >= 1) {
+                page--;
+                window.location.href = '/xdmin/?page=' + page;
+            }
+        }
+        // 点击下一页
+        next.onclick = function () {
+            if (page < Math.ceil(count / 2) - 1) {
+                page++;
+                window.location.href = '/xdmin/?page=' + page;
+            }
+        }
+    })
 </script>

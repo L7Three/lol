@@ -1,8 +1,8 @@
 class feedback{
-    constructor(content,img,name){
+    constructor(content,img,contact){
         this.content = content;
         this.img = img;
-        this.name = name;
+        this.contact = contact;
     }
 }
 

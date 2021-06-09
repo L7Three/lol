@@ -32,6 +32,7 @@
 							<th>反馈图片</th>
 							<th>反馈时间</th>
 							<th>反馈人</th>
+							<th>联系方式</th>
 							<th>操作</th>
 						</tr>
 					</thead>
@@ -42,8 +43,9 @@
 							<td><%=o.id%></td>
 							<td class="hero"><%=o.content%></td>
 							<td><img width="100" src="/img/<%=o.img%>"/></td>
-							<td><%=o.time.toLocaleString()%></td>
+							<td><%=o.time%></td>
 							<td><%=o.name%></td>
+							<td><%=o.contact%></td>
 							<td>
 								<button class="c2">回复用户</button>
 								<button class="c3  delete" data-id=<%=o.id%>>删除</button>
