@@ -2,6 +2,7 @@ const { render } = require('ejs');
 var express = require('express');
 var router = express.Router();
 var mysql = require("mysql");
+var moment = require('moment');
 var comment = require("./bean/comment");
 
 
@@ -58,9 +59,10 @@ router.get('/details/:id', (req, res) => {
 })
 
 router.post('/details/:id/add', (req, res) => {
+  var current_time =  moment(Date.now()).format('YYYY-MM-DD HH:mm:ss')
   let id = req.body.id
   let co = new comment(req.body.name, req.body.comment)
-  connection.query("insert into newscomment(name,comment,content_id) value(?,?,?)", [req.session.user, co.comment,id], (err, result, fields) => {
+  connection.query("insert into newscomment(name,comment,content_id,time) value(?,?,?,?)", [req.session.user, co.comment,id,current_time], (err, result, fields) => {
     res.redirect('/details/'+id)
   })
 });

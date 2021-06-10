@@ -3,6 +3,7 @@ var express = require('express');
 var router = express.Router();
 var name = require("./xdminlogo");
 var mysql = require("mysql");
+var moment = require('moment');
 const article = require('./bean/article');
 
 
@@ -22,8 +23,9 @@ router.get('/add', function(req, res, next) {
 });
 
 router.post('/add', (req, res) => {
+  var current_time =  moment(Date.now()).format('YYYY-MM-DD HH:mm:ss')
   let Article = new article(req.body.title,req.body.name,req.body.content,req.body.img)
-  connection.query("insert into article(title,name,content,img) value(?,?,?,?)", [Article.title,Article.name, Article.content,Article.img], (err, result, fields) => {
+  connection.query("insert into article(title,name,content,img,time) value(?,?,?,?,?)", [Article.title,Article.name, Article.content,Article.img,current_time], (err, result, fields) => {
     res.redirect('/xdmin')
   })
   
@@ -79,6 +81,7 @@ router.get('/update/:id', (req, res) => {
 })
 
 router.post('/update/:id', (req, res) => {
+  var current_time =  moment(Date.now()).format('YYYY-MM-DD HH:mm:ss')
   let user = {
       'title': req.body.title,
       'name': req.body.name,
@@ -88,7 +91,7 @@ router.post('/update/:id', (req, res) => {
   let sqlStr = `delete from article where id = ${req.params.id}`
   connection.query(sqlStr, (err, result) => {
     if(err) throw err;
-      let sqlStr1 = `INSERT INTO article(id,title,name,content,img) VALUES('${req.params.id}','${user.title}','${user.name}','${user.content}','${user.img}')`
+      let sqlStr1 = `INSERT INTO article(id,title,name,content,img,time) VALUES('${req.params.id}','${user.title}','${user.name}','${user.content}','${user.img}','${current_time}')`
       connection.query(sqlStr1, (err, result) => {
         if(err) throw err;
           res.redirect('/xdmin')

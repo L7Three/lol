@@ -57,8 +57,8 @@
         <% } %>
             <div style="text-align: center; font-family: monospace">
               评论: <textarea name="comment" id=""></textarea>
-              <!-- 评论: <input type="text" name="comment" onblur="if(this.value.replace(/^ +| +$/g,'')=='')alert('不能为空!')"> -->
             </div>
+            <input type="hidden" name="time">
             <div style="text-align: center;">
             <input type="hidden" name="id" value="<%= id %>">
             <input type="submit" id="tj" value="发表">
