@@ -34,7 +34,6 @@
 				<h1 class="LminLinkText1">我要上热门</h1>
 				</p>
 			</div>
-		<form action="/hot/add" method="POST">
 			<div class="success">标题:
 				<input type="text"name="title">
 			</div>
@@ -64,9 +63,8 @@
 		
 			
 			<div class="fund">
-				<button type="submit" id="tj" class="but1">我要发布</button>
+				<button type="submit" id="co" class="but1">我要发布</button>
 			</div>
-		</form>
 		</div>
 	</div>
 </main>
@@ -74,7 +72,30 @@
 </html>
 
 <script>
-	$('#tj').click(function(){
-			alert('发表成功,请等待审核!')
+	$('#co').click(function (req,res) {
+		var title = $("input[name='title']").val();
+		var name = $("input[name='name']").val();
+		var content = $("textarea[name='content']").val();
+		var img = $("input[name='img']").val();
+			$.ajax({
+				type: "post",
+				dataType: "json",
+				url: "/hot/add",
+				data:({
+					'title':title,
+					'name':name,
+					'content':content,
+					'img':img
+				}),
+				success: function (data) {
+                    if (data =="1"){
+                        alert("未登录！请登录后发表")
+                        window.location.href = "/"
+                    }else{
+                        alert("发表成功！")
+                        window.location.href = "/"
+                    }	
+				}
+			})
 		})
 </script>

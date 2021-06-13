@@ -29,7 +29,6 @@
             <a href="/xdmin"> <button class="add">返回首页</button> </a>
             <a href="/xdmin/add"><button class="add" id="margin"">发表文章</button></a>
            <a href=" /issue"><button class="add"> 反馈管理</button></a>
-            <a href="/logs"><button class="add"> 查看日志</button></a>
             <a href="/user"><button class="add">用户管理</button></a>
 
         </ul>
@@ -65,10 +64,8 @@
                             <%=o.time%>
                         </td>
                         <td>
-                            <button class="c">详情</button>
                             <button class="c2 update" data-id1=<%=o.id%>>修改</button>
                             <button class="c3  delete" data-id=<%=o.id%>>删除</button>
-                            <button class="c4">添加图片</button>
                         </td>
                     </tr>
                      <% } %>

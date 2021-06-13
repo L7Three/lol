@@ -20,12 +20,16 @@ router.get('/', function(req, res, next) {
 
 
 router.post('/add', (req, res) => {
-  var current_time =  moment(Date.now()).format('YYYY-MM-DD HH:mm:ss')
-  let name = req.session.user
-  let appeal = new feedback(req.body.content,req.body.img,req.body.contact)
-  connection.query("insert into feedback(content,img,name,contact,time) value(?,?,?,?,?)", [appeal.content,appeal.img,name,appeal.contact,current_time], (err, result, fields) => {
-    res.redirect('/')
-  })
+  var current_time =  moment(Date.now()).format('YYYY-MM-DD HH:mm:ss');
+  let name = req.session.user;
+  let appeal = new feedback(req.body.content,req.body.img,req.body.contact);
+  if(req.session.user == undefined){
+    res.send("1")
+  }else{
+    connection.query("insert into feedback(content,img,name,contact,time) value(?,?,?,?,?)", [appeal.content,appeal.img,name,appeal.contact,current_time], (err, result, fields) => {
+      res.send("2")
+    })
+  }
 });
 
 

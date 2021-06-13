@@ -17,7 +17,6 @@ let connection = mysql.createConnection({
 });
 
 
-
 router.get('/', function (req, res, next) {
     res.render('index');
 });
@@ -33,6 +32,7 @@ router.post("/login", function (req, res) {
             res.json({ "status": -1 });
         } else {
             req.session.user=v.name;
+            req.session.userq = v.name;
             res.json({ "status": 1 });
         }
     })

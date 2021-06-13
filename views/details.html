@@ -46,22 +46,23 @@
                 </div>
         </form>
         <% } %>
-
-        <form action="/details/id/add" method="POST">
+        
+        <% for(let l of datas){%>
         <div>
-            <% for(let l of datas){%>
         <div style="font-family: monospace">
             <div style="float: left;"><%=l.name%>:</div>
             <div><%=l.comment%></div>
         </div>
+        <input type="hidden" data-id="<%= l.content_id%>">
         <% } %>
+        <form action="/details/<%=datas[0].content_id%>" method="POST"></form>
             <div style="text-align: center; font-family: monospace">
               评论: <textarea name="comment" id=""></textarea>
             </div>
             <input type="hidden" name="time">
             <div style="text-align: center;">
             <input type="hidden" name="id" value="<%= id %>">
-            <input type="submit" id="tj" value="发表">
+            <input type="submit" id="co" value="发表">
             </div>
         </div>
         </form>
@@ -76,9 +77,21 @@
 
 <script>
 
-$('#tj').click(function(){
-			alert('评论成功!')
+    $('#co').click(function (req,res) {
+        let id = this.getAttribute('data-id')
+			$.ajax({
+				type: "post",
+				url: "/details/"+id,
+				success: function (data) {
+                    if (data =="1"){
+                        alert("未登录！请登录后评论")
+                        window.location.href = "/"
+                    }else{
+                        alert("评论成功！")
+                        location.reload();
+                    }	
+				}
+			})
 		})
-
 </script>
 

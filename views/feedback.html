@@ -87,7 +87,6 @@
 	<body>
 		<header>
 			<div class="left">
-				<form action="/feedback/add" method="POST">
 				<h2>反馈内容:</h2>
 				<section id="editor" style="width: 90%;margin: auto;text-align: left;">
 					<textarea name="content" id="edit"></textarea>
@@ -112,8 +111,7 @@
 					<input name="name" type="hidden" id="type" value="  用户名" onFocus="this.value=''" style="width: 200px;height: 40px;margin-left: 50px;color: #7c7c7c;" onblur="if(this.value.replace(/^ +| +$/g,'')=='')alert('用户名不能为空!')" /><br />
 					<input name="contact" type="text" id="type" value="  优先使用QQ，方便在线沟通" onFocus="this.value=''" style="width: 450px;height: 40px;margin: 50px;color: #7c7c7c;" onblur="if(this.value.replace(/^ +| +$/g,'')=='')alert('不能为空!')" /><br />
 					<input type="hidden" name="time">
-					<input id="tj" type="submit" class="hover" value="提交" style="border-radius: 14px;margin-left: 50px;width: 150px;height: 50px;" />
-				</form>
+					<input id="co" type="submit" class="hover" value="提交" style="border-radius: 14px;margin-left: 50px;width: 150px;height: 50px;" />
 			</div>
 			<div class="right">
 				<a href="/help"><input type="button" id="but" value="帮助中心" /></a>
@@ -195,8 +193,31 @@
 			})
 		});
 
-		$('#tj').click(function(){
-			alert('反馈成功,请等待回复!')
+		$('#co').click(function(req,res) {
+		var content = $("textarea[name='content']").val();
+		var img = $("input[name='title']").val();
+		var name = $("input[name='name']").val();
+		var contact = $("input[name='contact']").val();
+			$.ajax({
+				type: "post",
+				dataType: "json",
+				url: "/feedback/add",
+				data:({
+					'content':content,
+					'img':img,
+					'name':name,
+					'contact':contact
+				}),
+				success: function (data) {
+                    if (data =="1"){
+                        alert("未登录！请登录后反馈")
+                        window.location.href = "/"
+                    }else{
+                        alert("反馈成功！")
+                        window.location.href = "/"
+                    }	
+				}
+			})
 		})
 	</script>
 

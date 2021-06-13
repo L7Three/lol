@@ -35,6 +35,8 @@ router.get('/', function (req, res) {
 
 router.get("/ind",function(req,res){
   connection.query("select * from article ORDER BY id DESC", function (err, results, fields) {
+    req.session.user = null;
+    req.session.userq = null;
     res.render('LOL2', {
       data: results
     })
@@ -58,13 +60,19 @@ router.get('/details/:id', (req, res) => {
   })
 })
 
-router.post('/details/:id/add', (req, res) => {
+router.post('/details/:id', (req, res) => {
   var current_time =  moment(Date.now()).format('YYYY-MM-DD HH:mm:ss')
-  let id = req.body.id
+  let id = req.params.id
   let co = new comment(req.body.name, req.body.comment)
-  connection.query("insert into newscomment(name,comment,content_id,time) value(?,?,?,?)", [req.session.user, co.comment,id,current_time], (err, result, fields) => {
-    res.redirect('/details/'+id)
-  })
+  if(req.session.userq == undefined){
+    res.send("1")
+  }else{
+    connection.query("insert into newscomment(name,comment,content_id,time) value(?,?,?,?)", [req.session.userq, co.comment,id,current_time], (err, result, fields) => {
+    res.json(2)
+    })
+  }
 });
+
+
 
 module.exports = router;
