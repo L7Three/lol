@@ -16,16 +16,18 @@
 
 		<!-- Sign Up -->
 		<div class="container__form container--signup">
-			<form action="#" class="form" id="form1" id="form">
+			<form action="/regist" method="POST" class="form" id="form1">
 				<h2 class="form__title">注册</h2>
-				<input type="text" placeholder="请输入用户名(英文字符或数字)" class="input" id="r_name" id="username"/>
+				<input type="text" placeholder="请输入用户名(英文字符或数字)" class="input" id="r_name"/>
 				<span id="s_username"></span>
-				<input type="email" placeholder="邮箱" class="input" id="email"/>
+				<input type="email" placeholder="请输入您的邮箱" class="input" id="e_mail"/>
 				<span id="s_email"></span>
-				<input type="password" placeholder="密码" class="input" id="r_pass" id="password"/>
+				<input type="text" name="code" placeholder="请输入验证码">
+				<input type="button" id="e_mail1" value="获取验证码">
+				<input type="password" placeholder="密码" class="input" id="r_pass"/>
 				<span id="s_password"></span>
 				<input type="hidden" name="regist_time">
-				<button class="btn" id="regist">注册</button>
+				<button type="submit" class="btn" id="regist">注册</button>
 			</form>
 		</div>
 
@@ -54,7 +56,6 @@
 	</div>
 
 	<script src="js/script.js"></script>
-	<script src="js/register.js"></script>
 	<script>
 		$('#login').click(function () {
 			$.ajax({
@@ -86,6 +87,25 @@
 				}
 			})
 		})
+
+
+		//邮箱
+		$(function () {
+				$('#e_mail1').click(function () {
+					let ma = document.getElementById('e_mail').value;
+					$.ajax({
+						url: "/index/:"+ma,
+						type: "PUT",
+						success: function (data) {
+							if(data =="success"){
+								alert("邮件发送成功！")
+							}else{
+								alert("验证码错误")
+							}
+						}
+					})
+				})
+			})
 	</script>
 </body>
 </html>

@@ -106,7 +106,6 @@
 					<a style="color: #f48b0e;">1、图片尺寸不小于400*400，大小不超过500K</a><br />
 					<a style="color: #f48b0e;">2、图片尽量清晰</a>
 				</section>
-				<!-- <input type="file" name="img"> -->
 				<h2>联系方式:</h2>
 					<input name="name" type="hidden" id="type" value="  用户名" onFocus="this.value=''" style="width: 200px;height: 40px;margin-left: 50px;color: #7c7c7c;" onblur="if(this.value.replace(/^ +| +$/g,'')=='')alert('用户名不能为空!')" /><br />
 					<input name="contact" type="text" id="type" value="  优先使用QQ，方便在线沟通" onFocus="this.value=''" style="width: 450px;height: 40px;margin: 50px;color: #7c7c7c;" onblur="if(this.value.replace(/^ +| +$/g,'')=='')alert('不能为空!')" /><br />
@@ -195,7 +194,7 @@
 
 		$('#co').click(function(req,res) {
 		var content = $("textarea[name='content']").val();
-		var img = $("input[name='title']").val();
+		var img = $("input[name='img']").val();
 		var name = $("input[name='name']").val();
 		var contact = $("input[name='contact']").val();
 			$.ajax({

@@ -16,6 +16,14 @@ let connection = mysql.createConnection({
   timezone:"SYSTEM"
 });
 
+router.get('/', function(req, res) {
+   let sql = 'select * from article ORDER BY id DESC';
+         connection.query(sql,(err,result)=>{
+           if(err) throw err;
+           console.log(result);
+            res.render('xdmin',{data: result});
+         })
+});
 
 //添加
 router.get('/add', function(req, res, next) {
@@ -33,34 +41,14 @@ router.post('/add', (req, res) => {
 
 //查询
 router.post('/find',function(req,res){
-  let message = req.body.queryinput
+  let message = req.body.queryinput;
   connection.query(`select * from article where title like '%${message}%'`,function(err,results) {
-    let page=(req.query.page==undefined)? 0 : req.query.page;
-       let startPage = page * 2;
-      
-       //从数据库获取数据，然后渲染到show页面
-       let count = 'select count(*) as count from article';
-       let sql = `select * from article order by(id) desc limit ${startPage},2`;
-    
-
-       connection.query(count,(err,result)=>{
-         if(err) throw err;
-           let countNum=result[0].count;
-           console.log();
-           connection.query(sql,(err,result)=>{
-             if(err) throw err;
-             console.log(result);
-              res.render('xdmin',{
-                data: results,
-                count: countNum,
-                page: page
-              });
-           })
-       })
-    // console.log(results);
-    // res.render("xdmin",{data:results1})
-  })
+    res.render('xdmin',{
+      data: results
+    })
 })
+})
+
 
 //删除
 router.delete('/del/:id',(req,res) =>{
@@ -70,12 +58,11 @@ router.delete('/del/:id',(req,res) =>{
   })
 })
 
-//更新
+//修改
 router.get('/update/:id', (req, res) => {
   let sqlStr = `SELECT * FROM article WHERE ID ="${req.params.id}" `
     connection.query(sqlStr, (err, result) => {
-      if (err) throw err;
-      console.log(result);
+      if (err) throw err;                                                                                                                                               
       res.render("update", { data: result })
   })
 })
@@ -93,37 +80,10 @@ router.post('/update/:id', (req, res) => {
     if(err) throw err;
       let sqlStr1 = `INSERT INTO article(id,title,name,content,img,time) VALUES('${req.params.id}','${user.title}','${user.name}','${user.content}','${user.img}','${current_time}')`
       connection.query(sqlStr1, (err, result) => {
-        if(err) throw err;
-          res.redirect('/xdmin')
+    if(err) throw err;
+      res.redirect('/xdmin')
       })
   })
 })
 
-//分页
-router.get('/',(req,res)=>{
-       //获取get后面的page参数值； 没有page的参数值的时候，给它默认值0
-       let page=(req.query.page==undefined)? 0 : req.query.page;
-       let startPage = page * 2;
-      
-       //从数据库获取数据，然后渲染到show页面
-       let count = 'select count(*) as count from article';
-       let sql = `select * from article order by(id) desc limit ${startPage},2`;
-    
-
-       connection.query(count,(err,result)=>{
-         if(err) throw err;
-           let countNum=result[0].count;
-           console.log();
-           connection.query(sql,(err,result)=>{
-             if(err) throw err;
-             console.log(result);
-              res.render('xdmin',{
-                data: result,
-                count: countNum,
-                page: page
-              });
-           })
-       })
-     })
-
-module.exports = router;
+module.exports = router; 

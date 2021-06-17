@@ -48,6 +48,7 @@
         <% } %>
         
         <% for(let l of datas){%>
+        <form action="/details/<%=l.content_id%>" method="POST"></form>
         <div>
         <div style="font-family: monospace">
             <div style="float: left;"><%=l.name%>:</div>
@@ -55,7 +56,7 @@
         </div>
         <input type="hidden" data-id="<%= l.content_id%>">
         <% } %>
-        <form action="/details/<%=datas[0].content_id%>" method="POST"></form>
+        
             <div style="text-align: center; font-family: monospace">
               评论: <textarea name="comment" id=""></textarea>
             </div>
@@ -93,5 +94,6 @@
 				}
 			})
 		})
+        
 </script>
 

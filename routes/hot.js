@@ -13,23 +13,23 @@ let connection = mysql.createConnection({
   timezone:"SYSTEM"
 });
 
-
 router.get('/', function(req, res, next) {
   res.render('hot');
 });
-
 
 router.post('/add', (req, res) => {
   var current_time =  moment(Date.now()).format('YYYY-MM-DD HH:mm:ss')
   let name = req.session.user;
   let score = new Score(req.body.title,req.body.content,req.body.img)
+  let img = req.body.img;
+  let im = img.substring(12);
     if(req.session.user == undefined){
       res.send("1")
     }else{
-      connection.query("insert into article(title,name,content,img,time) value(?,?,?,?,?)", [score.title,name, score.content,score.img,current_time], (err, result, fields) => {
+      connection.query("insert into article(title,name,content,img,time) value(?,?,?,?,?)", [score.title,name, score.content,im,current_time], (err, result, fields) => {
         res.send("2")
       })
     }
   });
-  
+
 module.exports = router;

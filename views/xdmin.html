@@ -19,7 +19,7 @@
             发表人: <input type="text">
             <button type="submit" class="c  queryName" id="queryName">查询</button>
             <a href="#" class="qk" style="left: 152px;">清空</a>
-            <a href="/xdminlogo" class="qk" style="left: 177px;">管理员登录</a>
+            <a href="/xdminlogo" class="qk" style="left: 177px;">退出登录</a>
         </form>
 
     </div>
@@ -72,13 +72,7 @@
             </tbody>
         </table>
     </div>
-    <tfoot>
-                        <span id="before" style="margin-left: 500px;">上一页</span>
-                        <span id="pages"></span>
-                        <span id="next" style="margin-left: 64px">下一页</span>
-                        <input type="hidden"  id="count" value="<%= count%>">
-                        <input type="hidden"  id="page" value="<%= page%>">
-    </tfoot>
+ 
 </body>
 
 </html>
@@ -111,46 +105,4 @@
         }
     })
 
-
-
-    //分页功能
-
-    var count = document.getElementById('count').value;
-    //总条数
-    var page = document.getElementById('page').value;
-    //当前的页码
-    console.log(count);
-    console.log(page);
-    var pages = document.getElementById('pages');
-    var prev = document.getElementById('before');
-    var next = document.getElementById('next');
-    function createPages() {
-        pages.innerHTML = '';
-        for (var i = 0; i < Math.ceil(count / 2); i++) {
-            pages.innerHTML += `<button class="btna" json-page="${i}">${i + 1}</button>`;
-        }
-    }
-    createPages()
-    //点击按钮翻页
-    $(function () {
-        //获取页面的位置
-        $('.btna').on('click', function () {
-            let page = $(this).attr('json-page');
-            window.location.href = '/xdmin/?page=' + page;
-        })
-        // 点击上一页
-        prev.onclick = function () {
-            if (page >= 1) {
-                page--;
-                window.location.href = '/xdmin/?page=' + page;
-            }
-        }
-        // 点击下一页
-        next.onclick = function () {
-            if (page < Math.ceil(count / 2) - 1) {
-                page++;
-                window.location.href = '/xdmin/?page=' + page;
-            }
-        }
-    })
 </script>
